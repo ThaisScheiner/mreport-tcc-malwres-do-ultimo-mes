@@ -1,0 +1,28 @@
+alternativa para nao usar o ChromeDriver, ja que nao é mais compativel
+pip install webdriver-manager
+
+
+pip install selenium webdriver-manager nltk spacy
+python -m nltk.downloader punkt
+python -m spacy download en_core_web_sm
+
+https://www.malwarebytes.com/blog
+https://blog.virustotal.com/
+https://www.bleepingcomputer.com/
+
+
+gerar pdf 
+pip install fpdf
+
+rodar o projeto
+python run_all.py
+python exportar_pdf.py
+
+
+Utilizar uma API de Resolução de CAPTCHA
+Uma das formas de lidar com o captcha é usar uma API de resolução de CAPTCHA, como 2Captcha ou AntiCaptcha. Essas APIs permitem que você envie a imagem do captcha e receba a resposta para ser preenchida automaticamente.
+
+Aqui está um exemplo de como integrar a API do 2Captcha com o Selenium:
+
+pip install python_anticaptcha
+
