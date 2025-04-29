@@ -66,11 +66,3 @@ mreport/
 - Demonstra conhecimento em automação web, extração de dados e geração de relatórios.
 - Aplicável em contextos reais de monitoramento e resposta a incidentes.
 
----
-
-## 🚀 Melhorias Futuras
-
-- Adicionar lógica aos estágios intermediários.
-- Gerar PDF com links clicáveis e mais informações.
-- Criar interface gráfica ou web.
-- Agendar execução automática (cron/Agendador de Tarefas).
