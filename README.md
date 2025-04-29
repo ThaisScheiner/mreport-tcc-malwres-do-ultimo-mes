@@ -66,3 +66,9 @@ mreport/
 - Demonstra conhecimento em automação web, extração de dados e geração de relatórios.
 - Aplicável em contextos reais de monitoramento e resposta a incidentes.
 
+## Instalações para o projeto
+pip install selenium webdriver-manager nltk spacy
+python -m nltk.downloader punkt
+python -m spacy download en_core_web_sm
+pip install fpdf
+pip install python_anticaptcha
