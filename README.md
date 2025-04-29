@@ -1,4 +1,3 @@
-
 # 🧠 Projeto: mreport – Malware Report Automation
 
 ## 🔎 Visão Geral
@@ -11,14 +10,14 @@ Este projeto simula um robô de monitoramento de ameaças, útil para profission
 
 ## ⚙️ Tecnologias Utilizadas
 
-| Tecnologia | Finalidade |
-|------------|------------|
-| **Python** | Linguagem principal para automação e geração de relatórios. |
-| **Selenium** | Automação do navegador para simular um usuário acessando páginas e coletando dados. |
-| **WebDriver Manager** | Gerencia automaticamente o ChromeDriver. |
-| **FPDF** | Biblioteca leve para criação de PDFs. |
-| **Subprocess** | Executa múltiplos scripts em sequência. |
-| **Chrome + ChromeDriver** | Navegador controlado automaticamente. |
+| Tecnologia                | Finalidade                                                                          |
+| ------------------------- | ----------------------------------------------------------------------------------- |
+| **Python**                | Linguagem principal para automação e geração de relatórios.                         |
+| **Selenium**              | Automação do navegador para simular um usuário acessando páginas e coletando dados. |
+| **WebDriver Manager**     | Gerencia automaticamente o ChromeDriver.                                            |
+| **FPDF**                  | Biblioteca leve para criação de PDFs.                                               |
+| **Subprocess**            | Executa múltiplos scripts em sequência.                                             |
+| **Chrome + ChromeDriver** | Navegador controlado automaticamente.                                               |
 
 ---
 
@@ -67,8 +66,23 @@ mreport/
 - Aplicável em contextos reais de monitoramento e resposta a incidentes.
 
 ## Instalações para o projeto
+
+```bash
 pip install selenium webdriver-manager nltk spacy
+```
+
+```bash
 python -m nltk.downloader punkt
+```
+
+```bash
 python -m spacy download en_core_web_sm
+```
+
+```bash
 pip install fpdf
+```
+
+```bash
 pip install python_anticaptcha
+```
