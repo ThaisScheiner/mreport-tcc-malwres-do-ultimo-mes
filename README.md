@@ -68,6 +68,10 @@ mreport/
 ## Instalações para o projeto
 
 ```bash
+pip install webdriver-manager
+```
+
+```bash
 pip install selenium webdriver-manager nltk spacy
 ```
 
