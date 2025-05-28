@@ -5,12 +5,12 @@ from utilitario import Utilitario
 nlp = spacy.load("en_core_web_sm")
 
 # Diretório de saída de entidades nomeadas
-ents_dir = "/tmp/ents"
+ents_dir = "C:/Temp/ents"
 if not os.path.exists(ents_dir):
     os.makedirs(ents_dir)
 
 # Diretório de entrada com os arquivos tokenizados
-tokenize_dir = "/tmp/tokenize"
+tokenize_dir = "C:/Temp/tokenize"
 arquivos = os.listdir(tokenize_dir)
 
 resultado_final = {}  # Dicionário para salvar todas as entidades por arquivo

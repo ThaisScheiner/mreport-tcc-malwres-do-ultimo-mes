@@ -67,6 +67,8 @@ mreport/
 
 ## Instalações para o projeto
 
+C:\Windows\system32>python.exe -m pip install --upgrade pip
+
 ```bash
 pip3 install nltk
 ```

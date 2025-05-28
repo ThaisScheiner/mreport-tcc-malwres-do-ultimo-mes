@@ -9,16 +9,16 @@ nltk.download('punkt')
 CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())));
 sys.path.append(CURRENTDIR);
 
-if not os.path.exists("/tmp/tokenize"):
-    os.mkdir("/tmp/tokenize");
+if not os.path.exists("C:/Temp/tokenize"):
+    os.mkdir("C:/Temp/tokenize");
 
-arquivos = os.listdir("/tmp/paginas");
+arquivos = os.listdir("C:/Temp/paginas");
 
 for arquivo in arquivos:
-    with open("/tmp/paginas/" + arquivo, 'r') as f:
+    with open("C:/Temp/paginas/" + arquivo, 'r') as f:
         conteudo = f.read();
         frases = tokenize.sent_tokenize(conteudo);
-        with open("/tmp/tokenize/" + arquivo, "w") as  w:
+        with open("C:/Temp/tokenize/" + arquivo, "w") as  w:
             for frase in frases:
                 w.write(frase + "\n");
 

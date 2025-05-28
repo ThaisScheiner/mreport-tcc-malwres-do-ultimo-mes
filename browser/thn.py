@@ -13,7 +13,7 @@ class Thn:
         options.add_argument("--disable-blink-features=AutomationControlled")
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    def buscar_malwares_abril_2025(self, max_links=10):
+    def buscar_malwares_maio_2025(self, max_links=10):
         self.driver.get("https://www.bleepingcomputer.com/news/security/")
         time.sleep(3)
         links = []
@@ -23,7 +23,7 @@ class Thn:
         for a in artigos:
             href = a.get_attribute("href")
             title = a.text
-            if "2025" in title or "April" in title or "Abril" in title:
+            if "2025" in title or "Mai" in title or "Maio" in title:
                 if href not in links:
                     links.append(href)
             if len(links) >= max_links:
