@@ -68,6 +68,10 @@ mreport/
 ## Instalações para o projeto
 
 ```bash
+pip3 install nltk
+```
+
+```bash
 pip install webdriver-manager
 ```
 
