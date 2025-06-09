@@ -14,7 +14,7 @@ https://www.bleepingcomputer.com/
 gerar pdf 
 pip install fpdf
 
-rodar o projeto
+rodar o projeto 
 python run_all.py
 python exportar_pdf.py
 
@@ -25,4 +25,10 @@ Uma das formas de lidar com o captcha é usar uma API de resolução de CAPTCHA,
 Aqui está um exemplo de como integrar a API do 2Captcha com o Selenium:
 
 pip install python_anticaptcha
+
+pip install -U selenium
+
+pip install beautifulsoup4
+
+
 

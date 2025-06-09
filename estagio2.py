@@ -1,26 +1,23 @@
-# BAIXAR TODAS AS PAGINAS PARA PROCESSAR DEPOIS
-import time, os, traceback, sys, inspect, hashlib, nltk;
+# estagio2.py
+from estagio1 import Browser
+import os
 
-from utilitario import *;
-from nltk import tokenize;
-nltk.download('punkt')
+input_path = "relatorios/links_malware_bing.txt"
+saida_dir = "C:/Temp/paginas"
+os.makedirs(saida_dir, exist_ok=True)
 
+browser = Browser()
 
-CURRENTDIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())));
-sys.path.append(CURRENTDIR);
+with open(input_path, "r", encoding="utf-8") as f:
+    links = [linha.strip() for linha in f if linha.strip()]
 
-if not os.path.exists("C:/Temp/tokenize"):
-    os.mkdir("C:/Temp/tokenize");
+for i, link in enumerate(links):
+    try:
+        conteudo = browser.pagina(link)
+        with open(os.path.join(saida_dir, f"pagina{i + 1}.html"), "w", encoding="utf-8") as arq:
+            arq.write(conteudo)
+        print(f"[✔] Página salva: pagina{i + 1}.html")
+    except Exception as e:
+        print(f"[✖] Erro ao baixar {link}: {e}")
 
-arquivos = os.listdir("C:/Temp/paginas");
-
-for arquivo in arquivos:
-    with open("C:/Temp/paginas/" + arquivo, 'r') as f:
-        conteudo = f.read();
-        frases = tokenize.sent_tokenize(conteudo);
-        with open("C:/Temp/tokenize/" + arquivo, "w") as  w:
-            for frase in frases:
-                w.write(frase + "\n");
-
-
-#pip3 install nltk
+browser.fechar()

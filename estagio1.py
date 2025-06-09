@@ -1,19 +1,19 @@
+# estagio1.py
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+import time
 
 class Browser:
     def __init__(self):
         options = Options()
         options.add_argument("--start-maximized")
         options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_argument("--ignore-certificate-errors")  # Ignorar erros de certificado SSL
-        options.add_argument("--disable-web-security")  # Desabilitar segurança da web
+        options.add_argument("--ignore-certificate-errors")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument("--disable-features=IsolateOrigins,site-per-process")
-
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     def pagina(self, url):

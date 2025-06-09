@@ -13,9 +13,9 @@ class Thn:
         options.add_argument("--disable-blink-features=AutomationControlled")
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    def buscar_malwares_maio_2025(self, max_links=10):
-        self.driver.get("https://www.google.com/search?q=noticias+de+malwares+mais+afetados+em+maio+de+2025&sca_esv=3daf0913dc600547&sxsrf=AE3TifOA7G92xfsemSHc6a_RtObQwabtHQ%3A1748477506120&ei=QqY3aK6SB_rF5OUP0qHGoQE&ved=0ahUKEwiuu5mlsseNAxX6IrkGHdKQMRQQ4dUDCBA&oq=noticias+de+malwares+mais+afetados+em+maio+de+2025&gs_lp=Egxnd3Mtd2l6LXNlcnAiMm5vdGljaWFzIGRlIG1hbHdhcmVzIG1haXMgYWZldGFkb3MgZW0gbWFpbyBkZSAyMDI1SABQAFgAcAB4AJABAJgBAKABAKoBALgBDMgBAJgCAKACAJgDAJIHAKAHALIHALgHAMIHAMgHAA&sclient=gws-wiz-serp")
-        time.sleep(3)
+    def buscar_malwares_maio_2025(self, month, year, max_pages=25):
+        self.driver.get("https://thehackernews.com/")
+        time.sleep(5)
         links = []
 
         artigos = self.driver.find_elements(By.XPATH, '//div[@class="bc_latest_news"]/ul/li/a')

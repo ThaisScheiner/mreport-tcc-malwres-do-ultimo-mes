@@ -1,38 +1,13 @@
 import subprocess
-import os
-import time
 
-# Lista dos arquivos dos estágios
-scripts = [
-    "estagio0.py",
-    "estagio1.py",
-    "estagio2.py",
-    "estagio3.py"
-]
+print("\n===== EXECUTANDO TODOS OS ESTÁGIOS =====\n")
 
-# Garantir que a pasta relatorios exista
-os.makedirs("relatorios", exist_ok=True)
+subprocess.run(["python", "estagio0.py"])   # Coleta dos links
+subprocess.run(["python", "estagio1.py"])   # Download das páginas
+subprocess.run(["python", "estagio2.py"])   # Extração do corpo
+subprocess.run(["python", "estagio3.py"])   # Limpeza de HTML
+subprocess.run(["python", "estagio4.py"])   # Classificação
+subprocess.run(["python", "estagio_tokenize.py"])  # Tokenização
+subprocess.run(["python", "estagio6.py"])   # Geração dos textos finais
 
-# Executa os estágios
-for script in scripts:
-    print(f"\n🔧 Executando {script}...")
-    start = time.time()
-    try:
-        subprocess.run(["python", script], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Erro ao executar {script}: {e}")
-        break
-    else:
-        duration = time.time() - start
-        print(f"✅ {script} executado com sucesso em {duration:.2f}s.")
-
-# Executa a geração do PDF após os estágios, se tudo deu certo
-else:
-    print("\n📄 Gerando relatório em PDF...")
-    try:
-        subprocess.run(["python", "exportar_pdf.py"], check=True)
-        print("✅ Relatório PDF gerado com sucesso.")
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Erro ao gerar o PDF: {e}")
-
-print("\n🏁 Pipeline finalizado.")
+print("\n🎉 TODOS OS ESTÁGIOS CONCLUÍDOS COM SUCESSO!\n")

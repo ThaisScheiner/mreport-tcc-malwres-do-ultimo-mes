@@ -1,37 +1,26 @@
-import time, os, traceback, sys, spacy, json
+# estagio3.py
+import spacy, os, json
 from utilitario import Utilitario
 
-# Carrega o modelo do spaCy
 nlp = spacy.load("en_core_web_sm")
-
-# Diretório de saída de entidades nomeadas
 ents_dir = "C:/Temp/ents"
-if not os.path.exists(ents_dir):
-    os.makedirs(ents_dir)
+os.makedirs(ents_dir, exist_ok=True)
 
-# Diretório de entrada com os arquivos tokenizados
 tokenize_dir = "C:/Temp/tokenize"
 arquivos = os.listdir(tokenize_dir)
-
-resultado_final = {}  # Dicionário para salvar todas as entidades por arquivo
+resultado_final = {}
 
 for arquivo in arquivos:
-    with open(os.path.join(tokenize_dir, arquivo), "r") as f:
+    with open(os.path.join(tokenize_dir, arquivo), "r", encoding="utf-8") as f:
         saida = []
-        linhas = f.readlines()
-
-        for linha in linhas:
+        for linha in f:
             doc = nlp(linha)
             for ent in doc.ents:
                 if str(ent) not in saida:
                     saida.append(str(ent))
-
-        # Salva individualmente no /tmp/ents
-        with open(os.path.join(ents_dir, arquivo), "w") as w:
+        with open(os.path.join(ents_dir, arquivo), "w", encoding="utf-8") as w:
             w.write(",".join(saida))
-
-        # Adiciona ao dicionário final
         resultado_final[arquivo] = saida
 
-# Salvar no projeto como JSON final com Utilitario
 Utilitario.salvar("3", resultado_final, "relatorio.json")
+print("[✔] Entidades extraídas e salvas.")
