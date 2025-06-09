@@ -1,4 +1,3 @@
-# estagio3.py
 import spacy, os, json
 from utilitario import Utilitario
 
@@ -23,4 +22,4 @@ for arquivo in arquivos:
         resultado_final[arquivo] = saida
 
 Utilitario.salvar("3", resultado_final, "relatorio.json")
-print("[✔] Entidades extraídas e salvas.")
+print("Entidades extraídas e salvas.")

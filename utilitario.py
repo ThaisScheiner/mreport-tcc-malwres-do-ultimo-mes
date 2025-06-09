@@ -1,4 +1,3 @@
-# utilitario.py
 import json
 import os
 
@@ -10,4 +9,4 @@ class Utilitario:
         caminho = os.path.join(pasta, nome_arquivo)
         with open(caminho, "w", encoding="utf-8") as f:
             json.dump(dados, f, indent=2, ensure_ascii=False)
-        print(f"[✔] Estágio {estagio} salvo em: {caminho}")
+        print(f"Estágio {estagio} salvo em: {caminho}")

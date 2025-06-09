@@ -19,9 +19,9 @@ class Browser:
         self.driver.get(url)
         time.sleep(3)
 
-        # Verificação de CAPTCHA simplificada
+        # verificacao de CAPTCHA simplificada
         if "detected unusual traffic" in self.driver.page_source.lower():
-            print("⚠️ CAPTCHA detectado.")
+            print("CAPTCHA detectado.")
             return None
 
         return self.driver.page_source

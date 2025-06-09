@@ -1,4 +1,3 @@
-# estagio_tokenize.py atualizado
 import os
 from bs4 import BeautifulSoup
 import json
@@ -9,38 +8,38 @@ output_dir = "C:/Temp/tokenize"
 relatorio_path = "relatorios/relatorio_classificado.json"
 os.makedirs(output_dir, exist_ok=True)
 
-# Carrega categorias/classificações do JSON
+# carrega as categorias/classificações do JSON
 with open(relatorio_path, "r", encoding="utf-8") as f:
     relatorio = json.load(f)
 
-# Processa cada HTML
+# processa cada HTML
 arquivos_html = [f for f in os.listdir(input_dir) if f.endswith(".html")]
 
 for arq in arquivos_html:
     input_path = os.path.join(input_dir, arq)
     output_path = os.path.join(output_dir, arq.replace(".html", ".txt"))
 
-    # Extrair conteúdo HTML
+    # extrai conteudo HTML
     with open(input_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f, "html.parser")
         for tag in soup(["script", "style"]):
             tag.decompose()
 
-        # Tenta extrair título e corpo
+        # tenta extrair o titulo e corpo
         titulo = soup.title.string.strip() if soup.title else "Sem título"
         paragrafos = soup.find_all('p')
         corpo = "\n".join(p.get_text(strip=True) for p in paragrafos if p.get_text(strip=True))
 
-    # Extração da classificação
+    # extracao da classificacao
     arq_txt = arq.replace(".html", ".txt")
     categorias = relatorio.get(arq_txt, {}).get("categorias", ["desconhecido"])
     categorias_str = ", ".join(categorias)
 
-    # Extrair mês e ano do nome do arquivo (ou fixar Maio 2025)
+    # extrai mês e ano do nome do arquivo 
     mes = "maio"
     ano = "2025"
 
-    # Salvar em .txt formatado
+    # salva a noticia em .txt formatado
     with open(output_path, "w", encoding="utf-8") as f_out:
         f_out.write(f"TÍTULO:\n{titulo}\n\n")
         f_out.write(f"CORPO DA NOTÍCIA:\n{corpo}\n\n")
@@ -49,6 +48,6 @@ for arq in arquivos_html:
         f_out.write(f"MÊS: {mes}\n")
         f_out.write(f"ANO: {ano}\n")
 
-    print(f"[✔] Texto estruturado salvo em: {output_path}")
+    print(f"Texto estruturado salvo em: {output_path}")
 
-print("\n✅ Tokenização estruturada concluída.")
+print("\nTokenização estruturada concluída.")

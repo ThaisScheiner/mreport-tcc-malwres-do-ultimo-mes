@@ -1,4 +1,3 @@
-# estagio4.py
 import json
 import os
 

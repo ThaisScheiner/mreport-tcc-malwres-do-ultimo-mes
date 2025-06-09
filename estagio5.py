@@ -1,4 +1,3 @@
-# estagio5.py
 import json
 from collections import defaultdict
 
@@ -12,16 +11,16 @@ def gerar_relatorio(path='relatorios/relatorio_classificado.json'):
         for categoria in info.get("categorias", []):
             resumo[categoria].append(arquivo)
 
-    print("\n🛡️  RELATÓRIO FINAL DOS MALWARES - MAIO 2025 🗓️")
+    print("\nRELATÓRIO FINAL DOS MALWARES - MAIO 2025")
     print("=================================================\n")
 
     for categoria, arquivos in resumo.items():
-        print(f"🔍 Categoria: {categoria.upper()} - {len(arquivos)} ocorrência(s)")
+        print(f"Categoria: {categoria.upper()} - {len(arquivos)} ocorrência(s)")
         for arq in arquivos:
             print(f"  - {arq}")
         print()
 
-    print("✅ Relatório completo.\n")
+    print("Relatório completo.\n")
 
 if __name__ == "__main__":
     gerar_relatorio()
