@@ -4,30 +4,38 @@ import re
 
 # Categorias expandidas com nomes populares e variações
 CATEGORIAS = {
-    'stealer': [
-        'stealer', 'info-stealer', 'infostealer', 'eddiestealer', 'password stealer',
-        'redline', 'raccoon', 'lummastealer', 'vidar', 'blackguard', 'hades', 'tycoon'
+     'Stealer': [
+        'RedLine', 'Raccoon', 'Vidar', 'BlackGuard', 'LummaStealer', 'EddieStealer', 'Tycoon'
     ],
-    'botnet': [
-        'botnet', 'c2', 'command and control', 'zombie network', 'mirai', 'mozi',
-        'qakbot', 'necurs', 'cutwail', 'asyncrat', 'cobalt strike'
+    'Botnet': [
+        'Mirai', 'Mozi', 'Qakbot', 'Necurs', 'Cutwail'
     ],
-    'ransomware': [
-        'ransomware', 'encrypt', 'decryption', 'locker', 'data leak', 'double extortion',
-        'lockbit', 'conti', 'revil', 'clop', 'alphv', 'blackcat', 'medusa'
+    'Ransomware': [
+        'LockBit', 'Conti', 'REvil', 'Clop', 'ALPHV', 'BlackCat', 'Medusa'
     ],
-    'trojan': [
-        'trojan', 'backdoor', 'remote access', 'rat', 'keylogger', 'blended threat',
-        'njrat', 'darkcomet', 'remcos', 'quasar', 'plugx', 'revenge rat'
+    'Trojan': [
+        'NjRAT', 'DarkComet', 'Remcos', 'Quasar', 'PlugX', 'RevengerAT'
     ],
-    'exploit': [
-        'exploit', 'exploit kit', 'kit de exploração', 'zero-day', 'n-day', 'cve-',
-        'rce', 'remote code execution'
+    'Backdoor': [
+        'NetWire', 'NanoCore', 'Poison Ivy', 'Cobalt Strike'  
     ],
-    'backdoor': [
-        'backdoor', 'remote access', 'hidden access', 'covert access',
-        'plugx', 'darkcomet', 'njrat', 'remcos', 'quasar', 'revenge rat',
-        'netwire', 'nanocore', 'poison ivy', 'cobalt strike'
+    'RAT (Remote Access Trojan)': [
+        'NjRAT', 'Quasar', 'DarkComet', 'Remcos', 'Xtreme RAT'
+    ],
+    'Keylogger': [
+        'HawkEye', 'Phoenix', 'Snake'
+    ],
+    'Worm': [
+        'Conficker', 'Morto', 'WannaCry'
+    ],
+    'Rootkit': [
+        'ZeroAccess', 'Necurs', 'TDSS', 'Rustock'
+    ],
+    'Spyware': [
+        'FinFisher', 'Pegasus'
+    ],
+    'Adware': [
+        'Fireball', 'DealPly'
     ],
     'generico': [
         'malware', 'malicious software', 'malicious code'
