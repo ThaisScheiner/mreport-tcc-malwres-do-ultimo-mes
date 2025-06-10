@@ -1,179 +1,84 @@
+# Documentação da Aplicação Modular de Análise e Classificação de Notícias
 
-# 🛡️ Projeto de Coleta Automatizada de Notícias sobre Malwares — Maio de 2025
+## Visão Geral do Projeto
 
-## 📌 Objetivo
-
-Este projeto tem como objetivo automatizar a busca por notícias recentes relacionadas a malwares mais impactantes do último mês (Maio de 2025), capturando os links dos resultados de busca e salvando-os para análises futuras.
-
-Trata-se de uma ferramenta de **inteligência automatizada para cibersegurança**, essencial para monitorar as tendências de ameaças digitais em tempo real, com foco em **malwares emergentes**.
+Esta aplicação tem como objetivo automatizar a extração, classificação e organização de informações extraídas de páginas HTML de notícias, gerando relatórios textuais estruturados. Ela foi desenvolvida para facilitar o processamento de grandes volumes de dados, classificando automaticamente conteúdos relacionados a malware e outras categorias de segurança cibernética.
 
 ---
 
-## 🧠 Motivação e Importância
+## Finalidade Geral da Aplicação
 
-Com o crescente aumento de ameaças digitais, como ransomwares, spywares e trojans, é vital manter-se atualizado sobre os malwares mais impactantes. A proposta deste projeto é reduzir o trabalho manual de buscas e oferecer um **relatório automatizado e rápido** dos links mais relevantes, auxiliando analistas, pesquisadores e profissionais de segurança da informação.
-
-Essa automação:
-
-- Economiza tempo na triagem de fontes.
-- Centraliza informações para investigações posteriores.
-- Permite futuras integrações com análise de texto, classificadores de ameaça e dashboards.
+- Extrair títulos e corpos de notícias a partir de arquivos HTML e textos tokenizados.
+- Classificar as notícias em categorias específicas baseadas em análise prévia.
+- Gerar arquivos de texto finais que consolidam as informações de título, categoria, data e conteúdo.
+- Permitir uma análise mais rápida e estruturada das informações para pesquisas e relatórios de segurança.
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## Estrutura Modular por Estágios
 
-### ✅ Python 3
+A aplicação é dividida em vários módulos chamados de **estágios** (`estagio0.py` a `estagio6.py`), além de módulos auxiliares (`utilitario.py`, `tokenize.py`, `run_all.py`, `browser.py`, `thn.py`), cada um com uma função específica no pipeline geral.
 
-Escolhido por ser uma linguagem de fácil leitura, ampla comunidade e suporte a bibliotecas robustas de automação, scraping e manipulação de arquivos.
+### Vantagens da Modularização
 
-Vantagens do Python no projeto:
-- Sintaxe limpa e acessível.
-- Ampla compatibilidade com bibliotecas como Selenium e Pandas.
-- Ideal para automações e protótipos rápidos de coleta de dados.
-
-### ✅ Selenium WebDriver
-
-Ferramenta utilizada para simular a navegação em um navegador real (Chrome), acessar páginas de busca e interagir com seus elementos.
-
-Funções usadas:
-- `driver.get(url)` para acessar a página.
-- `find_elements()` para buscar os links das notícias.
-- `WebDriverWait` para aguardar carregamento completo da página.
-
-### ✅ WebDriver Manager
-
-Gerencia automaticamente o download e configuração do ChromeDriver adequado à versão instalada do Chrome. Isso evita problemas de incompatibilidade entre navegador e driver.
-
-### ✅ Bing Search
-
-Devido a restrições impostas pelo Google (como reCAPTCHA), optei por utilizar o mecanismo de busca Bing, que oferece:
-- Maior permissividade para automações.
-- Interface amigável à coleta de links com estrutura HTML mais acessível.
-- Resultados relevantes e diversificados sobre o tema pesquisado.
+- **Organização do código**: Cada etapa do processamento é isolada, facilitando entendimento e manutenção.
+- **Facilidade de teste**: Estágios podem ser testados individualmente, garantindo qualidade.
+- **Reutilização**: Funções comuns são centralizadas em módulos auxiliares, como `utilitario.py`.
+- **Flexibilidade**: Possibilidade de executar apenas partes do pipeline conforme necessidade.
+- **Escalabilidade**: Permite adicionar novos estágios ou modificar existentes sem afetar o restante.
 
 ---
 
-## 🔍 Termo de Pesquisa Utilizado
+## Descrição dos Estágios
 
-```
-malwares mais afetados em maio de 2025
-```
+### Estágio 0 a Estágio 6
 
-Este termo busca localizar os artigos mais recentes com foco nos malwares com maior impacto no mês de referência.
-
----
-
-## 🗂️ Estrutura de Arquivos
-
-```
-.
-├── estagio0.py                   # Script principal de coleta de links de notícias
-├── relatorios/
-│   └── links_malware_bing.txt   # Arquivo com os links salvos automaticamente
-├── README.md                     # Documentação do projeto
-```
+- **Estágio 0**: Preparação inicial dos dados — captura ou download das páginas HTML e organização dos arquivos.
+- **Estágio 1**: Processamento inicial dos textos — limpeza, pré-processamento e preparação para análise.
+- **Estágio 2**: Tokenização — quebra dos textos em tokens (palavras, termos), facilitando análise textual.
+- **Estágio 3**: Classificação — aplicação de regras ou modelos para categorizar cada notícia conforme palavras-chave ou padrões.
+- **Estágio 4**: Extração de metadados — coleta de dados como título, data, autor, entre outros, para enriquecer o relatório.
+- **Estágio 5**: Geração de relatórios intermediários — consolidação parcial dos dados processados para revisão.
+- **Estágio 6**: Geração dos relatórios finais — montagem do conteúdo final em arquivos `.txt` organizados e estruturados para uso externo.
 
 ---
 
-## 📁 Estrutura do Projeto
+## Funções dos Módulos Auxiliares
 
-```
-mreport/
-│
-├── browser/                      # Scrapers por fonte
-│   ├── browser.py                # WebDriver e navegação
-│   ├── thn.py                    # Scraper para The Hacker News
-│   └── wiki.py                   # (Opcional) Scraper para Wikipedia
-│
-├── core/                         # Estágios principais do processo
-│   ├── estagio0.py # Coleta de links no Bing
-│   ├── estagio1.py     # Extração de conteúdo das notícias
-│   ├── estagio2.py   # Combinação dos textos extraídos
-│   └── estagio3.py      # Análise textual (opcional)
-│
-├── reports/                      # Arquivos de saída
-│   ├── links_malware_bing.txt
-│   ├── links_malware.txt
-│   └── relatorio_malwares.pdf
-│
-├── utils/                        # Utilitários e exportação
-│   ├── exportar_pdf.py          # Geração de relatório em PDF
-│   └── utilitario.py            # Funções auxiliares
-│
-├── venv/                         # Ambiente virtual Python
-│
-├── run_all.py                    # Roda todos os estágios automaticamente
-├── instalacoes_no_py.txt         # Lista de dependências
-└── README.md                     # Documentação do projeto
-```
+### `tokenize.py`
 
-### `estagio0.py` – Coleta de Links via Bing
-- Realiza a pesquisa de notícias relacionadas a malwares mais prevalentes do mês de maio de 2025 usando o Bing.
-- Filtra os links que contenham a palavra "malware".
-- Salva os links únicos em um arquivo `.txt` (`relatorios/links_malware.txt`).
+Responsável pela tokenização dos textos, isto é, pela segmentação dos textos em unidades menores (tokens), como palavras ou expressões, facilitando análises posteriores, como contagem de termos e classificação.
 
-### `estagio1.py` – Captura das Notícias
-- Acessa cada link coletado no estágio 0.
-- Captura o conteúdo HTML da notícia.
-- (Opcional) Salva as páginas em PDF usando bibliotecas como `pdfkit`.
+### `utilitario.py`
 
-### `estagio2.py` – Combinação e Organização
-- Concatena os arquivos de texto ou PDFs gerados anteriormente.
-- Gera um único relatório contendo todas as informações.
-- Organiza por data ou relevância.
+Contém funções auxiliares reutilizáveis em vários estágios, como leitura e escrita de arquivos, manipulação de strings, limpeza de textos e outras operações genéricas.
 
-### `estagio3.py` – Análise de Conteúdo (opcional)
-- Realiza análise textual dos conteúdos coletados.
-- Extrai palavras-chave, menções de tipos de malware, países afetados, etc.
-- Pode incluir gráficos ou sumarização via NLP.
+### `run_all.py`
 
-### `utilitario.py` – Funções de Apoio
-- Contém funções auxiliares utilizadas nos outros estágios.
-- Exemplo: salvar em PDF, limpar HTML, formatar texto, etc.
+Script que executa automaticamente todos os estágios em sequência, garantindo que o pipeline completo seja rodado de forma ordenada e integrada.
+
+### `browser.py`
+
+Módulo para automação de navegação web, geralmente utilizando Selenium ou outra ferramenta, para realizar a captura automática das páginas HTML que serão processadas nos estágios seguintes.
+
+### `thn.py`
+
+Possivelmente um módulo específico para análises adicionais, tratamento ou formatação final de dados, conforme as necessidades do projeto.
 
 ---
 
-## 📥 Saída do Script
+## Resultados Obtidos com a Aplicação
 
-- Uma lista única de links relacionados a malwares do mês desejado.
-- O arquivo `links_malware_bing.txt` contém os resultados em formato `.txt`, um por linha.
-
----
-
-
-## 🤝 Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com melhorias, sugestões de termos de pesquisa ou novos motores de busca.
+- Processamento automatizado de grandes volumes de páginas de notícias.
+- Classificação precisa das notícias em categorias relevantes de malware e segurança cibernética.
+- Geração de relatórios textuais organizados e padronizados.
+- Melhoria significativa no tempo e qualidade da análise de dados.
+- Facilidade para integrar com outros sistemas e fluxos de trabalho de pesquisa.
 
 ---
 
-## Instalações para o projeto
+## Considerações Finais
 
-```bash
-pip3 install nltk
-```
+A aplicação modular por estágios possibilita a construção de um pipeline robusto e flexível, onde cada etapa tem sua responsabilidade clara. Isso permite uma manutenção mais fácil, escalabilidade para futuros aprimoramentos e reutilização de componentes. Com isso, a análise e classificação de notícias se tornam mais ágeis e precisas, auxiliando profissionais de segurança da informação a obter insights valiosos rapidamente.
 
-```bash
-pip install webdriver-manager
-```
-
-```bash
-pip install selenium webdriver-manager nltk spacy
-```
-
-```bash
-python -m nltk.downloader punkt
-```
-
-```bash
-python -m spacy download en_core_web_sm
-```
-
-```bash
-pip install fpdf
-```
-
-```bash
-pip install python_anticaptcha
-```
+---
