@@ -15,8 +15,8 @@ for i, link in enumerate(links):
         conteudo = browser.pagina(link)
         with open(os.path.join(saida_dir, f"pagina{i + 1}.html"), "w", encoding="utf-8") as arq:
             arq.write(conteudo)
-        print(f"[✔] Página salva: pagina{i + 1}.html")
+        print(f"Página salva: pagina{i + 1}.html")
     except Exception as e:
-        print(f"[✖] Erro ao baixar {link}: {e}")
+        print(f"Erro ao baixar {link}: {e}")
 
 browser.fechar()

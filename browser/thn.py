@@ -13,23 +13,47 @@ class Thn:
         options.add_argument("--disable-blink-features=AutomationControlled")
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    def buscar_malwares_maio_2025(self, month, year, max_pages=25):
+    def buscar_malwares_maio_2025(self, max_links=25):
         self.driver.get("https://thehackernews.com/")
         time.sleep(5)
-        links = []
+
+        resultados = []
+        links_adicionados = set()
 
         artigos = self.driver.find_elements(By.XPATH, '//div[@class="bc_latest_news"]/ul/li/a')
 
         for a in artigos:
             href = a.get_attribute("href")
-            title = a.text
-            if "2025" in title or "Mai" in title or "Maio" in title:
-                if href not in links:
-                    links.append(href)
-            if len(links) >= max_links:
+            title = a.text.strip()
+
+            if not href or href in links_adicionados:
+                continue
+
+            # Abrir a notícia individualmente
+            self.driver.execute_script("window.open(arguments[0]);", href)
+            self.driver.switch_to.window(self.driver.window_handles[-1])
+            time.sleep(3)
+
+            try:
+                # Pega a data de publicação
+                data_element = self.driver.find_element(By.XPATH, '//div[@class="item-label"]/span')
+                data_text = data_element.text.lower()
+
+                # Verifica se é de maio de 2025
+                if "2025" in data_text and ("may" in data_text or "maio" in data_text):
+                    resultados.append((title, href))
+                    links_adicionados.add(href)
+                    print(f"✅ Adicionado: {title} | {data_text}")
+            except Exception as e:
+                print(f"⚠️ Erro ao obter data da notícia: {href} ({e})")
+
+            self.driver.close()
+            self.driver.switch_to.window(self.driver.window_handles[0])
+
+            if len(resultados) >= max_links:
                 break
 
-        return links
+        return resultados
 
     def fechar(self):
         try:

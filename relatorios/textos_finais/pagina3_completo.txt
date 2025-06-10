@@ -1,5 +1,5 @@
 TÍTULO:
-5 Active Malware Campaigns in Q1 2025
+⚡ Weekly Recap: Zero-Day Exploits, Developer Malware, IoT Botnets, and AI-Powered Scams
 
 CATEGORIA:
 stealer, apt, botnet, ransomware, trojan
@@ -12,63 +12,26 @@ ANO:
 
 CORPO DA NOTÍCIA:
 TÍTULO:
-5 Active Malware Campaigns in Q1 2025
+⚡ Weekly Recap: Zero-Day Exploits, Developer Malware, IoT Botnets, and AI-Powered Scams
 
 CORPO DA NOTÍCIA:
-The first quarter of 2025 has been a battlefield in the world of cybersecurity. Cybercriminals continued launching aggressive new campaigns and refining their attack methods.
-Below is an overview of five notable malware families, accompanied by analyses conducted in controlled environments.
-In early 2025, threat actors began exploiting a technique known as ClickFix to distribute the NetSupport Remote Access Trojan (RAT).
-This method involves injecting fake CAPTCHA pages into compromised websites, prompting users to execute malicious PowerShell commands that download and run the NetSupport RAT.
-Once installed, this RAT grants attackers full control over the victim's system, allowing activities such as real-time screen monitoring, file manipulation, and execution of arbitrary commands.
-After running the NetSupport RAT payload insideANY.RUN's Interactive Sandbox, we can see several activities.
-View NetSupport RAT analysis session
-When NetSupport RAT infects a system, it immediately establishes a connection with a command-and-control (C2) server, allowing attackers to operate the compromised machine remotely.
-Through this connection, attackers can execute system commands, deploy additional malware, and modify system settings.
-Equip your team withANY.RUN'sInteractive Sandbox to analyze unlimited malware in real time, uncover threats faster, and strengthen your defenses.
-Start your free trial today!
-NetSupport RAT employs multiple Tactics, Techniques, and Procedures (TTPs) to maintain persistence, evade detection, and gather system data. Key TTPs include:
-These techniques demonstrate how NetSupport RAT establishes control while avoiding detection, all of which are visible in ANY.RUN's ATT&CK mapping.
-The Lynx Ransomware-as-a-Service (RaaS) group is known as a highly organized entity, offering a structured affiliate program and robust encryption methods. Building upon the foundation of the earlier INC ransomware, Lynx has enhanced its capabilities and expanded its reach, targeting a diverse range of industries across multiple countries.
-Lynx's affiliate panel allows its affiliates to configure victim profiles, generate custom ransomware samples, and manage data-leak schedules within a user-friendly interface. Because of its structured approach, it becomes one of the most accessible ransomware even for those with limited technical expertise.
-To incentivize participation, Lynx offers affiliates an 80% share of ransom proceeds. The group maintains a leak site where stolen data is published if victims fail to pay the ransom.
-In the first quarter of 2025, the Lynx Ransomware-as-a-Service (RaaS) group has intensified its operations, targeting various industries with sophisticated attacks.
-Particularly, in February 2025, Lynx claimed responsibility for breaching Brown and Hurley, a prominent Australian truck dealership. The group alleged the theft of approximately 170 gigabytes of sensitive data, including human resources documents, business contracts, customer information, and financial records.
-In January 2025, Lynx also breached Hunter Taubman Fischer & Li LLC, a U.S.-based law firm specializing in corporate and securities law.
-We can observe Lynx Ransomware's behavior firsthand in a controlled environment. In the ANY.RUN sandbox analysis, after executing the Lynx payload, the infected system undergoes several noticeable changes.
-View Lynx ransomware analysis session
-The desktop background is replaced with a ransom message, and the attackers leave a note warning that all data has been stolen and encrypted. Victims are instructed to download Tor to contact them.
-The sandbox also detects how Lynx systematically renames files, appending its extension. For example, C:\Users\admin\Desktop\academicroad.rtf becomes C:\Users\admin\Desktop\academicroad.rtf.LYNX.
-Dozens of files across the system are modified this way, further confirming its encryption process. These are just a few of the many destructive actions Lynx carries out once inside a compromised system.
-In early 2025, cybersecurity researchers uncovered a sophisticated malware campaign deploying AsyncRAT, a remote access trojan known for its efficient, asynchronous communication capabilities.
-This campaign stands out due to its use of Python-based payloads and the exploitation of TryCloudflare tunnels to enhance stealth and persistence.
-The attack initiates with a phishing email containing a Dropbox URL. When recipients click the link, they download a ZIP archive housing an internet shortcut (URL) file.
-This file, in turn, retrieves a Windows shortcut (LNK) file via a TryCloudflare URL. Executing the LNK file triggers a series of scripts, PowerShell, JavaScript, and batch scripts, that download and execute a Python payload.
-This payload is responsible for deploying multiple malware families, including AsyncRAT, Venom RAT, and XWorm.
-Inside ANY.RUN's analysis session, we can open the MalConf section to reveal the malicious configurations used by AsyncRAT.
-View AsyncRAT analysis session
-As we can see, AsyncRAT connects to masterpoldo02[.]kozow[.]com over port 7575, allowing remote attackers to control infected machines. Blocking this domain and monitoring traffic to this port can help prevent infections.
-Besides, AsyncRAT installs itself in %AppData% to blend in with legitimate applications and uses a mutex (AsyncMutex_alosh) to prevent multiple instances from running.
-The malware also uses AES encryption with a hardcoded key and salt, making it difficult for security tools to analyze its communications.
-In early 2025, cybersecurity experts uncovered a sophisticated campaign involving Lumma Stealer, an information-stealing malware.
-Attackers used GitHub's release infrastructure to distribute this malware, exploiting the platform's trustworthiness to bypass security measures.
-Once executed, Lumma Stealer initiates additional malicious activities, including downloading and running other threats like SectopRAT, Vidar, Cobeacon, and additional Lumma Stealer variants.
-View Lumma analysis session
-A detailed examination using the ANY.RUN sandbox demonstrates Lumma Stealer's behavior.
-Upon execution, the malware connects to its command-and-control server, facilitating the exfiltration of sensitive data. The analysis also reveals the triggering of specific Suricata rules:
-The analysis session also reveals how Lumma steals credentials from web browsers and exfiltrates personal data:
-In a wave of social engineering attacks, cybercriminals have been leveraging InvisibleFerret, a stealthy Python-based malware, to compromise unsuspecting victims.
-Disguised as legitimate software in fake job interview processes, this malware has been actively used in the fake interview campaign, where attackers pose as recruiters to trick professionals into downloading malicious tools.
-A key element of the InvisibleFerret attack is the deployment of BeaverTail, a malicious NPM module that delivers a portable Python environment (p.zip) to execute the malware.
-Acting as the first stage in a multi-layered attack chain, BeaverTail sets up InvisibleFerret, a stealthy backdoor with advanced obfuscation and persistence mechanisms, making detection difficult.
-By submitting InvisibleFerret to ANY.RUN's Interactive Sandbox, we can analyze its behavior in real time:
-View InvisibleFerret analysis session
-The malware starts by collecting system information, such as OS version, hostname, username, and geolocation, using services like ip-api.com, a method also used by cryptocurrency drainers.
-Malicious requests blend with normal traffic, making detection challenging. ANY.RUN's interface highlights these activities, showing network requests in orange and red beneath the virtual machine.
-Clicking on the ATT&CK button in ANY.RUN's sandbox provides a breakdown of InvisibleFerret's TTPs. One key detection is T1016 ("System Network Configuration Discovery"), which highlights how the malware gathers geolocation and system data.
-The first quarter of 2025 has been filled with stealthy and aggressive cyber threats, from ransomware operations to silent data stealers. But attackers don't have to win.
-ANY.RUN's Interactive Sandbox gives businesses the power to analyze malware in real time, uncover hidden behaviors, and strengthen defenses before an attack escalates.
-With ANY.RUN, security teams can:
-Sign up for a free ANY.RUN trial todayand experience it for yourself!
+What do a source code editor, a smart billboard, and a web server have in common? They've all become launchpads for attacks—because cybercriminals are rethinking what counts as "infrastructure." Instead of chasing high-value targets directly, threat actors are now quietly taking over the overlooked: outdated software, unpatched IoT devices, and open-source packages. It's not just clever—it's reshaping how intrusion, persistence, and evasion happen at scale.
+5Socks Proxy Using IoT, EoL Systems Dismantled in Law Enforcement Operation— A joint law enforcement operation undertaken by Dutch and U.S. authoritiesdismantleda criminal proxy network, known as anyproxy[.]net and 5socks[.]net, that was powered by thousands of infected Internet of Things (IoT) and end-of-life (EoL) devices, enlisting them into a botnet for providing anonymity to malicious actors. The illicit platform, active since 2004, advertised more than 7,000 online proxies daily, with infected devices mainly located in the U.S., Canada and Ecuador. The attacks targeted IoT devices susceptible to known security flaws to deploy a malware called TheMoon. The development comes as two other law enforcement operations have felled theeXchcryptocurrency exchange for facilitating money laundering andsix DDoS-for-hire servicesthat were used to launch thousands of cyber-attacks across the world.
+Discover why Privileged Access Management is a top leadership priority in 2025. In this white paper, Jonathan Care outlines a framework for aligning PAM with business goals, tackling privileged threats, and preparing for future cybersecurity trends. Download your copy now.
+Attackers love software vulnerabilities—they're easy doors into your systems. Every week brings fresh flaws, and waiting too long to patch can turn a minor oversight into a major breach. Below are this week's critical vulnerabilities you need to know about. Take a look, update your software promptly, and keep attackers locked out.
+This week's list includes —CVE-2025-32819, CVE-2025-32820, CVE-2025-32821(SonicWall),CVE-2025-20188(Cisco IOS XE Wireless Controller),CVE-2025-27007(OttoKit),CVE-2025-24977(OpenCTI),CVE-2025-4372(Google Chrome),CVE-2025-25014(Elastic Kibana),CVE-2025-4318(AWS Amplify Studio),CVE-2024-56523, CVE-2024-56524(Radware Cloud Web Application Firewall),CVE-2025-27533(Apache ActiveMQ),CVE-2025-26168, CVE-2025-26169(IXON VPN),CVE-2025-23123(Ubiquiti UniFi Protect Cameras),CVE-2024-8176(libexpat), andCVE-2025-47188(Mitel 6800 Series, 6900 Series, and 6900w Series SIP Phones).
+Cybersecurity Tip of the Week: Block AI Bots from Scraping Your Website →AI companies are quietly crawling websites to collect content for training their models. If you run a company blog, research portal, or any site with original content, it's likely being indexed—often without your consent.
+You can reduce this risk by adding a simple robots.txt rule that tells known AI crawlers to stay out. It doesn't block rogue scrapers, but it does stop most major bots like GPTBot (OpenAI), AnthropicBot, and CCBot (Common Crawl), which power many commercial AI systems.
+Add this to your site's robots.txt file:
+User-agent: GPTBot
+Disallow: /
+User-agent: AnthropicBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+This file must live at yourdomain[.]com/robots.txt. For extra visibility, monitor your server logs for unexpected crawlers. In an era where data is currency, limiting unauthorized use of your content is a simple, proactive security move.
+This week underscored a fundamental reality: cyber risk is no longer just a technical problem—it's a business, legal, and reputational one. From criminal indictments tied to ransomware operations, to flawed software policies that enable phishing through official ad platforms, the consequences are moving upstream.
+Security decisions are leadership decisions now, and the organizations that act accordingly will be the ones that endure when the next breach hits close.
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
