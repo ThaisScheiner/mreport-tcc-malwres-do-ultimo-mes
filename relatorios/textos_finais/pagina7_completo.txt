@@ -1,8 +1,8 @@
 TÍTULO:
-    ⚡ Weekly Recap: APT Campaigns, Browser Hijacks, AI Malware, Cloud Breaches and Critical CVEs
+    The Hacker News | #1 Trusted Source for Cybersecurity News
 
     CATEGORIA:
-    botnet, exploit, generico
+    generico
 
     MÊS:
     JUN
@@ -12,30 +12,13 @@ TÍTULO:
 
     CORPO DA NOTÍCIA:
     TÍTULO:
-⚡ Weekly Recap: APT Campaigns, Browser Hijacks, AI Malware, Cloud Breaches and Critical CVEs
+The Hacker News | #1 Trusted Source for Cybersecurity News
 
 CORPO DA NOTÍCIA:
-Cyber threats don't show up one at a time anymore. They're layered, planned, and often stay hidden until it's too late.
-For cybersecurity teams, the key isn't just reacting to alerts—it's spotting early signs of trouble before they become real threats. This update is designed to deliver clear, accurate insights based on real patterns and changes we can verify. With today's complex systems, we need focused analysis—not noise.
-What you'll see here isn't just a list of incidents, but a clear look at where control is being gained, lost, or quietly tested.
-Lumma Stealer, DanaBot Operations Disrupted— A coalition of private sector companies and law enforcement agencies have taken down the infrastructure associated withLumma StealerandDanaBot. Charges have also been unsealed against 16 individuals for their alleged involvement in the development and deployment of DanaBot. The malware is equipped to siphon data from victim computers, hijack banking sessions, and steal device information. More uniquely, though, DanaBot has also been used for hacking campaigns that appear to be linked to Russian state-sponsored interests. All of that makes DanaBot a particularly clear example of how commodity malware has been repurposed by Russian state hackers for their own goals. In tandem, about 2,300 domains that acted as the command-and-control (C2) backbone for the Lumma information stealer have been seized, alongsidetaking down 300 servers and neutralizing 650 domainsthat were used to launch ransomware attacks. The actions against international cybercrime in the past few days constituted the latest phase of Operation Endgame.
-More security teams are moving away from custom scripts like Python, PowerShell, and Bash in favor of low-code platforms. Why? This new Tines guide breaks it down. Inside, you'll find a side-by-side comparison of Tines vs Python across HTTP requests, webhooks, data manipulation, and more.
-Software vulnerabilities remain one of the simplest—and most effective—entry points for attackers. Each week uncovers new flaws, and even small delays in patching can escalate into serious security incidents. Staying ahead means acting fast. Below is this week's list of high-risk vulnerabilities that demand attention. Review them carefully, apply updates without delay, and close the doors before they're forced open.
-This week's list includes —CVE-2025-34025, CVE-2025-34026, CVE-2025-34027(Versa Concerto),CVE-2025-30911(RomethemeKit For Elementor WordPress plugin),CVE-2024-57273,CVE-2024-54780, andCVE-2024-54779(pfSense),CVE-2025-41229(VMware Cloud Foundation),CVE-2025-4322(Motors WordPress theme),CVE-2025-47934(OpenPGP.js),CVE-2025-30193(PowerDNS),CVE-2025-0993(GitLab),CVE-2025-36535(AutomationDirect MB-Gateway),CVE-2025-47949(Samlify),CVE-2025-40775(BIND DNS),CVE-2025-20152(Cisco Identity Services Engine),CVE-2025-4123(Grafana),CVE-2025-5063(Google Chrome),CVE-2025-37899(Linux Kernel),CVE-2025-26817(Netwrix Password Secure),CVE-2025-47947(ModSecurity),CVE-2025-3078,CVE-2025-3079(Canon Printers), andCVE-2025-4978(NETGEAR).
-🔧 Cybersecurity Tools
-Review and Revoke Old OAuth App Permissions — They're Silent Backdoor →You've likely logged into apps using "Continue with Google," "Sign in with Microsoft," or GitHub/Twitter/Facebook logins. That's OAuth. But did you know many of those apps still have access to your data long after you stop using them?
-Why it matters:
-Even if you delete the app or forget it existed, it might still have ongoing access to your calendar, email, cloud files, or contact list — no password needed. If that third-party gets breached, your data is at risk.
-What to do:
-Revoke anything you don't actively use. It's a fast, silent cleanup — and it closes doors you didn't know were open.
-Looking ahead, it's not just about tracking threats—it's about understanding what they reveal. Every tactic used, every system tested, points to deeper issues in how trust, access, and visibility are managed. As attackers adapt quickly, defenders need sharper awareness and faster response loops.
-The takeaways from this week aren't just technical—they speak to how teams prioritize risk, design safeguards, and make choices under pressure. Use these insights not just to react, but to rethink what "secure" really needs to mean in today's environment.
-AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
-Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): botnet, exploit, generico
-CLASSIFICAÇÃO: botnet / exploit / generico
-MÊS: may
-ANO: 2025
+CATEGORIA(S): generico
+CLASSIFICAÇÃO: generico
+MÊS: desconhecido
+ANO: desconhecido
     

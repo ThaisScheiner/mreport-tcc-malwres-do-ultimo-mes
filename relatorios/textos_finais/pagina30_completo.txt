@@ -2,7 +2,7 @@ TÍTULO:
     New PathWiper Data Wiper Malware Disrupts Ukrainian Critical Infrastructure in 2025 Attack
 
     CATEGORIA:
-    botnet, trojan, backdoor, generico
+    Trojan, Backdoor, RAT (Remote Access Trojan), generico
 
     MÊS:
     JUN
@@ -46,8 +46,8 @@ AI boosts speed and scale—but also risk. Hidden identity accounts can expose y
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): botnet, trojan, backdoor, generico
-CLASSIFICAÇÃO: botnet / trojan / backdoor / generico
+CATEGORIA(S): Trojan, Backdoor, RAT (Remote Access Trojan), generico
+CLASSIFICAÇÃO: Trojan / Backdoor / RAT (Remote Access Trojan) / generico
 MÊS: desconhecido
 ANO: desconhecido
     

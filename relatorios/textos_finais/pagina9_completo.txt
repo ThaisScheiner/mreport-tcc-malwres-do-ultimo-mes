@@ -1,8 +1,8 @@
 TÍTULO:
-    ⚡ Weekly Recap: Zero-Day Exploits, Developer Malware, IoT Botnets, and AI-Powered Scams
+    Malicious Browser Extensions Infect Over 700 Users Across Latin America Since Early 2025
 
     CATEGORIA:
-    stealer, botnet, exploit, generico
+    generico
 
     MÊS:
     JUN
@@ -12,32 +12,30 @@ TÍTULO:
 
     CORPO DA NOTÍCIA:
     TÍTULO:
-⚡ Weekly Recap: Zero-Day Exploits, Developer Malware, IoT Botnets, and AI-Powered Scams
+Malicious Browser Extensions Infect Over 700 Users Across Latin America Since Early 2025
 
 CORPO DA NOTÍCIA:
-What do a source code editor, a smart billboard, and a web server have in common? They've all become launchpads for attacks—because cybercriminals are rethinking what counts as "infrastructure." Instead of chasing high-value targets directly, threat actors are now quietly taking over the overlooked: outdated software, unpatched IoT devices, and open-source packages. It's not just clever—it's reshaping how intrusion, persistence, and evasion happen at scale.
-5Socks Proxy Using IoT, EoL Systems Dismantled in Law Enforcement Operation— A joint law enforcement operation undertaken by Dutch and U.S. authoritiesdismantleda criminal proxy network, known as anyproxy[.]net and 5socks[.]net, that was powered by thousands of infected Internet of Things (IoT) and end-of-life (EoL) devices, enlisting them into a botnet for providing anonymity to malicious actors. The illicit platform, active since 2004, advertised more than 7,000 online proxies daily, with infected devices mainly located in the U.S., Canada and Ecuador. The attacks targeted IoT devices susceptible to known security flaws to deploy a malware called TheMoon. The development comes as two other law enforcement operations have felled theeXchcryptocurrency exchange for facilitating money laundering andsix DDoS-for-hire servicesthat were used to launch thousands of cyber-attacks across the world.
-Discover why Privileged Access Management is a top leadership priority in 2025. In this white paper, Jonathan Care outlines a framework for aligning PAM with business goals, tackling privileged threats, and preparing for future cybersecurity trends. Download your copy now.
-Attackers love software vulnerabilities—they're easy doors into your systems. Every week brings fresh flaws, and waiting too long to patch can turn a minor oversight into a major breach. Below are this week's critical vulnerabilities you need to know about. Take a look, update your software promptly, and keep attackers locked out.
-This week's list includes —CVE-2025-32819, CVE-2025-32820, CVE-2025-32821(SonicWall),CVE-2025-20188(Cisco IOS XE Wireless Controller),CVE-2025-27007(OttoKit),CVE-2025-24977(OpenCTI),CVE-2025-4372(Google Chrome),CVE-2025-25014(Elastic Kibana),CVE-2025-4318(AWS Amplify Studio),CVE-2024-56523, CVE-2024-56524(Radware Cloud Web Application Firewall),CVE-2025-27533(Apache ActiveMQ),CVE-2025-26168, CVE-2025-26169(IXON VPN),CVE-2025-23123(Ubiquiti UniFi Protect Cameras),CVE-2024-8176(libexpat), andCVE-2025-47188(Mitel 6800 Series, 6900 Series, and 6900w Series SIP Phones).
-Cybersecurity Tip of the Week: Block AI Bots from Scraping Your Website →AI companies are quietly crawling websites to collect content for training their models. If you run a company blog, research portal, or any site with original content, it's likely being indexed—often without your consent.
-You can reduce this risk by adding a simple robots.txt rule that tells known AI crawlers to stay out. It doesn't block rogue scrapers, but it does stop most major bots like GPTBot (OpenAI), AnthropicBot, and CCBot (Common Crawl), which power many commercial AI systems.
-Add this to your site's robots.txt file:
-User-agent: GPTBot
-Disallow: /
-User-agent: AnthropicBot
-Disallow: /
-User-agent: CCBot
-Disallow: /
-This file must live at yourdomain[.]com/robots.txt. For extra visibility, monitor your server logs for unexpected crawlers. In an era where data is currency, limiting unauthorized use of your content is a simple, proactive security move.
-This week underscored a fundamental reality: cyber risk is no longer just a technical problem—it's a business, legal, and reputational one. From criminal indictments tied to ransomware operations, to flawed software policies that enable phishing through official ad platforms, the consequences are moving upstream.
-Security decisions are leadership decisions now, and the organizations that act accordingly will be the ones that endure when the next breach hits close.
+Cybersecurity researchers have shed light on a new campaign targeting Brazilian users since the start of 2025 to infect users with a malicious extension for Chromium-based web browsers and siphon user authentication data.
+"Some of the phishing emails were sent from the servers of compromised companies, increasing the chances of a successful attack," Positive Technologies security researcher Klimentiy Galkinsaidin a report. "The attackers used a malicious extension for Google Chrome, Microsoft Edge, and Brave browsers, as well as Mesh Agent and PDQ Connect Agent."
+The Russian cybersecurity company, which is tracking the activity under the nameOperation Phantom Enigma, said the malicious extension was downloaded 722 times from across Brazil, Colombia, the Czech Republic, Mexico, Russia, and Vietnam, among others. As many as 70 unique victim companies have been identified. Some aspects of the campaign were disclosed in early April by a researcher who goes by the alias@johnk3ron X.
+The attack starts with phishing emails disguised as invoices that trigger a multi-stage process to deploy the browser extension. The messages encourage recipients to download a file from an embedded link or open a malicious attachment contained within an archive.
+Present within the files is a batch script that's responsible for downloading and launching a PowerShell script, which, in turn, performs a series of checks to determine if it's running in a virtualized environment and the presence of a software named Diebold Warsaw.
+Developed by GAS Tecnologia, Warsaw is a security plugin that's used to secure banking and e-commerce transactions through the Internet and mobile devices in Brazil. It's worth noting that Latin American banking trojans like Casbaneiro have incorporated similar features, asdisclosedby ESET in October 2019.
+The PowerShell script is also engineered to disable User Account Control (UAC), set up persistence by configuring the aforementioned batch script to be launched automatically upon system reboot, and establish a connection with a remote server to await further commands.
+The list of supported commands is as follows -
+The detected extensions (identifiers: nplfchpahihleeejpjmodggckakhglee, ckkjdiimhlanonhceggkfjlmjnenpmfm, and lkpiodmpjdhhhkdhdbnncigggodgdfli) have already been removed from the Chrome Web Store.
+Other attack chains swap the initial batch script for Windows Installer and Inno Setup installer files that are utilized to deliver the extensions. The add-on, per Positive Technologies, is equipped to execute malicious JavaScript code when the active browser tab corresponds to a web page associated with Banco do Brasil.
+Specifically, it sends the user's authentication token and a request to the attackers' server to receive commands to likely display a loading screen to the victim (WARTEN or SCHLIEBEN_WARTEN) or serve a malicious QR code on the bank's web page (CODE_ZUM_LESEN). The presence of German words for the commands could either allude to the attacker's location or that the source code was repurposed from somewhere else.
+In what appears to be an effort to maximize the number of potential victims, the unknown operators have found to leverage invoice-related lures to distribute installer files and deploy remote access software such as MeshCentral Agent or PDQ Connect Agent instead of a malicious browser extension.
+Positive Technologies said it also identified an open directory belonging to the attacker's auxiliary scripts containing links with parameters that included the EnigmaCyberSecurity identifier ("<victim-domain>/about.php?key=EnigmaCyberSecurity").
+"The study highlights the use of rather unique techniques in Latin America, including a malicious browser extension and distribution via Windows Installer and Inno Setup installers," Galkin said.
+"Files in the attackers' open directory indicate that infecting companies was necessary for discreetly distributing emails on their behalf. However, the main focus of the attacks remained on regular Brazilian users. The attackers' goal is to steal authentication data from the victims' bank accounts."
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): stealer, botnet, exploit, generico
-CLASSIFICAÇÃO: stealer / botnet / exploit / generico
-MÊS: may
+CATEGORIA(S): generico
+CLASSIFICAÇÃO: generico
+MÊS: june
 ANO: 2025
     

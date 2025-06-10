@@ -2,7 +2,7 @@ TÍTULO:
     Top 10 Cybersecurity Trends to Expect in 2025
 
     CATEGORIA:
-    exploit
+    desconhecido
 
     MÊS:
     JUN
@@ -46,8 +46,8 @@ AI boosts speed and scale—but also risk. Hidden identity accounts can expose y
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): exploit
-CLASSIFICAÇÃO: exploit
+CATEGORIA(S): desconhecido
+CLASSIFICAÇÃO: desconhecido
 MÊS: desconhecido
 ANO: desconhecido
     

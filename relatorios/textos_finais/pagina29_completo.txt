@@ -2,7 +2,7 @@ TÍTULO:
     New Atomic macOS Stealer Campaign Exploits ClickFix to Target Apple Users
 
     CATEGORIA:
-    stealer
+    desconhecido
 
     MÊS:
     JUN
@@ -42,8 +42,8 @@ AI boosts speed and scale—but also risk. Hidden identity accounts can expose y
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): stealer
-CLASSIFICAÇÃO: stealer
+CATEGORIA(S): desconhecido
+CLASSIFICAÇÃO: desconhecido
 MÊS: desconhecido
 ANO: desconhecido
     

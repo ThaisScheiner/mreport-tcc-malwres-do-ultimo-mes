@@ -2,7 +2,7 @@ TÍTULO:
     Top 5 Malware Threats to Prepare Against in 2025
 
     CATEGORIA:
-    botnet, ransomware, trojan, exploit, backdoor
+    Ransomware, Trojan, RAT (Remote Access Trojan)
 
     MÊS:
     JUN
@@ -55,8 +55,8 @@ AI boosts speed and scale—but also risk. Hidden identity accounts can expose y
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): botnet, ransomware, trojan, exploit, backdoor
-CLASSIFICAÇÃO: botnet / ransomware / trojan / exploit / backdoor
+CATEGORIA(S): Ransomware, Trojan, RAT (Remote Access Trojan)
+CLASSIFICAÇÃO: Ransomware / Trojan / RAT (Remote Access Trojan)
 MÊS: desconhecido
 ANO: desconhecido
     

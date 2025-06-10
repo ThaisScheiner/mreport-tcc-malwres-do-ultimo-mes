@@ -2,7 +2,7 @@ TÍTULO:
     Hackers Abuse Russian Bulletproof Host Proton66 for Global Attacks and Malware Delivery
 
     CATEGORIA:
-    botnet, generico
+    generico
 
     MÊS:
     JUN
@@ -36,8 +36,8 @@ AI boosts speed and scale—but also risk. Hidden identity accounts can expose y
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): botnet, generico
-CLASSIFICAÇÃO: botnet / generico
+CATEGORIA(S): generico
+CLASSIFICAÇÃO: generico
 MÊS: desconhecido
 ANO: desconhecido
     

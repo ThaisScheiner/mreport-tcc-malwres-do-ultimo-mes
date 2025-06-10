@@ -2,7 +2,7 @@ TÍTULO:
     Gamaredon Uses Infected Removable Drives to Breach Western Military Mission in Ukraine
 
     CATEGORIA:
-    botnet
+    desconhecido
 
     MÊS:
     JUN
@@ -30,8 +30,8 @@ AI boosts speed and scale—but also risk. Hidden identity accounts can expose y
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): botnet
-CLASSIFICAÇÃO: botnet
+CATEGORIA(S): desconhecido
+CLASSIFICAÇÃO: desconhecido
 MÊS: desconhecido
 ANO: desconhecido
     

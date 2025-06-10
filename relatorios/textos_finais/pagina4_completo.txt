@@ -1,8 +1,8 @@
 TÍTULO:
-    The Hacker News — Cybersecurity Articles Posted on 05 June, 2025 — Thursday
+    Qilin Ransomware Ranked Highest in April 2025 with 72 Data Leak Disclosures
 
     CATEGORIA:
-    exploit
+    desconhecido
 
     MÊS:
     JUN
@@ -12,28 +12,29 @@ TÍTULO:
 
     CORPO DA NOTÍCIA:
     TÍTULO:
-The Hacker News — Cybersecurity Articles Posted on 05 June, 2025 — Thursday
+Qilin Ransomware Ranked Highest in April 2025 with 72 Data Leak Disclosures
 
 CORPO DA NOTÍCIA:
-LATEST STORIES
-05 June, 2025 — Thursday
-Cybersecurity researchers have flagged several popular Google Chrome extensions that have been found to transmit data in HTTP and hard-code secrets in their code, exposing users to privacy and security risks.
+Threat actors with ties to theQilinransomwarefamily have leveraged malware known asSmokeLoaderalong with a previously undocumented .NET compiled loader codenamed NETXLOADER as part of a campaign observed in November 2024.
+"NETXLOADER is a new .NET-based loader that plays a critical role in cyber attacks," Trend Micro researchers Jacob Santos, Raymart Yambot, John Rainier Navato, Sarah Pearl Camiling, and Neljorn Nathaniel Aguassaidin a Wednesday analysis.
+"While hidden, it stealthily deploys additional malicious payloads, such as Agenda ransomware and SmokeLoader. Protected by .NET Reactor 6, NETXLOADER is difficult to analyze."
+Qilin, also called Agenda, has been anactive ransomware threatsince it surfaced in the threat landscape in July 2022. Last year, cybersecurity company Halcyon discovered an improved version of the ransomware that it named Qilin.B.
+Recent data shared by Group-IB shows that disclosures on Qilin's data leak site have more than doubled since February 2025, making it thetop ransomware groupfor April with72 claimed victims, surpassing other players like Akira, Play, and Lynx.
+"From July 2024 to January 2025, Qilin's affiliates did not disclose more than 23 companies per month," the Singaporean cybersecurity companysaidlate last month. "However, [...] since February 2025 the amount of disclosures have significantly increased, with 48 in February, 44 in March and 45 in the first weeks of April."
+Qilin is also said to have benefited from an influx of affiliates following RansomHub's abrupt shutdown at the start of last month. According to Flashpoint, RansomHub was thesecond-most active ransomware groupin 2024, claiming38 victimsin the financial sector between April 2024 and April 2025.
+"Agenda ransomware activity was primarily observed in healthcare, technology, financial services, and telecommunications sectors across the U.S., the Netherlands, Brazil, India, and the Philippines," according to Trend Micro's data from the first quarter of 2025.
+NETXLOADER, the cybersecurity company said, is a highly obfuscated loader that's designed to launch next-stage payloads retrieved from external servers (e.g., "bloglake7[.]cfd"), which are then used to drop SmokeLoader and Agenda ransomware.
+Protected by .NET Reactor version 6, it also incorporates a bevy of tricks to bypass traditional detection mechanisms and resist analysis efforts, such as the use of just-in-time (JIT) hooking techniques, and seemingly meaningless method names, and control flow obfuscation.
+"The operators' use of NETXLOADER is a major leap forward in how malware is delivered," Trend Micro said. "It uses a heavily obfuscated loader that hides the actual payload, meaning you can't know what it truly is without executing the code and analyzing it in memory. Even string-based analysis won't help because the obfuscation scrambles the clues that would normally reveal the payload's identity."
+Attack chains have been found to leverage valid accounts and phishing as initial access vectors to drop NETXLOADER, which then deploys SmokeLoader on the host. The SmokeLoader malware proceeds to perform a series of steps to perform virtualization and sandbox evasion, while simultaneously terminating a hard-coded list of running processes.
+In the final stage, SmokeLoader establishes contact with a command-and-control (C2) server to fetch NETXLOADER, which launches the Agenda ransomware using atechniqueknown asreflective DLL loading.
+"The Agenda ransomware group is continually evolving by adding new features designed to cause disruption," the researchers said. "Its diverse targets include domain networks, mounted devices, storage systems, and VCenter ESXi."
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-"Several widely us...
-An Iran-aligned hacking group has been attributed to a new set of cyber attacks targeting Kurdish and Iraqi government officials in early 2024.
-The activity is tied to a threat group ESET tracks as BladedFeline, which is assessed...
-The threat actor known as Bitter has been assessed to be a state-backed hacking group that's tasked with gathering intelligence that aligns with the interests of the Indian government.
-That's according to new findings jointly pu...
-Security teams face growing demands with more tools, more data, and higher expectations than ever. Boards approve large security budgets, yet still ask the same question: what is the business getting in return? CISOs respond with...
-The U.S. Department of Justice (DoJ) on Wednesday announced the seizure of cryptocurrency funds and about 145 clearnet and dark web domains associated with an illicit carding marketplace called BidenCash.
-"The operators of the Bi...
-Cisco has released security patches to address a critical security flaw impacting the Identity Services Engine (ISE) that, if successfully exploited, could allow unauthenticated actors to carry out malicious actions on susceptibl...
-Don't Miss!!!
-Join our mailing list to receive free eBooks, latest news, critical updates, and offers.
-Let's get social! Follow us.
-
-CATEGORIA(S): exploit
-CLASSIFICAÇÃO: exploit
-MÊS: desconhecido
-ANO: desconhecido
+CATEGORIA(S): desconhecido
+CLASSIFICAÇÃO: desconhecido
+MÊS: may
+ANO: 2025
     

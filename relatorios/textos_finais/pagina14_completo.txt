@@ -1,8 +1,8 @@
 TÍTULO:
-    Malicious Browser Extensions Infect Over 700 Users Across Latin America Since Early 2025
+    The Hacker News — Cybersecurity Articles Posted on 05 June, 2025 — Thursday
 
     CATEGORIA:
-    stealer
+    desconhecido
 
     MÊS:
     JUN
@@ -12,30 +12,28 @@ TÍTULO:
 
     CORPO DA NOTÍCIA:
     TÍTULO:
-Malicious Browser Extensions Infect Over 700 Users Across Latin America Since Early 2025
+The Hacker News — Cybersecurity Articles Posted on 05 June, 2025 — Thursday
 
 CORPO DA NOTÍCIA:
-Cybersecurity researchers have shed light on a new campaign targeting Brazilian users since the start of 2025 to infect users with a malicious extension for Chromium-based web browsers and siphon user authentication data.
-"Some of the phishing emails were sent from the servers of compromised companies, increasing the chances of a successful attack," Positive Technologies security researcher Klimentiy Galkinsaidin a report. "The attackers used a malicious extension for Google Chrome, Microsoft Edge, and Brave browsers, as well as Mesh Agent and PDQ Connect Agent."
-The Russian cybersecurity company, which is tracking the activity under the nameOperation Phantom Enigma, said the malicious extension was downloaded 722 times from across Brazil, Colombia, the Czech Republic, Mexico, Russia, and Vietnam, among others. As many as 70 unique victim companies have been identified. Some aspects of the campaign were disclosed in early April by a researcher who goes by the alias@johnk3ron X.
-The attack starts with phishing emails disguised as invoices that trigger a multi-stage process to deploy the browser extension. The messages encourage recipients to download a file from an embedded link or open a malicious attachment contained within an archive.
-Present within the files is a batch script that's responsible for downloading and launching a PowerShell script, which, in turn, performs a series of checks to determine if it's running in a virtualized environment and the presence of a software named Diebold Warsaw.
-Developed by GAS Tecnologia, Warsaw is a security plugin that's used to secure banking and e-commerce transactions through the Internet and mobile devices in Brazil. It's worth noting that Latin American banking trojans like Casbaneiro have incorporated similar features, asdisclosedby ESET in October 2019.
-The PowerShell script is also engineered to disable User Account Control (UAC), set up persistence by configuring the aforementioned batch script to be launched automatically upon system reboot, and establish a connection with a remote server to await further commands.
-The list of supported commands is as follows -
-The detected extensions (identifiers: nplfchpahihleeejpjmodggckakhglee, ckkjdiimhlanonhceggkfjlmjnenpmfm, and lkpiodmpjdhhhkdhdbnncigggodgdfli) have already been removed from the Chrome Web Store.
-Other attack chains swap the initial batch script for Windows Installer and Inno Setup installer files that are utilized to deliver the extensions. The add-on, per Positive Technologies, is equipped to execute malicious JavaScript code when the active browser tab corresponds to a web page associated with Banco do Brasil.
-Specifically, it sends the user's authentication token and a request to the attackers' server to receive commands to likely display a loading screen to the victim (WARTEN or SCHLIEBEN_WARTEN) or serve a malicious QR code on the bank's web page (CODE_ZUM_LESEN). The presence of German words for the commands could either allude to the attacker's location or that the source code was repurposed from somewhere else.
-In what appears to be an effort to maximize the number of potential victims, the unknown operators have found to leverage invoice-related lures to distribute installer files and deploy remote access software such as MeshCentral Agent or PDQ Connect Agent instead of a malicious browser extension.
-Positive Technologies said it also identified an open directory belonging to the attacker's auxiliary scripts containing links with parameters that included the EnigmaCyberSecurity identifier ("<victim-domain>/about.php?key=EnigmaCyberSecurity").
-"The study highlights the use of rather unique techniques in Latin America, including a malicious browser extension and distribution via Windows Installer and Inno Setup installers," Galkin said.
-"Files in the attackers' open directory indicate that infecting companies was necessary for discreetly distributing emails on their behalf. However, the main focus of the attacks remained on regular Brazilian users. The attackers' goal is to steal authentication data from the victims' bank accounts."
-AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
-Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
-Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+LATEST STORIES
+05 June, 2025 — Thursday
+Cybersecurity researchers have flagged several popular Google Chrome extensions that have been found to transmit data in HTTP and hard-code secrets in their code, exposing users to privacy and security risks.
 
-CATEGORIA(S): stealer
-CLASSIFICAÇÃO: stealer
-MÊS: june
-ANO: 2025
+"Several widely us...
+An Iran-aligned hacking group has been attributed to a new set of cyber attacks targeting Kurdish and Iraqi government officials in early 2024.
+The activity is tied to a threat group ESET tracks as BladedFeline, which is assessed...
+The threat actor known as Bitter has been assessed to be a state-backed hacking group that's tasked with gathering intelligence that aligns with the interests of the Indian government.
+That's according to new findings jointly pu...
+Security teams face growing demands with more tools, more data, and higher expectations than ever. Boards approve large security budgets, yet still ask the same question: what is the business getting in return? CISOs respond with...
+The U.S. Department of Justice (DoJ) on Wednesday announced the seizure of cryptocurrency funds and about 145 clearnet and dark web domains associated with an illicit carding marketplace called BidenCash.
+"The operators of the Bi...
+Cisco has released security patches to address a critical security flaw impacting the Identity Services Engine (ISE) that, if successfully exploited, could allow unauthenticated actors to carry out malicious actions on susceptibl...
+Don't Miss!!!
+Join our mailing list to receive free eBooks, latest news, critical updates, and offers.
+Let's get social! Follow us.
+
+CATEGORIA(S): desconhecido
+CLASSIFICAÇÃO: desconhecido
+MÊS: desconhecido
+ANO: desconhecido
     
