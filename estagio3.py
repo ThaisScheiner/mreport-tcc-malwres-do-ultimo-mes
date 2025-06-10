@@ -1,4 +1,3 @@
-# estagio3.py
 import spacy
 import os
 from utilitario import Utilitario

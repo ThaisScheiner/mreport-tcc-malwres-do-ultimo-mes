@@ -1,4 +1,3 @@
-# thn.py
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -41,9 +40,9 @@ class Thn:
                 if "2025" in data_text and ("may" in data_text or "maio" in data_text):
                     resultados.append((title, href))
                     links_adicionados.add(href)
-                    print(f"✅ Adicionado: {title} | {data_text}")
+                    print(f"Adicionado: {title} | {data_text}")
             except Exception as e:
-                print(f"⚠️ Erro ao obter data da notícia: {href} ({e})")
+                print(f"Erro ao obter data da notícia: {href} ({e})")
 
             self.driver.close()
             self.driver.switch_to.window(self.driver.window_handles[0])

@@ -1,4 +1,3 @@
-# estagio5.py
 import json
 from collections import defaultdict
 
