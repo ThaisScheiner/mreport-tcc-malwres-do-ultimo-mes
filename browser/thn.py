@@ -1,13 +1,13 @@
+# thn.py
 from selenium.webdriver.common.by import By
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 class Thn:
     def __init__(self):
-        from selenium import webdriver
-        from selenium.webdriver.chrome.options import Options
-        from selenium.webdriver.chrome.service import Service
-        from webdriver_manager.chrome import ChromeDriverManager
-
         options = Options()
         options.add_argument("--start-maximized")
         options.add_argument("--disable-blink-features=AutomationControlled")
@@ -29,17 +29,15 @@ class Thn:
             if not href or href in links_adicionados:
                 continue
 
-            # Abrir a notícia individualmente
+            # Abrir notícia em nova aba
             self.driver.execute_script("window.open(arguments[0]);", href)
             self.driver.switch_to.window(self.driver.window_handles[-1])
             time.sleep(3)
 
             try:
-                # Pega a data de publicação
                 data_element = self.driver.find_element(By.XPATH, '//div[@class="item-label"]/span')
                 data_text = data_element.text.lower()
 
-                # Verifica se é de maio de 2025
                 if "2025" in data_text and ("may" in data_text or "maio" in data_text):
                     resultados.append((title, href))
                     links_adicionados.add(href)

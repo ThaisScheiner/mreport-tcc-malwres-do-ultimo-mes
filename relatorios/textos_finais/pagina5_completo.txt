@@ -1,0 +1,41 @@
+TÍTULO:
+    The Hacker News — Cybersecurity Articles Posted on 01 May, 2025 — Thursday
+
+    CATEGORIA:
+    desconhecido
+
+    MÊS:
+    JUN
+
+    ANO:
+    2025
+
+    CORPO DA NOTÍCIA:
+    TÍTULO:
+The Hacker News — Cybersecurity Articles Posted on 01 May, 2025 — Thursday
+
+CORPO DA NOTÍCIA:
+LATEST STORIES
+01 May, 2025 — Thursday
+SonicWall has revealed that two now-patched security flaws impacting its SMA100 Secure Mobile Access (SMA) appliances have been exploited in the wild.
+The vulnerabilities in question are listed below -
+
+CVE-2023-44221 (CVSS score...
+Cybersecurity researchers have shed light on a new campaign targeting WordPress sites that disguises the malware as a security plugin.
+The plugin, which goes by the name "WP-antymalwary-bot.php," comes with a variety of features ...
+Artificial intelligence (AI) company Anthropic has revealed that unknown threat actors leveraged its Claude chatbot for an "influence-as-a-service" operation to engage with authentic accounts across Facebook and X.
+The sophistica...
+Security Operations Center (SOC) teams are facing a fundamentally new challenge — traditional cybersecurity tools are failing to detect advanced adversaries who have become experts at evading endpoint-based defenses and sig...
+Enterprise data backup platform Commvault has revealed that an unknown nation-state threat actor breached its Microsoft Azure environment by exploiting CVE-2025-3928 but emphasized there is no evidence of unauthorized data access...
+For over a decade, application security teams have faced a brutal irony: the more advanced the detection tools became, the less useful their results proved to be. As alerts from static analysis tools, scanners, and CVE databases ...
+Russian companies have been targeted as part of a large-scale phishing campaign that's designed to deliver a known malware called DarkWatchman.
+Targets of the attacks include entities in the media, tourism, finance and insurance,...
+Don't Miss!!!
+Join our mailing list to receive free eBooks, latest news, critical updates, and offers.
+Let's get social! Follow us.
+
+CATEGORIA(S): desconhecido
+CLASSIFICAÇÃO: desconhecido
+MÊS: desconhecido
+ANO: desconhecido
+    

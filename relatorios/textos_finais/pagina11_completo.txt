@@ -1,0 +1,38 @@
+TÍTULO:
+    ⚡ THN Weekly Recap: Router Hacks, PyPI Attacks, New Ransomware Decryptor, and More
+
+    CATEGORIA:
+    exploit
+
+    MÊS:
+    JUN
+
+    ANO:
+    2025
+
+    CORPO DA NOTÍCIA:
+    TÍTULO:
+⚡ THN Weekly Recap: Router Hacks, PyPI Attacks, New Ransomware Decryptor, and More
+
+CORPO DA NOTÍCIA:
+From sophisticated nation-state campaigns to stealthy malware lurking in unexpected places, this week's cybersecurity landscape is a reminder that attackers are always evolving. Advanced threat groups are exploiting outdated hardware, abusing legitimate tools for financial fraud, and finding new ways to bypass security defenses. Meanwhile, supply chain threats are on the rise, with open-source repositories becoming a playground for credential theft and hidden backdoors.
+But it's not all bad news—law enforcement is tightening its grip on cybercriminal networks, with key ransomware figures facing extradition and the security community making strides in uncovering and dismantling active threats. Ethical hackers continue to expose critical flaws, and new decryptors offer a fighting chance against ransomware operators.
+In this week's recap, we dive into the latest attack techniques, emerging vulnerabilities, and defensive strategies to keep you ahead of the curve. Stay informed, stay secure.
+UNC3886 Targets End-of-Life Juniper Networks MX Series Routers— UNC3886, a China-nexus hacking group previously known forbreaching edge devices and virtualization technologies, targeted end-of-life MX Series routers from Juniper Networks as part of a campaign designed to deploy six distinct TinyShell-based backdoors. Less than 10 organizations have been targeted as part of the campaign. "The backdoors had varying custom capabilities, including active and passive backdoor functions, as well as an embedded script that disables logging mechanisms on the target device," Mandiant said. Further analysis by Juniper Networks has revealed that at least one security vulnerability (CVE-2025-21590) contributed to a successful attack that allowed the threat actors to bypass security protections and execute malicious code.
+You can't secure what you can't see. Without full visibility into your AWS environment, it's easy to get buried in alerts without knowing which ones actually matter. Learn how to strengthen your AWS security posture with clear visibility and smarter risk prioritization.
+Attackers love software vulnerabilities—they're easy doors into your systems. Every week brings fresh flaws, and waiting too long to patch can turn a minor oversight into a major breach. Below are this week's critical vulnerabilities you need to know about. Take a look, update your software promptly, and keep attackers locked out.
+This week's list includes —CVE-2025-24983, CVE-2025-24984, CVE-2025-24985, CVE-2025-24991, CVE-2025-24993, CVE-2025-26633(Microsoft Windows),CVE-2025-24201(Apple iOS, iPadOS, macOS Sequoia, Safari, and VisionOS),CVE-2025-25291, CVE-2025-25292(ruby-saml),CVE-2025-27363(FreeType),CVE-2024-12297(Moxa PT switches),CVE-2025-27816(Arctera InfoScale product),CVE-2025-24813(Apache Tomcat),CVE-2025-27636(Apache Camel),CVE-2025-27017(Apache NiFi),CVE-2024-56336(Siemens SINAMICS S200),CVE-2024-13871,CVE-2024-13872(Bitdefender BOX v1),CVE-2025-20115(Cisco IOS XR),CVE-2025-27593(SICK DL100-2xxxxxxx),CVE-2025-27407(graphql),CVE-2024-54085(AMI),CVE-2025-27509(Fleet), andCVE-2024-57040(TP-Link TL-WR845N router).
+Detecting Threat Actors Early with Sysmon and Event ID 4688— Attackers rely heavily on running unusual or malicious processes—such as encoded PowerShell commands, uncommon scripts, or tools like certutil.exe or rundll32.exe—to escalate privileges and evade detection. Deploying Microsoft Sysmon combined with built-in Windows Event ID 4688 (Process Creation) auditing helps capture these actions early, significantly reducing the risk of compromise. Sysmon provides detailed logs on process activities, file creation, and network connections, enabling defenders to spot anomalies quickly.
+For practical implementation, install Sysmon with a trusted, community-driven configuration (likeSwiftOnSecurity's config), and enable Windows process auditing through group policies or the command line. Then, automate detection and alerting using free SIEM solutions likeElastic Stack(ELK) or Graylog, easily integrating Sysmon and Windows logs for real-time visibility and rapid threat response.
+Cyber threats aren't just evolving—they're adapting to security controls, exploiting human behavior, and weaponizing legitimate technologies. This week's developments highlight a critical reality: outdated infrastructure isn't just a liability, it's an invitation. Trusting signed software blindly? That's a risk. Assuming major platforms are inherently secure? That's an oversight.
+Threat actors are shifting tactics faster than many defenses can keep up. They're embedding malware in everyday tools, leveraging phishing beyond mere credential theft, and manipulating vulnerabilities that most organizations overlook. The lesson? Security isn't about reacting to the breach—it's about anticipating the next move.
+As defenders, our edge isn't just in patching vulnerabilities but in understanding the mindset of attackers. Every breach, every exploit, and every overlooked detail is a signal: the threat landscape doesn't wait, and neither should our response. Stay proactive, stay skeptical, and stay ahead.
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+CATEGORIA(S): exploit
+CLASSIFICAÇÃO: exploit
+MÊS: march
+ANO: 2025
+    

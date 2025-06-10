@@ -1,0 +1,36 @@
+TÍTULO:
+    Google Releases Android Update to Patch Two Actively Exploited Vulnerabilities
+
+    CATEGORIA:
+    desconhecido
+
+    MÊS:
+    JUN
+
+    ANO:
+    2025
+
+    CORPO DA NOTÍCIA:
+    TÍTULO:
+Google Releases Android Update to Patch Two Actively Exploited Vulnerabilities
+
+CORPO DA NOTÍCIA:
+Google hasshipped patchesfor 62 vulnerabilities, two of which it said have been exploited in the wild.
+The two high-severity vulnerabilities are listed below -
+"The most severe of these issues is a critical security vulnerability in the System component that could lead to remote escalation of privilege with no additional execution privileges needed," Google said in its monthly security bulletin for April 2025. "User interaction is not needed for exploitation."
+The tech giant also acknowledged that both the shortcomings may have come under "limited, targeted exploitation."
+It's worth noting that CVE-2024-53197 is rooted in the Linux kernel and was patched last year, alongside CVE-2024-53104 and CVE-2024-50302. All three vulnerabilities, per Amnesty International, are said to have beenchained togetherto break into a Serbian youth activist's Android phone in December 2024.
+While CVE-2024-53104 wasaddressedby Google in February 2025, CVE-2024-50302 wasremediatedlast month. With the latest update, all three vulnerabilities have been fixed, effectively plugging the exploit path.
+There are currently no details on how CVE-2024-53150 has been exploited in real-world attacks, by whom, and who may have been targeted in those attacks. Users of Android devices are advised to apply the updates as and when Android original equipment manufacturers (OEMs) release them.
+When reached for comment regarding CVE-2024-53150, Google told The Hacker News that it's "going to defer to the Amnesty report," indicating that the vulnerability was also exploited as part of the same chain.
+In a follow-up statement shared with the publication on April 9, Google confirmed that both the zero-days were indeed used by Cellebrite. In a related move, the U.S. Cybersecurity and Infrastructure Security Agency (CISA)addedthe two Linux kernel flaws to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the patches by April 30, 2025.
+(The story was updated after publication to include a response from Google.)
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+CATEGORIA(S): desconhecido
+CLASSIFICAÇÃO: desconhecido
+MÊS: april
+ANO: 2025
+    

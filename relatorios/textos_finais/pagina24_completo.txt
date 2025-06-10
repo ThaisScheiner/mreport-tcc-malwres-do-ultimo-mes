@@ -2,7 +2,7 @@ TÍTULO:
     FBI and Europol Disrupt Lumma Stealer Malware Network Linked to 10 Million Infections
 
     CATEGORIA:
-    generico
+    stealer, botnet, generico
 
     MÊS:
     JUN
@@ -44,8 +44,8 @@ AI boosts speed and scale—but also risk. Hidden identity accounts can expose y
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
 
-CATEGORIA(S): generico
-CLASSIFICAÇÃO: generico
-MÊS: may
-ANO: 2025
+CATEGORIA(S): stealer, botnet, generico
+CLASSIFICAÇÃO: stealer / botnet / generico
+MÊS: desconhecido
+ANO: desconhecido
     

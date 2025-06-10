@@ -46,25 +46,25 @@ for nome_arquivo in os.listdir(token_dir):
     categorias = ", ".join(dados_classificacao.get("categorias", ["desconhecido"]))
 
     # data atual 
-    mes = "maio"
+    mes = datetime.now().strftime('%b')  # Exemplo: Jun, Jul, Aug
     ano = "2025"
 
     # monta o conteudo
     conteudo = f"""TÍTULO:
-{titulo}
+    {titulo}
 
-CATEGORIA:
-{categorias}
+    CATEGORIA:
+    {categorias}
 
-MÊS:
-{mes.upper()}
+    MÊS:
+    {mes.upper()}
 
-ANO:
-{ano}
+    ANO:
+    {ano}
 
-CORPO DA NOTÍCIA:
-{corpo}
-"""
+    CORPO DA NOTÍCIA:
+    {corpo}
+    """
 
     # salva o .txt final
     with open(saida_txt, "w", encoding="utf-8") as out:

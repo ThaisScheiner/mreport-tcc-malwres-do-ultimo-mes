@@ -1,7 +1,8 @@
+# estagio2.py
 from estagio1 import Browser
 import os
 
-input_path = "relatorios/links_malware_bing.txt"
+input_path = "relatorios/links_malware_bing_ultimos_3_meses_completo.txt"
 saida_dir = "C:/Temp/paginas"
 os.makedirs(saida_dir, exist_ok=True)
 

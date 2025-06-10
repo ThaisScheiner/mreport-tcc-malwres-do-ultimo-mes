@@ -1,0 +1,38 @@
+TÍTULO:
+    ⚡ Weekly Recap: iOS Zero-Days, 4Chan Breach, NTLM Exploits, WhatsApp Spyware & More
+
+    CATEGORIA:
+    exploit
+
+    MÊS:
+    JUN
+
+    ANO:
+    2025
+
+    CORPO DA NOTÍCIA:
+    TÍTULO:
+⚡ Weekly Recap: iOS Zero-Days, 4Chan Breach, NTLM Exploits, WhatsApp Spyware & More
+
+CORPO DA NOTÍCIA:
+Can a harmless click really lead to a full-blown cyberattack?
+Surprisingly, yes — and that's exactly what we saw in last week's activity. Hackers are getting better at hiding inside everyday actions: opening a file, running a project, or logging in like normal. No loud alerts. No obvious red flags. Just quiet entry through small gaps — like a misconfigured pipeline, a trusted browser feature, or reused login tokens. These aren't just tech issues — they're habits being exploited.
+Let's walk through the biggest updates from the week and what they mean for your security.
+Recently Patched Windows Flaw Comes Under Active Exploitation— A recently patched security flaw affectingWindows NTLM has been exploitedby malicious actors to leak NTLM hashes or user passwords and infiltrate systems since March 19, 2025. The flaw, CVE-2025-24054 (CVSS score: 6.5), is a hash disclosure spoofing bug that was fixed by Microsoft last month as part of its Patch Tuesday updates. The security flaw is assessed to be a variant of CVE-2024-43451 (CVSS score: 6.5), which was patched by Microsoft in November 2024 and has also been weaponized in the wild in attacks targeting Ukraine and Colombia by threat actors like UAC-0194 and Blind Eagle.
+Companies need to rethink how they protect their private and public use of AI and how they defend against AI-powered attacks. Traditional firewalls, VPNs, and public-facing IPs expose your attack surface and are no match in the AI era. It's time for a modern approach with Zscaler Zero Trust + AI.
+Attackers love software vulnerabilities—they're easy doors into your systems. Every week brings fresh flaws, and waiting too long to patch can turn a minor oversight into a major breach. Below are this week's critical vulnerabilities you need to know about. Take a look, update your software promptly, and keep attackers locked out.
+This week's list includes —CVE-2025-2492(ASUS),CVE-2025-24054(Microsoft Windows),CVE-2025-32433(Erlang/OTP),CVE-2021-20035(SonicWall Secure Mobile Access 100 Series),CVE-2025-31200, CVE-2025-31201(Apple iOS, iPadOS, macOS Sequoia, tvOS, and visionOS),CVE-2025-24859(Apache Roller),CVE-2025-1093(AIHub theme), andCVE-2025-3278(UrbanGo Membership plugin).
+Stop Spam Before It Starts: Use Burner Emails the Smart Way— Most people use the same email everywhere — but when one company leaks or sells your address, your inbox starts filling with spam or phishing emails. A smarter way is to use a burner email system, where you give each company a unique email like netflix@yourdomain.com. To do this, buy a cheap domain (like myaliashub.com) and set up free forwarding with services like ImprovMX or SimpleLogin. Every email sent to any name on that domain will land in your main inbox. If one starts getting spam, just delete or block it — problem solved, no need to change your real email.
+If you use Gmail, you can add +something after your name, like alex+uber@gmail.com, and Gmail will still deliver it. This helps you track who shared your email and set filters, but it's not very private since your real email is still visible. Some websites also block + emails. A better long-term option is to connect a custom domain to Gmail through Google Workspace, which gives you real aliases like shop@yourdomain.com with full control and spam filtering.
+Apple users can use Hide My Email (built into iOS and macOS). It creates a random email like x2k4@privaterelay.appleid.com for each website, and forwards messages to your iCloud inbox. You can disable or delete these anytime. It's great for signups, subscriptions, or trials where you don't want to share your real email. For even more control, Apple lets you use custom domains too. These tools help you stay organized, stop spam early, and quickly trace any leaks — all without needing to change your main email ever again.
+This week made it clear: attackers aren't just hunting for big holes — they're slipping through tiny cracks we barely notice. An outdated security setting. A forgotten endpoint. A tool used slightly out of spec. And just like that, they're in. We're seeing more cases where the compromise isn't about breaking in — it's about being invited in by accident. As systems grow more connected and automated, even the smallest misstep can open a big door.
+Stay sharp, stay curious — and double-check the things you think are "too minor to matter."
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+CATEGORIA(S): exploit
+CLASSIFICAÇÃO: exploit
+MÊS: desconhecido
+ANO: desconhecido
+    

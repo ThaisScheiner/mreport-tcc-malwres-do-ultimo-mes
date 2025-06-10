@@ -1,23 +1,51 @@
+# estagio4.py
 import json
 import os
+import re
 
+# Categorias expandidas com nomes populares e variações
 CATEGORIAS = {
-    'stealer': ['stealer', 'info-stealer', 'eddiestealer', 'password'],
-    'minerador': ['crypto', 'miner', 'cryptojacking'],
-    'apt': ['apt', 'espionage', 'advanced persistent threat'],
-    'botnet': ['botnet', 'c2', 'command and control'],
-    'ransomware': ['ransomware', 'encrypt', 'decryption'],
-    'trojan': ['trojan', 'backdoor', 'remote access'],
+    'stealer': [
+        'stealer', 'info-stealer', 'infostealer', 'eddiestealer', 'password stealer',
+        'redline', 'raccoon', 'lummastealer', 'vidar', 'blackguard', 'hades', 'tycoon'
+    ],
+    'botnet': [
+        'botnet', 'c2', 'command and control', 'zombie network', 'mirai', 'mozi',
+        'qakbot', 'necurs', 'cutwail', 'asyncrat', 'cobalt strike'
+    ],
+    'ransomware': [
+        'ransomware', 'encrypt', 'decryption', 'locker', 'data leak', 'double extortion',
+        'lockbit', 'conti', 'revil', 'clop', 'alphv', 'blackcat', 'medusa'
+    ],
+    'trojan': [
+        'trojan', 'backdoor', 'remote access', 'rat', 'keylogger', 'blended threat',
+        'njrat', 'darkcomet', 'remcos', 'quasar', 'plugx', 'revenge rat'
+    ],
+    'exploit': [
+        'exploit', 'exploit kit', 'kit de exploração', 'zero-day', 'n-day', 'cve-',
+        'rce', 'remote code execution'
+    ],
+    'backdoor': [
+        'backdoor', 'remote access', 'hidden access', 'covert access',
+        'plugx', 'darkcomet', 'njrat', 'remcos', 'quasar', 'revenge rat',
+        'netwire', 'nanocore', 'poison ivy', 'cobalt strike'
+    ],
+    'generico': [
+        'malware', 'malicious software', 'malicious code'
+    ]
+
 }
+
 
 def classificar_malware(texto):
     texto = texto.lower()
     encontrados = []
     for categoria, termos in CATEGORIAS.items():
         for termo in termos:
-            if termo in texto:
+            # procura por palavra isolada usando \b
+            if re.search(r'\b' + re.escape(termo.lower()) + r'\b', texto):
                 encontrados.append(categoria)
-                break
+                break  # Evita duplicatas
     return encontrados if encontrados else ['desconhecido']
 
 def executar_classificacao(input_path='relatorios/relatorio.json', output_path='relatorios/relatorio_classificado.json'):
