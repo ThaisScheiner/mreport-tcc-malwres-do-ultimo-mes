@@ -1,12 +1,9 @@
-# estagio6.py
 import json
 import os
 
 # Caminhos fixos
 json_path = r"C:\Users\Thais\Desktop\mreport\relatorios\relatorio_classificado.json"
 pasta_txt = r"C:\Temp\tokenize"
-
-print("ESTÁGIO 6 =====\n")
 
 # Verifica se o JSON existe
 if not os.path.exists(json_path):

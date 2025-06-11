@@ -1,4 +1,3 @@
-# estagio2.py
 from estagio1 import Browser
 import os
 

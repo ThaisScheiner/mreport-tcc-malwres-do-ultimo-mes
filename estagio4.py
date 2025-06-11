@@ -101,7 +101,7 @@ def processar_pasta(diretorio, resultado):
             "classificacoes": classificacoes
         }
 
-        status = "✔" if classificacoes else "⚠"
+        status = "[OK]" if classificacoes else "[AVISO]"
         print(f"{status} {nome_arquivo} -> {len(classificacoes)} classificações.")
 
 def main():
@@ -125,7 +125,7 @@ def main():
     with open(caminho_json, "w", encoding="utf-8") as f:
         json.dump(resultado, f, ensure_ascii=False, indent=2)
 
-    print(f"\n[✔] Arquivo relatorio_classificado.json criado em:\n{caminho_json}")
+    print(f"\nArquivo relatorio_classificado.json criado em:\n{caminho_json}")
 
 if __name__ == "__main__":
     main()
