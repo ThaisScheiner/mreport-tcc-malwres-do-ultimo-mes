@@ -57,3 +57,8 @@ CLASSIFICAÇÃO: desconhecido
 MÊS: june
 ANO: 2025
     
+
+=== Classificação do Malware ===
+- Virus: infected
+- Trojan: trojan
+- Backdoor: backdoor

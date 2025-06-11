@@ -60,3 +60,11 @@ CLASSIFICAÇÃO: desconhecido
 MÊS: january
 ANO: 2025
     
+
+=== Classificação do Malware ===
+- Virus: infected
+- Virus: infection
+- Trojan: trojan
+- Exploit: cve
+- Ransomware: lockbit
+- Ransomware: ransomware

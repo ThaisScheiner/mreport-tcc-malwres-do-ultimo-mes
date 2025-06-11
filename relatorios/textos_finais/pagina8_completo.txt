@@ -22,3 +22,5 @@ CLASSIFICAÇÃO: desconhecido
 MÊS: desconhecido
 ANO: desconhecido
     
+
+=== Classificação do Malware ===

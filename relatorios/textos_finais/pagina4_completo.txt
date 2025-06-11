@@ -47,3 +47,8 @@ CLASSIFICAÇÃO: desconhecido
 MÊS: june
 ANO: 2025
     
+
+=== Classificação do Malware ===
+- Ransomware: ransomware
+- Backdoor: rat
+- Exploit: exploit

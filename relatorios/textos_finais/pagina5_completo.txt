@@ -37,3 +37,9 @@ CLASSIFICAÇÃO: desconhecido
 MÊS: june
 ANO: 2025
     
+
+=== Classificação do Malware ===
+- Ransomware: ransomware
+- Virus: infected
+- Backdoor: backdoor
+- Exploit: cve
