@@ -81,12 +81,12 @@ def classificar_texto(texto, base_malware):
 
 def processar_pasta(diretorio, resultado):
     if not os.path.exists(diretorio):
-        print(f"❌ Pasta não encontrada: {diretorio}")
+        print(f"Pasta não encontrada: {diretorio}")
         return
 
     arquivos_txt = [f for f in os.listdir(diretorio) if f.endswith(".txt")]
     if not arquivos_txt:
-        print(f"⚠ Nenhum arquivo .txt encontrado em: {diretorio}")
+        print(f"Nenhum arquivo .txt encontrado em: {diretorio}")
         return
 
     for nome_arquivo in arquivos_txt:

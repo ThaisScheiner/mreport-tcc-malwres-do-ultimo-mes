@@ -43,9 +43,9 @@ def gerar_relatorio(path=r"C:\Users\Thais\Desktop\mreport\relatorios\relatorio_c
             f.write("\n".join(linhas_txt))
 
         if os.path.exists(caminho_saida):
-            print(f"[✔] Relatório salvo em: {caminho_saida}\n")
+            print(f"Relatório salvo em: {caminho_saida}\n")
         else:
-            print(f"[❌] Falha ao salvar o relatório.\n")
+            print(f"Falha ao salvar o relatório.\n")
 
 if __name__ == "__main__":
     gerar_relatorio()
