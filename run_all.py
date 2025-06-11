@@ -7,6 +7,7 @@ estagios = [
     ("ESTÁGIO 3", "estagio3.py"),
     ("ESTÁGIO 4", "estagio4.py"),
     ("ESTÁGIO tokenize", "estagio_tokenize.py"),
+    ("ESTÁGIO 5", "estagio5.py"),
     ("ESTÁGIO 6", "estagio6.py"),
 ]
 

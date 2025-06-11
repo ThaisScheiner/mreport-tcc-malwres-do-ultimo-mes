@@ -1,5 +1,5 @@
 TÍTULO:
-    The Hacker News | #1 Trusted Source for Cybersecurity News — Index Page
+    Malware — Latest News, Reports & Analysis | The Hacker News
 
     CATEGORIA:
     desconhecido
@@ -12,7 +12,7 @@ TÍTULO:
 
     CORPO DA NOTÍCIA:
     TÍTULO:
-The Hacker News | #1 Trusted Source for Cybersecurity News — Index Page
+Malware — Latest News, Reports & Analysis | The Hacker News
 
 CORPO DA NOTÍCIA:
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
