@@ -14,7 +14,7 @@ import os
 def gerar_ultimos_3_meses():
     hoje = datetime.today()
     meses = []
-    for i in range(3):
+    for i in range(1):
         mes_atual = (hoje.month - i - 1) % 12 + 1
         ano_atual = hoje.year - ((hoje.month - i - 1) // 12)
         nome_mes = calendar.month_name[mes_atual]

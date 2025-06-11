@@ -1,5 +1,5 @@
 TÍTULO:
-    Over 70 Organizations Across Multiple Sectors Targeted by China-Linked Cyber Espionage Group
+    The Hacker News — Cybersecurity Articles Posted on 03 June, 2025 — Tuesday
 
     CATEGORIA:
     desconhecido
@@ -12,28 +12,29 @@ TÍTULO:
 
     CORPO DA NOTÍCIA:
     TÍTULO:
-Over 70 Organizations Across Multiple Sectors Targeted by China-Linked Cyber Espionage Group
+The Hacker News — Cybersecurity Articles Posted on 03 June, 2025 — Tuesday
 
 CORPO DA NOTÍCIA:
-The reconnaissance activity targeting American cybersecurity company SentinelOne was part of a broader set of partially-related intrusions into several targets between July 2024 and March 2025.
-"The victimology includes a South Asian government entity, a European media organization, and more than 70 organizations across a wide range of sectors," SentinelOne security researchers Aleksandar Milenkoski and Tom Hegelsaidin a report published today.
-Some of the targeted sectors include manufacturing, government, finance, telecommunications, and research. Also present among the victims was an IT services and logistics company that was managing hardware logistics for SentinelOne employees at the time of the breach in early 2025.
-The malicious activity has been attributed with high confidence to China-nexus threat actors, with some of the attacks tied to a threat cluster dubbedPurpleHaze, which, in turn, overlaps with Chinese cyber espionage groups publicly reported as APT15 and UNC5174.
-In late April 2024, SentinelOnefirst disclosedPurpleHaze-related reconnaissance activity targeting some of its servers that were deliberately accessible over the internet by "virtue of their functionality."
-"The threat actor's activities were limited to mapping and evaluating the availability of select internet-facing servers, likely in preparation for potential future actions," the researchers said.
-It's currently not known if the attackers' intent was to just target the IT logistics organization or if they planned to expand their focus to downstream organizations as well. Further investigation into the attacks has uncovered six different activity clusters (named to A to F) that date back to June 2024 with the compromise of an unnamed South Asian government entity.
-The clusters are listed below -
-The June 2024 attack against the government entity, as previously detailed by SentinelOne, is said to have led to the deployment of ShadowPad that's obfuscated using ScatterBrain. The ShadowPad artifacts and infrastructure overlap with recent ShadowPad campaigns that have delivered a ransomware family codenamedNailaoLockerfollowing the exploitation of Check Point gateway devices.
-Subsequently in October 2024, the same organization was targeted to drop a Go-basedreverse shelldubbedGoReShellthat uses SSH to connect to an infected host. The same backdoor, SentinelOne noted, has been used in connection with a September 2024 attack aimed at a leading European media organization.
-Also common to these two activity clusters is the use of tools developed by a team of IT security experts who go by the name The Hacker's Choice (THC). The development marks the first time THC's software programs have been abused by state-sponsored actors.
-SentinelOne has attributed Activity F to a China-nexus actor with loose affiliations to an "initial access broker" tracked by Google Mandiant under the nameUNC5174(aka Uteus or Uetus). It's worth noting that the threat group wasrecently linkedto the active exploitation of SAP NetWeaver flaws to deliver GOREVERSE, a variant of GoReShell. The cybersecurity company is collectively tracking Activity D, E, and F as PurpleHaze.
-"The threat actor leveragedORB[operational relay box] network infrastructure, which we assess to be operated from China, and exploited theCVE-2024-8963 vulnerability together with CVE-2024-8190to establish an initial foothold, a few days before the vulnerabilities were publicly disclosed," the researchers said. "After compromising these systems, UNC5174 is suspected of transferring access to other threat actors."
-AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
-Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
-Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+LATEST STORIES
+03 June, 2025 — Tuesday
+A growing number of malicious campaigns have leveraged a recently discovered Android banking trojan called Crocodilus to target users in Europe and South America.
+The malware, according to a new report published by ThreatFabric, ...
+Cybersecurity researchers have disclosed details of a critical security flaw in the Roundcube webmail software that has gone unnoticed for a decade and could be exploited to take over susceptible systems and execute arbitrary cod...
+Threat hunters are alerting to a new campaign that employs deceptive websites to trick unsuspecting users into executing malicious PowerShell scripts on their machines and infect them with the NetSupport RAT malware.
+The DomainTo...
+In the wake of high-profile attacks on UK retailers Marks & Spencer and Co-op, Scattered Spider has been all over the media, with coverage spilling over into the mainstream news due to the severity of the disruption caused �...
+Google on Monday released out-of-band fixes to address three security issues in its Chrome browser, including one that it said has come under active exploitation in the wild.
+The high-severity flaw is being tracked as CVE-2025-54...
+Google has revealed that it will no longer trust digital certificates issued by Chunghwa Telecom and Netlock citing "patterns of concerning behavior observed over the past year."
+The changes are expected to be introduced in Chrom...
+Microsoft and CrowdStrike have announced that they are teaming up to align their individual threat actor taxonomies by publishing a new joint threat actor mapping.
+"By mapping where our knowledge of these actors align, we will pr...
+Don't Miss!!!
+Join our mailing list to receive free eBooks, latest news, critical updates, and offers.
+Let's get social! Follow us.
 
 CATEGORIA(S): desconhecido
 CLASSIFICAÇÃO: desconhecido
-MÊS: june
-ANO: 2025
+MÊS: desconhecido
+ANO: desconhecido
     

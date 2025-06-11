@@ -1,13 +1,19 @@
 import subprocess
 
+estagios = [
+    ("ESTÁGIO 0", "estagio0.py"),
+    ("ESTÁGIO 1", "estagio1.py"),
+    ("ESTÁGIO 2", "estagio2.py"),
+    ("ESTÁGIO 3", "estagio3.py"),
+    ("ESTÁGIO 4", "estagio4.py"),
+    ("ESTÁGIO tokenize", "estagio_tokenize.py"),
+    ("ESTÁGIO 6", "estagio6.py"),
+]
+
 print("\n===== EXECUTANDO TODOS OS ESTÁGIOS =====\n")
 
-subprocess.run(["python", "estagio0.py"])          # coleta dos links
-subprocess.run(["python", "estagio1.py"])          # download das paginas
-subprocess.run(["python", "estagio2.py"])          # extrai do corpo
-subprocess.run(["python", "estagio3.py"])          # limpeza de HTML
-subprocess.run(["python", "estagio4.py"])          # classificacao
-subprocess.run(["python", "estagio_tokenize.py"])  # tokenizacao
-subprocess.run(["python", "estagio6.py"])          # gera os textos finais
+for nome, arquivo in estagios:
+    print(f"\n===== {nome} =====\n")
+    subprocess.run(["python", arquivo], check=True)
 
 print("\nTODOS OS ESTÁGIOS CONCLUÍDOS COM SUCESSO!\n")

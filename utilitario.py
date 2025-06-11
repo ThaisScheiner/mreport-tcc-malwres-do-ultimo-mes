@@ -1,6 +1,7 @@
 # utilitario.py
 import json
 import os
+import hashlib
 
 class Utilitario:
     @staticmethod
@@ -11,3 +12,6 @@ class Utilitario:
         with open(caminho, "w", encoding="utf-8") as f:
             json.dump(dados, f, indent=2, ensure_ascii=False)
         print(f"Estágio {estagio} salvo em: {caminho}")
+
+def gerar_md5(texto):
+    return hashlib.md5(texto.encode("utf-8")).hexdigest()
