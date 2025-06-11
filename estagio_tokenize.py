@@ -40,10 +40,6 @@ for arq in arquivos_html:
         paragrafos = soup.find_all('p')
         corpo = "\n".join(p.get_text(strip=True) for p in paragrafos if p.get_text(strip=True))
 
-    # categorias
-    arq_txt = arq.replace(".html", ".txt")
-    categorias = relatorio.get(arq_txt, {}).get("categorias", ["desconhecido"])
-    categorias_str = ", ".join(categorias)
 
     # tenta extrair mês e ano do link
     link = mapa_links.get(arq, "")
@@ -52,18 +48,13 @@ for arq in arquivos_html:
         ano = match.group(1)
         mes_num = int(match.group(2))
         mes = month_name[mes_num].lower()
-    else:
-        ano = "desconhecido"
-        mes = "desconhecido"
+
 
     # salva resultado
     with open(output_path, "w", encoding="utf-8") as f_out:
         f_out.write(f"TÍTULO:\n{titulo}\n\n")
         f_out.write(f"CORPO DA NOTÍCIA:\n{corpo}\n\n")
-        f_out.write(f"CATEGORIA(S): {categorias_str}\n")
-        f_out.write(f"CLASSIFICAÇÃO: {' / '.join(categorias)}\n")
-        f_out.write(f"MÊS: {mes}\n")
-        f_out.write(f"ANO: {ano}\n")
+     
 
     print(f"Texto estruturado salvo em: {output_path}")
 

@@ -4,7 +4,9 @@ import os
 
 # Caminhos fixos
 json_path = r"C:\Users\Thais\Desktop\mreport\relatorios\relatorio_classificado.json"
-pasta_txt = r"C:\Users\Thais\Desktop\mreport\relatorios\textos_finais"
+pasta_txt = r"C:\Temp\tokenize"
+
+print("ESTÁGIO 6 =====\n")
 
 # Verifica se o JSON existe
 if not os.path.exists(json_path):
@@ -16,8 +18,7 @@ with open(json_path, "r", encoding="utf-8") as f:
 
 # Para cada arquivo listado no JSON, procurar o .txt correspondente
 for nome_arquivo, info in dados.items():
-    nome_base = nome_arquivo.replace(":", "").replace("/", "-").strip()
-    caminho_txt = os.path.join(pasta_txt, f"{nome_base}")
+    caminho_txt = os.path.join(pasta_txt, nome_arquivo)
 
     if os.path.exists(caminho_txt):
         with open(caminho_txt, "a", encoding="utf-8") as f:

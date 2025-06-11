@@ -1,73 +1,50 @@
-Categoria: VIRUS - 15 ocorrência(s)
+Categoria: VIRUS - 10 ocorrência(s)
 
-  - infected (Arquivo: pagina10.txt)
-  - infection (Arquivo: pagina10.txt)
-  - infected (Arquivo: pagina2.txt)
+  - infected (Arquivo: pagina1.txt)
+  - infection (Arquivo: pagina1.txt)
+  - virus (Arquivo: pagina1.txt)
   - infected (Arquivo: pagina4.txt)
-  - infected (Arquivo: pagina5.txt)
-  - infection (Arquivo: pagina5.txt)
-  - infected (Arquivo: pagina10_completo.txt)
-  - infection (Arquivo: pagina10_completo.txt)
-  - infected (Arquivo: pagina2_completo.txt)
-  - infection (Arquivo: pagina2_completo.txt)
-  - infected (Arquivo: pagina5_completo.txt)
-  - infected (Arquivo: pagina6_completo.txt)
+  - virus (Arquivo: pagina4.txt)
+  - infected (Arquivo: pagina8.txt)
+  - virus (Arquivo: pagina8.txt)
   - virus (Arquivo: relatorio_final.txt)
   - infected (Arquivo: relatorio_final.txt)
   - infection (Arquivo: relatorio_final.txt)
 
-Categoria: TROJAN - 9 ocorrência(s)
+Categoria: TROJAN - 4 ocorrência(s)
 
-  - trojan (Arquivo: pagina10.txt)
-  - trojan (Arquivo: pagina2.txt)
-  - trojan (Arquivo: pagina5.txt)
-  - trojan (Arquivo: pagina6.txt)
-  - trojan (Arquivo: pagina10_completo.txt)
-  - trojan (Arquivo: pagina2_completo.txt)
-  - trojan (Arquivo: pagina3_completo.txt)
-  - trojan (Arquivo: pagina6_completo.txt)
+  - trojan (Arquivo: pagina1.txt)
+  - trojan (Arquivo: pagina3.txt)
+  - trojan (Arquivo: pagina4.txt)
   - trojan (Arquivo: relatorio_final.txt)
 
-Categoria: EXPLOIT - 12 ocorrência(s)
+Categoria: EXPLOIT - 9 ocorrência(s)
 
-  - cve (Arquivo: pagina10.txt)
-  - cve (Arquivo: pagina4.txt)
-  - cve (Arquivo: pagina5.txt)
+  - cve (Arquivo: pagina1.txt)
+  - exploit (Arquivo: pagina1.txt)
+  - exploit (Arquivo: pagina5.txt)
+  - cve (Arquivo: pagina8.txt)
   - exploit (Arquivo: pagina8.txt)
   - cve (Arquivo: pagina9.txt)
-  - cve (Arquivo: pagina10_completo.txt)
-  - cve (Arquivo: pagina2_completo.txt)
-  - exploit (Arquivo: pagina4_completo.txt)
-  - cve (Arquivo: pagina5_completo.txt)
-  - cve (Arquivo: pagina7_completo.txt)
+  - exploit (Arquivo: pagina9.txt)
   - exploit (Arquivo: relatorio_final.txt)
   - cve (Arquivo: relatorio_final.txt)
 
-Categoria: RANSOMWARE - 14 ocorrência(s)
+Categoria: RANSOMWARE - 6 ocorrência(s)
 
-  - lockbit (Arquivo: pagina10.txt)
-  - ransomware (Arquivo: pagina10.txt)
-  - ransomware (Arquivo: pagina4.txt)
-  - lockbit (Arquivo: pagina5.txt)
+  - lockbit (Arquivo: pagina1.txt)
+  - ransomware (Arquivo: pagina1.txt)
   - ransomware (Arquivo: pagina5.txt)
   - ransomware (Arquivo: pagina8.txt)
-  - lockbit (Arquivo: pagina10_completo.txt)
-  - ransomware (Arquivo: pagina10_completo.txt)
-  - lockbit (Arquivo: pagina2_completo.txt)
-  - ransomware (Arquivo: pagina2_completo.txt)
-  - ransomware (Arquivo: pagina4_completo.txt)
-  - ransomware (Arquivo: pagina5_completo.txt)
   - ransomware (Arquivo: relatorio_final.txt)
   - lockbit (Arquivo: relatorio_final.txt)
 
-Categoria: BACKDOOR - 8 ocorrência(s)
+Categoria: BACKDOOR - 6 ocorrência(s)
 
-  - backdoor (Arquivo: pagina2.txt)
   - backdoor (Arquivo: pagina4.txt)
-  - rat (Arquivo: pagina8.txt)
-  - rat (Arquivo: pagina4_completo.txt)
-  - backdoor (Arquivo: pagina5_completo.txt)
-  - backdoor (Arquivo: pagina6_completo.txt)
+  - rat (Arquivo: pagina5.txt)
+  - backdoor (Arquivo: pagina5.txt)
+  - backdoor (Arquivo: pagina8.txt)
   - backdoor (Arquivo: relatorio_final.txt)
   - rat (Arquivo: relatorio_final.txt)
 
@@ -75,18 +52,3 @@ Categoria: ROOTKIT - 2 ocorrência(s)
 
   - rootkit (Arquivo: relatorio_final.txt)
   - stealth (Arquivo: relatorio_final.txt)
-
-
-=== Classificação do Malware ===
-- Virus: virus
-- Virus: infected
-- Virus: infection
-- Trojan: trojan
-- Exploit: exploit
-- Exploit: cve
-- Ransomware: ransomware
-- Ransomware: lockbit
-- Backdoor: backdoor
-- Backdoor: rat
-- Rootkit: rootkit
-- Rootkit: stealth
