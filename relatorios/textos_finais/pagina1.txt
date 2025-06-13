@@ -1,0 +1,35 @@
+TÍTULO:
+PureRAT Malware Spikes 4x in 2025, Deploying PureLogs to Target Russian Firms
+
+CORPO DA NOTÍCIA:
+Russian organizations have become the target of a phishing campaign that distributes malware called PureRAT, according to new findings from Kaspersky.
+"The campaign aimed at Russian business began back in March 2023, but in the first third of 2025 the number of attacks quadrupled compared to the same period in 2024," the cybersecurity vendorsaid.
+The attack chains, which have not been attributed to any specific threat actor, commence with a phishing email that contains a RAR file attachment or a link to the archive that masquerades as a Microsoft Word or a PDF document by making use of double extensions ("doc_054_[redacted].pdf.rar").
+Present within the archive file is an executable that, when launched, copies itself to the "%AppData%" location of the compromised Windows machine under the name "task.exe" and creates a Visual Basic Script called "Task.vbs" in the Startup VBS folder.
+The executable then proceeds to unpack another executable "ckcfb.exe", runs the system utility "InstallUtil.exe," and injects into it the decrypted module. "Ckcfb.exe," for its part, extracts and decrypts a DLL file "Spydgozoi.dll" that incorporates the main payload of the PureRAT malware.
+PureRAT establishes SSL connections with a command-and-control (C2) server and transmits system information, including details about the antivirus products installed, the computer name, and the time elapsed since the system startup. In response, the C2 server sends auxiliary modules to perform a variety of malicious actions -
+"The Trojan includes modules for downloading and running arbitrary files that provide full access to the file system, registry, processes, camera and microphone, implement keylogger functionality, and give attackers the ability to secretly control the computer using the remote desktop principle," Kaspersky said.
+The original executable that launches "ckcfb.exe" simultaneously also extracts a second binary referred to as "StilKrip.exe," which is a commercially available downloader dubbedPureCrypterthat has been used to deliver various payloads in the past. It's active since 2022.
+"StilKrip.exe" is designed to download "Bghwwhmlr.wav," which follows the aforementioned attack sequence to run "InstallUtil.exe" and ultimately launch "Ttcxxewxtly.exe," an executable that unpacks and runs a DLL payload called PureLogs ("Bftvbho.dll").
+PureLogs is anoff-the-shelf information stealerthat can harvest data from web browsers, email clients, VPN services, messaging apps, wallet browser extensions, password managers, cryptocurrency wallet apps, and other programs like FileZilla and WinSCP.
+"The PureRAT backdoor and PureLogs stealer have broad functionality that allows attackers to gain unlimited access to infected systems and confidential organization data," Kaspersky said. "The main vector of attacks on businesses has been and remains emails with malicious attachments or links."
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- rat (Backdoor)
+- trojan (Trojan)
+- infected (Virus)
+- backdoor (Backdoor)
+- virus (Virus)
+
+
+=== Classificação do Malware ===
+- Backdoor: rat
+- Trojan: trojan
+- Virus: infected
+- Backdoor: backdoor
+- Virus: virus

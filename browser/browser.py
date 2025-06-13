@@ -1,3 +1,4 @@
+#browser.py
 class Browser:
     def __init__(self):
         chrome_options = Options()

@@ -1,0 +1,39 @@
+TÍTULO:
+Chaos RAT Malware Targets Windows and Linux via Fake Network Tool Downloads
+
+CORPO DA NOTÍCIA:
+Threat hunters are calling attention to a new variant of a remote access trojan (RAT) calledChaos RATthat has been used in recent attacks targeting Windows and Linux systems.
+According to findings from Acronis, the malware artifact may have been distributed by tricking victims into downloading a network troubleshooting utility for Linux environments.
+"Chaos RAT is an open-source RAT written in Golang, offering cross-platform support for both Windows and Linux systems," security researchers Santiago Pontiroli, Gabor Molnar, and Kirill Antonenkosaidin a report shared with The Hacker News.
+"Inspired by popular frameworks such as Cobalt Strike and Sliver, Chaos RAT provides an administrative panel where users can build payloads, establish sessions, and control compromised machines."
+While work on the "remote administration tool" started way back in 2017, it did not attract attention untilDecember 2022, when it was put to use in a malicious campaign targeting public-facing web applications hosted on Linux systems with the XMRig cryptocurrency miner.
+Once installed, the malware connects to an external server and awaits commands that allow it to launch reverse shells, upload/download/delete files, enumerate files and directories, take screenshots, gather system information, lock/restart/shutdown the machine, and open arbitrary URLs. The latest version of Chaos RAT is 5.0.3, which was released on May 31, 2024.
+Acronis said that the Linux variants of the malware have since been detected in the wild, often in connection with cryptocurrency mining campaigns. The attack chains observed by the company show that Chaos RAT is distributed to victims via phishing emails containing malicious links or attachments.
+These artifacts are designed to drop a malicious script that can modify the task scheduler "/etc/crontab" to fetch the malware periodically as a way of setting up persistence.
+"Early campaigns used this technique to deliver cryptocurrency miners and Chaos RAT separately, indicating that Chaos was primarily employed for reconnaissance and information gathering on compromised devices," the researchers said.
+An analysis of arecent sampleuploaded to VirusTotal in January 2025 from India with the name "NetworkAnalyzer.tar.gz," has raised the possibility that users are being deceived into downloading the malware by masquerading it as a network troubleshooting utility for Linux environments.
+Furthermore, the admin panel that allows users to build payloads and manage infected machines has been found to besusceptibleto a command injection vulnerability (CVE-2024-30850, CVSS score: 8.8) that could be combined with a cross-site scripting flaw (CVE-2024-31839, CVSS score: 4.8) toexecute arbitrary codeon the server with elevated privileges. Both the vulnerabilities have since been addressed by Chaos RAT's maintainer as of May 2024.
+While it's currently not clear who is behind the use of Chaos RAT in real-world attacks, the development once again illustrates how threat actors continue to weaponize open-source tools to their advantage and confuse attribution efforts.
+"What starts as a developer's tool can quickly become a threat actor's instrument of choice," the researchers said. "Using publicly available malware helps APT groups blend into the noise of everyday cybercrime. Open-source malware offers a 'good enough' toolkit that can be quickly customized and deployed. When multiple actors use the same open-source malware, it muddles the waters of attribution."
+The disclosure coincides with the emergence of a new campaign that's targeting Trust Wallet users on desktop with counterfeit versions that are distributed via deceptive download links, phishing emails, or bundled software with the goal of harvesting browser credentials, extracting data from desktop-based wallets and browser extensions, executing commands, and acting as aclipper malware.
+"Once installed, the malware can scan for wallet files, intercept clipboard data, or monitor browser sessions to capture seed phrases or private keys," Point Wild researcher Kedar S Panditsaidin a report published this week.
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- ransomware (Ransomware)
+- rat (Backdoor)
+- infected (Virus)
+- backdoor (Backdoor)
+- virus (Virus)
+
+
+=== Classificação do Malware ===
+- Ransomware: ransomware
+- Backdoor: rat
+- Virus: infected
+- Backdoor: backdoor
+- Virus: virus

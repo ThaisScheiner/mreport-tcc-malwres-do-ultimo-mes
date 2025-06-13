@@ -1,5 +1,294 @@
 {
+  "pagina1.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "rat",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "trojan",
+        "categoria": "Trojan"
+      },
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "backdoor",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      }
+    ]
+  },
+  "pagina2.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "trojan",
+        "categoria": "Trojan"
+      },
+      {
+        "classificacao": "backdoor",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      }
+    ]
+  },
+  "pagina3.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "stealth",
+        "categoria": "Rootkit"
+      },
+      {
+        "classificacao": "exploit",
+        "categoria": "Exploit"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "rootkit",
+        "categoria": "Rootkit"
+      }
+    ]
+  },
+  "pagina4.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "infection",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "stealth",
+        "categoria": "Rootkit"
+      },
+      {
+        "classificacao": "backdoor",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "rootkit",
+        "categoria": "Rootkit"
+      }
+    ]
+  },
+  "pagina5.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "ransomware",
+        "categoria": "Ransomware"
+      },
+      {
+        "classificacao": "rat",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "backdoor",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      }
+    ]
+  },
+  "pagina6.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "trojanized",
+        "categoria": "Trojan"
+      },
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "backdoor",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "infection",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "trojan",
+        "categoria": "Trojan"
+      }
+    ]
+  },
+  "pagina7.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "trojan",
+        "categoria": "Trojan"
+      },
+      {
+        "classificacao": "keylogger",
+        "categoria": "Spyware"
+      },
+      {
+        "classificacao": "backdoor",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "spyware",
+        "categoria": "Spyware"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      }
+    ]
+  },
+  "pagina8.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "ransomware",
+        "categoria": "Ransomware"
+      },
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "trojanized",
+        "categoria": "Trojan"
+      },
+      {
+        "classificacao": "exploit",
+        "categoria": "Exploit"
+      },
+      {
+        "classificacao": "crypto",
+        "categoria": "Ransomware"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "trojan",
+        "categoria": "Trojan"
+      }
+    ]
+  },
+  "pagina9.txt": {
+    "classificacoes": [
+      {
+        "classificacao": "ransomware",
+        "categoria": "Ransomware"
+      },
+      {
+        "classificacao": "stealth",
+        "categoria": "Rootkit"
+      },
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "backdoor",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "rootkit",
+        "categoria": "Rootkit"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      }
+    ]
+  },
   "relatorio_final.txt": {
-    "classificacoes": []
+    "classificacoes": [
+      {
+        "classificacao": "backdoor",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "rat",
+        "categoria": "Backdoor"
+      },
+      {
+        "classificacao": "trojan",
+        "categoria": "Trojan"
+      },
+      {
+        "classificacao": "trojanized",
+        "categoria": "Trojan"
+      },
+      {
+        "classificacao": "virus",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "infected",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "infection",
+        "categoria": "Virus"
+      },
+      {
+        "classificacao": "rootkit",
+        "categoria": "Rootkit"
+      },
+      {
+        "classificacao": "stealth",
+        "categoria": "Rootkit"
+      },
+      {
+        "classificacao": "exploit",
+        "categoria": "Exploit"
+      },
+      {
+        "classificacao": "ransomware",
+        "categoria": "Ransomware"
+      },
+      {
+        "classificacao": "crypto",
+        "categoria": "Ransomware"
+      },
+      {
+        "classificacao": "spyware",
+        "categoria": "Spyware"
+      },
+      {
+        "classificacao": "keylogger",
+        "categoria": "Spyware"
+      }
+    ]
   }
 }

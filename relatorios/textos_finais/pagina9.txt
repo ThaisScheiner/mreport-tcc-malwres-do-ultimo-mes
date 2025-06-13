@@ -1,0 +1,40 @@
+TÍTULO:
+Ransomware Gangs Use Skitnet Malware for Stealthy Data Theft and Remote Access
+
+CORPO DA NOTÍCIA:
+Several ransomware actors are using a malware calledSkitnetas part of their post-exploitation efforts to steal sensitive data and establish remote control over compromised hosts.
+"Skitnet has been sold on underground forums like RAMP since April 2024," Swiss cybersecurity company PRODAFT told The Hacker News. "However, since early 2025, we have observed multiple ransomware operators using it in real-world attacks."
+"For example, in April 2025, Black Basta leveraged Skitnet in Teams-themed phishing campaigns targeting enterprise environments. With its stealth features and flexible architecture, Skitnet appears to be gaining traction rapidly within the ransomware ecosystem."
+Skitnet, also calledBossnet, is a multi-stage malware developed by a threat actor tracked by the company under the name LARVA-306. A notable aspect of the malicious tool is that it uses programming languages like Rust and Nim to launch a reverse shell over DNS and evade detection.
+It also incorporates persistence mechanisms, remote access tools, commands for data exfiltration, and even download a .NET loader binary that can be used to serve additional payloads, making it a versatile threat.
+First advertised on April 19, 2024, Skitnet is offered to potential customers as a "compact package" comprising a server component and malware. The initial executable is a Rust binary that decrypts and runs an embedded payload that's compiled in Nim.
+"The primary function of this Nim binary is to establish a reverse shell connection with the C2 [command-and-control] server via DNS resolution," PRODAFTsaid. "To evade detection, it employs the GetProcAddress function to dynamically resolve API function addresses rather than using traditional import tables."
+The Nim-based binary further starts multiple threads to send DNS requests every 10 seconds, read DNS responses and extract commands to be executed on the host, and transmit the results of the execution of the command back to the server. The commands are issued via a C2 panel that's used to manage the infected hosts.
+Some of the supported PowerShell commands are listed below -
+"Skitnet is a multi-stage malware that leverages multiple programming languages, and encryption techniques," PRODAFT said. "By using Rust for payload decryption and manual mapping, followed by a Nim-based reverse shell communicating over DNS, the malware tries to evade traditional security measures."
+The disclosure comes as Zscaler ThreatLabz detailed another malware loader dubbed TransferLoader that's being used to deliver a ransomware strain called Morpheus targeting an American law firm.
+Active since at least February 2025, TransferLoader incorporates three components, a downloader, a backdoor, and a specialized loader for the backdoor, enabling the threat actors to execute arbitrary commands on the compromised system.
+While the downloader is designed to fetch and execute a payload from a C2 server and simultaneously run a PDF decoy file, the backdoor is responsible for running commands issued by the server, as well as updating its own configuration.
+"The backdoor utilizes the decentralized InterPlanetary File System (IPFS) peer-to-peer platform as a fallback channel for updating the command-and-control (C2) server," the cybersecurity companysaid. "The developers of TransferLoader use obfuscation methods to make the reverse engineering process more tedious."
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- ransomware (Ransomware)
+- stealth (Rootkit)
+- infected (Virus)
+- backdoor (Backdoor)
+- rootkit (Rootkit)
+- virus (Virus)
+
+
+=== Classificação do Malware ===
+- Ransomware: ransomware
+- Rootkit: stealth
+- Virus: infected
+- Backdoor: backdoor
+- Rootkit: rootkit
+- Virus: virus

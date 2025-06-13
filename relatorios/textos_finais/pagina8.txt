@@ -1,0 +1,43 @@
+TÍTULO:
+Chinese APT41 Exploits Google Calendar for Malware Command-and-Control Operations
+
+CORPO DA NOTÍCIA:
+Google on Wednesday disclosed that the Chinese state-sponsored threat actor known as APT41 leveraged a malware called TOUGHPROGRESS that uses Google Calendar for command-and-control (C2).
+The tech giant, which discovered the activity in late October 2024, said the malware was hosted on a compromised government website and was used to target multiple other government entities.
+"Misuse of cloud services for C2 is a technique that many threat actors leverage in order to blend in with legitimate activity," Google Threat Intelligence Group (GTIG) researcher Patrick Whitsellsaid.
+APT41, also tracked as Axiom, Blackfly, Brass Typhoon (formerly Barium), Bronze Atlas, Earth Baku, HOODOO, RedGolf, Red Kelpie, TA415, Wicked Panda, and Winnti, is the name assigned to a prolific nation-state group known for its targeting of governments and organizations within the global shipping and logistics, media and entertainment, technology, and automotive sectors.
+In July 2024, Googlerevealedthat several entities operating within these industry verticals in Italy, Spain, Taiwan, Thailand, Turkey, and the U.K. were targeted by a "sustained campaign" using a combination of web shells and droppers like ANTSWORD, BLUEBEAM, DUSTPAN, and DUSTTRAP.
+Then earlier this year, a sub-cluster within the APT41 umbrella wasidentifiedas attacking Japanese companies in the manufacturing, materials, and energy sectors in March 2024 as part of a campaign dubbed RevivalStone.
+The latest attack chain documented by Google involves sending spear-phishing emails containing a link to a ZIP archive that's hosted on the exploited government website. The ZIP file includes a directory and a Windows shortcut (LNK) that masquerades as a PDF document. The directory features what appear to be seven different images of arthropods (from "1.jpg" to "7.jpg").
+The infection begins when the LNK file is launched, causing a decoy PDF to be presented to the recipient stating the species pulled from the directory need to be declared for export. However, it's worth noting that "6.jpg" and "7.jpg" are fake images.
+"The first file is actually an encrypted payload and is decrypted by the second file, which is a DLL file launched when the target clicks the LNK," Whitsell said, adding the malware implements various stealth and evasion techniques, such as memory-only payloads, encryption, compression, and control flow obfuscation.
+The malware consists of three distinct components, each of which are deployed in series and are designed to carry out a specific function -
+The malware is designed to read and write events with an attacker-controlled Google Calendar, creating a zero-minute event at a hard-coded date (2023-05-30) in order to store the harvested data in the event description.
+The operators place encrypted commands in Calendar events on July 30 and 31, 2023, which are then polled by the malware, decrypted, executed on the compromised Windows host, and the results written back to another Calendar event from where they can be extracted by the attackers.
+Google said it has taken the step of taking down the malicious Google Calendar and terminated the associated Workspace projects, thereby neutralizing the whole campaign. It also said that affected organizations were notified. The exact scale of the campaign is unclear.
+This is not the first time APT41 has weaponized Google's services to its advantage. In April 2023, Googledisclosedthat the threat actor targeted an unnamed Taiwanese media organization to deliver a Go-based open-source red teaming tool known as Google Command and Control (GC2) delivered via password-protected files hosted on Google Drive.
+Once installed, GC2 acts as a backdoor to read commands from Google Sheets and exfiltrate data using the cloud storage service.
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- ransomware (Ransomware)
+- infected (Virus)
+- trojanized (Trojan)
+- exploit (Exploit)
+- crypto (Ransomware)
+- virus (Virus)
+- trojan (Trojan)
+
+
+=== Classificação do Malware ===
+- Ransomware: ransomware
+- Virus: infected
+- Trojan: trojanized
+- Exploit: exploit
+- Ransomware: crypto
+- Virus: virus
+- Trojan: trojan

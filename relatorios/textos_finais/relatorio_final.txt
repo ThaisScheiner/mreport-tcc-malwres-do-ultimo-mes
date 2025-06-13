@@ -1,3 +1,100 @@
+Categoria: BACKDOOR - 11 ocorrência(s)
+
+  - rat (Arquivo: pagina1.txt)
+  - backdoor (Arquivo: pagina1.txt)
+  - backdoor (Arquivo: pagina2.txt)
+  - backdoor (Arquivo: pagina4.txt)
+  - rat (Arquivo: pagina5.txt)
+  - backdoor (Arquivo: pagina5.txt)
+  - backdoor (Arquivo: pagina6.txt)
+  - backdoor (Arquivo: pagina7.txt)
+  - backdoor (Arquivo: pagina9.txt)
+  - backdoor (Arquivo: relatorio_final.txt)
+  - rat (Arquivo: relatorio_final.txt)
+
+Categoria: TROJAN - 9 ocorrência(s)
+
+  - trojan (Arquivo: pagina1.txt)
+  - trojan (Arquivo: pagina2.txt)
+  - trojanized (Arquivo: pagina6.txt)
+  - trojan (Arquivo: pagina6.txt)
+  - trojan (Arquivo: pagina7.txt)
+  - trojanized (Arquivo: pagina8.txt)
+  - trojan (Arquivo: pagina8.txt)
+  - trojan (Arquivo: relatorio_final.txt)
+  - trojanized (Arquivo: relatorio_final.txt)
+
+Categoria: VIRUS - 22 ocorrência(s)
+
+  - infected (Arquivo: pagina1.txt)
+  - virus (Arquivo: pagina1.txt)
+  - infected (Arquivo: pagina2.txt)
+  - virus (Arquivo: pagina2.txt)
+  - infected (Arquivo: pagina3.txt)
+  - virus (Arquivo: pagina3.txt)
+  - infection (Arquivo: pagina4.txt)
+  - virus (Arquivo: pagina4.txt)
+  - infected (Arquivo: pagina5.txt)
+  - virus (Arquivo: pagina5.txt)
+  - infected (Arquivo: pagina6.txt)
+  - infection (Arquivo: pagina6.txt)
+  - virus (Arquivo: pagina6.txt)
+  - infected (Arquivo: pagina7.txt)
+  - virus (Arquivo: pagina7.txt)
+  - infected (Arquivo: pagina8.txt)
+  - virus (Arquivo: pagina8.txt)
+  - infected (Arquivo: pagina9.txt)
+  - virus (Arquivo: pagina9.txt)
+  - virus (Arquivo: relatorio_final.txt)
+  - infected (Arquivo: relatorio_final.txt)
+  - infection (Arquivo: relatorio_final.txt)
+
+Categoria: ROOTKIT - 8 ocorrência(s)
+
+  - stealth (Arquivo: pagina3.txt)
+  - rootkit (Arquivo: pagina3.txt)
+  - stealth (Arquivo: pagina4.txt)
+  - rootkit (Arquivo: pagina4.txt)
+  - stealth (Arquivo: pagina9.txt)
+  - rootkit (Arquivo: pagina9.txt)
+  - rootkit (Arquivo: relatorio_final.txt)
+  - stealth (Arquivo: relatorio_final.txt)
+
+Categoria: EXPLOIT - 3 ocorrência(s)
+
+  - exploit (Arquivo: pagina3.txt)
+  - exploit (Arquivo: pagina8.txt)
+  - exploit (Arquivo: relatorio_final.txt)
+
+Categoria: RANSOMWARE - 6 ocorrência(s)
+
+  - ransomware (Arquivo: pagina5.txt)
+  - ransomware (Arquivo: pagina8.txt)
+  - crypto (Arquivo: pagina8.txt)
+  - ransomware (Arquivo: pagina9.txt)
+  - ransomware (Arquivo: relatorio_final.txt)
+  - crypto (Arquivo: relatorio_final.txt)
+
+Categoria: SPYWARE - 4 ocorrência(s)
+
+  - keylogger (Arquivo: pagina7.txt)
+  - spyware (Arquivo: pagina7.txt)
+  - spyware (Arquivo: relatorio_final.txt)
+  - keylogger (Arquivo: relatorio_final.txt)
 
 
 === Classificação do Malware ===
+- Backdoor: backdoor
+- Backdoor: rat
+- Trojan: trojan
+- Trojan: trojanized
+- Virus: virus
+- Virus: infected
+- Virus: infection
+- Rootkit: rootkit
+- Rootkit: stealth
+- Exploit: exploit
+- Ransomware: ransomware
+- Ransomware: crypto
+- Spyware: spyware
+- Spyware: keylogger

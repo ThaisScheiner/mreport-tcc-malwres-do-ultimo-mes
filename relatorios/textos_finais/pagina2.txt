@@ -1,0 +1,40 @@
+TÍTULO:
+RVTools Official Site Hacked to Deliver Bumblebee Malware via Trojanized Installer
+
+CORPO DA NOTÍCIA:
+The official site for RVTools has been hacked to serve a compromised installer for the popular VMware environment reporting utility.
+"Robware.net and RVTools.com are currently offline. We are working expeditiously to restore service and appreciate your patience," the companysaidin a statement posted on its website.
+"Robware.net and RVTools.com are the only authorized and supported websites for RVTools software. Do not search for or download purported RVTools software from any other websites or sources."
+The development comes after security researcher Aidan Leonrevealedthat an infected version of the installer downloaded from the website was being used to sideload amalicious DLLthat turned out to be a known malware loader calledBumblebee.
+It's currently not known how long the trojanized version of RVTools had been available for download and how many had installed it before the site was taken offline.
+In the interim, users are recommended to verify the installer's hash and review any execution of version.dll from user directories.
+The disclosure comes as it has come to light that the official software supplied with Procolored printers included a Delphi-based backdoor called XRed and a clipper malware dubbed SnipVex that's capable of substituting wallet addresses in the clipboard with that of a hard-coded address.
+Details of the malicious activity werefirst discoveredby Cameron Coward, who is behind the YouTube channel Serial Hobbyism.
+XRed, believed to be active since at least 2019, comes with features to collect system information, log keystrokes, propagate via connected USB drives, and execute commands sent from an attacker-controlled server to capture screenshots, enumerate file systems and directories, download files, and delete files from the system.
+"[SnipVex] searches the clipboard for content that resembles a BTC address and replaces it with the attacker's address, such that cryptocurrency transactions will be diverted to the attacker," G DATA researcher Karsten Hahn, who further investigated the incident,said.
+But in an interesting twist, the malware infects .EXE files with the clipper functionality and makes use of an infection marker sequence – 0x0A 0x0B 0x0C – at the end to avoid re-infecting the files a second time. Thewallet addressin question has received 9.30857859 BTC (about $974,000) to date.
+Procolored has since acknowledged that the software packages were uploaded to the Mega file hosting service in October 2024 via USB drives and that the malware may have been introduced during this process. Software downloads are currently only available for F13 Pro, VF13 Pro, and V11 Pro products.
+"The malware's command-and-control server has been offline since February 2024," Hahn noted. "So it is not possible that XRed established a successful remote connection after that date. The accompanying clipbanker virus SnipVex is still a serious threat. Although transactions to the BTC address stopped on March 3, 2024, the file infection itself damages systems."
+Dell Technologies, which operates the two sites, said the malicious RVTools installer was not distributed from them but rather from fake domains mimicking them. It also said that the sites were taken down as they are being targeted in DDoS attacks. The entire statement from Dell is below -
+Dell Technologies operates two websites to distribute our RVTools software: Robware.net and RVTools.com. We are aware of reports alleging that malicious versions of the RVTools software were available on these websites. Our investigation has not identified any indications to suggest a compromise of these websites or the software available for download there.
+We have identified fake websites designed to mimic our websites that may be distributing malware. Our legitimate websites – Robware.net and RVTools.com – have been the subject of recent denial of service (DOS) attacks. As a precaution, we temporarily disabled these sites.
+For the RVTools software, the only Dell-managed sites are Robware.net and RVTools.com. Customers should not search for or download purported RVTools software from any other websites or sources.
+(The story was updated after publication on May 21, 2025, to include a response from Dell.)
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- infected (Virus)
+- trojan (Trojan)
+- backdoor (Backdoor)
+- virus (Virus)
+
+
+=== Classificação do Malware ===
+- Virus: infected
+- Trojan: trojan
+- Backdoor: backdoor
+- Virus: virus

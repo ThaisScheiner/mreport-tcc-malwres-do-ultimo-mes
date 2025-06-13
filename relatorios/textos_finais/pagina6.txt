@@ -1,0 +1,45 @@
+TÍTULO:
+Hackers Use TikTok Videos to Distribute Vidar and StealC Malware via ClickFix Technique
+
+CORPO DA NOTÍCIA:
+The malware known asLatrodectushas become the latest to embrace the widely-used social engineering technique calledClickFixas a distribution vector.
+"TheClickFix techniqueis particularly risky because it allows the malware to execute in memory rather than being written to disk," Expelsaidin a report shared with The Hacker News. "This removes many opportunities for browsers or security tools to detect or block the malware."
+Latrodectus, believed to be a successor to IcedID, is the name given to a malware that acts as a downloader for other payloads, such as ransomware. It was first documented by Proofpoint and Team Cymru in April 2024.
+Incidentally, the malware is one among the many malicious software to suffer an operational setback as part of Operation Endgame, whichtook down300 servers worldwide and neutralized 650 domains related to Bumblebee, Lactrodectus, QakBot, HijackLoader, DanaBot, TrickBot, and WARMCOOKIE between May 19 and 22, 2025.
+In the latest set of Latrodectus attacks observed by Expel in May 2025, unsuspecting users are tricked into copying and executing a PowerShell command from an infected website, a tactic that has become a prevalent method to distribute a wide range of malware.
+"When run by a user, these commands will attempt to install a file located at the remote URL using MSIExec, and then execute it in memory," Expel said. "This keeps the attacker from having to write the file to the computer and risk being detected by the browser or an antivirus that might detect it on disk."
+The MSI installer contains a legitimate application from NVIDIA, which is used to sideload a malicious DLL, which then uses curl to download the main payload.
+To mitigate attacks of this type, it's advised to disable the Windows Run program using Group Policy Objects (GPOs) or turn off the "Windows + R" hot key via a Windows Registry change.
+The disclosure comes as Trend Micro revealed details of a new social engineering campaign that, instead of relying on fake CAPTCHA pages, employs TikTok videos likely generated using artificial intelligence (AI) tools to deliver the Vidar and StealC information stealers by instructing users to run malicious commands on their systems to activate Windows, Microsoft Office, CapCut, and Spotify.
+These videos have been posted from various TikTok accounts such as @gitallowed, @zane.houghton, @allaivo2, @sysglow.wow, @alexfixpc, and @digitaldreams771. These accounts are no longer active. One of the videos claiming to provide instructions on how to "boost your Spotify experience instantly" has amassed nearly 500,000 views, with over 20,000 likes and more than 100 comments.
+The campaign marks a new escalation of ClickFix in that users searching for ways to activate pirated apps are verbally and visually guided to open the Windows Run dialog by pressing the "Windows + R" hot key, launch PowerShell, and run the command highlighted in the video, ultimately compromising their own systems.
+"Threat actors are now using TikTok videos that are potentially generated using AI-powered tools to socially engineer users into executing PowerShell commands under the guise of guiding them to activate legitimate software or unlock premium features," security researcher Junestherry Dela Cruzsaid.
+"This campaign highlights how attackers are ready to weaponize whichever social media platforms are currently popular to distribute malware."
+The findings also follow the discovery of four different malware campaigns that leverage a cloned version of the Ledger Live app to steal sensitive data, including seed phrases, with the goal of draining victims' cryptocurrency wallets. The activity has been ongoingsince August 2024.
+The attacks make use of the malicious DMG files that, when launched, launches AppleScript to exfiltrate passwords and Apple Notes data, and then download a trojanized version of Ledger Live. Once the app is opened, it warns users of a supposed account problem and that it requires their seed phrase for recovery. The entered seed phrase is sent to an attacker-controlled server.
+Moonlock Lab, which shed light on the campaign, said the rogue apps make use of macOS stealer malware like Atomic macOS Stealer (AMOS) and Odyssey, the latter of which introduced the novel phishing scheme in March 2025. It's worth noting that the activity overlaps with a macOS infostealer campaign that targets Ledger Live users through PyInstaller-packed binaries, asrevealedby Jamf this month.
+"On dark web forums, chatter around anti-Ledger schemes is growing. The next wave is already taking shape," MacPaw's cybersecurity divisionnoted. "Hackers will continue to exploit the trust crypto owners place in Ledger Live."
+Attack surface management platform Censys, in an analysispublishedon May 27, 2025, said the domains used to host the PowerShell scripts responsible for delivering the StealC and Vidar stealers – allaivo[.]me and amssh[.]co – have resolved to other IP addresses historically, including two that were common to both of them: 91.92.46[.]76 and 91.92.46[.]219.
+These IP addresses have been found to host previous iterations of the PowerShell script, one of which is designed to deliver another information stealer referred to as Lumma.
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- trojanized (Trojan)
+- infected (Virus)
+- backdoor (Backdoor)
+- infection (Virus)
+- virus (Virus)
+- trojan (Trojan)
+
+
+=== Classificação do Malware ===
+- Trojan: trojanized
+- Virus: infected
+- Backdoor: backdoor
+- Virus: infection
+- Virus: virus
+- Trojan: trojan

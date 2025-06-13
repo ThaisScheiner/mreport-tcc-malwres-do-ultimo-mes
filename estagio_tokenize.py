@@ -7,7 +7,7 @@ from calendar import month_name
 input_dir = "C:/Temp/paginas"
 output_dir = "C:/Temp/tokenize"
 relatorio_class_path = "relatorios/relatorio_classificado.json"
-relatorio_links_path = "relatorios/links_malware_bing_ultimos_3_meses_completo.txt"
+relatorio_links_path = r"C:\Users\Thais\Desktop\mreport\relatorios\links_malware_bing_ultimo_mes_completo.txt"
 os.makedirs(output_dir, exist_ok=True)
 
 # carrega o JSON de classificações
@@ -56,6 +56,6 @@ for arq in arquivos_html:
         f_out.write(f"CORPO DA NOTÍCIA:\n{corpo}\n\n")
      
 
-    print(f"Texto estruturado salvo em: {output_path}")
+    print(f"[OK] Texto estruturado salvo em: {output_path}")
 
-print("\nTokenização estruturada concluída.")
+print("\n[OK] Tokenização estruturada concluída.")
