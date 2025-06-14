@@ -1,0 +1,41 @@
+TÍTULO:
+Microsoft Fixes 78 Flaws, 5 Zero-Days Exploited; CVSS 10 Bug Impacts Azure DevOps Server
+
+CORPO DA NOTÍCIA:
+Microsoft on Tuesday shipped fixes to address a total of78 security flawsacross its software lineup, including a set of five zero-days that have come under active exploitation in the wild.
+Of the 78 flaws resolved by the tech giant, 11 are rated Critical, 66 are rated Important, and one is rated Low in severity. Twenty-eight of these vulnerabilities lead to remote code execution, 21 of them are privilege escalation bugs, and 16 others are classified as information disclosure flaws.
+The updates are in addition toeight more security defectspatched by the company in its Chromium-based Edge browser since the release of last month'sPatch Tuesday update.
+The five vulnerabilities that have come under active exploitation in the wild are listed below -
+While the first three flaws have been credited to Microsoft's own threat intelligence team, Benoit Sevens of Google Threat Intelligence Group and the CrowdStrike Advanced Research Team have been acknowledged for the discovery of CVE-2025-32706. An anonymous researcher has been credited with reporting CVE-2025-32709.
+"Another zero-day vulnerability has been identified in the Microsoft Scripting Engine, a key component used by Internet Explorer and Internet Explorer mode in Microsoft Edge," Alex Vovk, CEO and co-founder of Action1,saidabout CVE-2025-30397.
+"Attackers can exploit the flaw via a malicious web page or script that causes the scripting engine to misinterpret object types, resulting in memory corruption and arbitrary code execution in the context of the current user. If the user has administrative privileges, attackers could gain full system control – enabling data theft, malware installation, and lateral movement across networks."
+CVE-2025-30400 is the third privilege escalation flaw in DWM Core Library to be weaponized in the wild since 2023. In May 2024, Microsoft issued patches for CVE-2024-30051, which Kasperskysaidwas used in attacks distributing QakBot (aka Qwaking Mantis) malware.
+"Since 2022, Patch Tuesday has addressed 26 elevation of privilege vulnerabilities in DWM," Satnam Narang, senior staff research engineer at Tenable, said in a statement shared with The Hacker News.
+"In fact, the April 2025 release included fixes for five DWM Core Library elevation of privilege vulnerabilities. Prior to CVE-2025-30400, only two DWM elevation of privilege bugs were exploited as zero days – CVE-2024-30051 in 2024 andCVE-2023-36033in 2023."
+CVE-2025-32701 and CVE-2025-32706 are the seventh and eighth privilege escalation flaws to be discovered in the CLFS component and have been exploited in real-world attacks since 2022. Last month, Microsoftrevealedthat CVE-2025-29824 was exploited in limited attacks to target companies in the U.S., Venezuela, Spain, and Saudi Arabia.
+CVE-2025-29824 is also said to have beenexploitedas a zero-day by threat actors linked to the Play ransomware family as part of an attack targeting an unnamed organization in the U.S., Broadcom-owned Symantec revealed earlier this month.
+CVE-2025-32709, likewise, is the third privilege escalation flaw in the Ancillary Function Driver for WinSock component to have come under abuse within a span of a year, afterCVE-2024-38193andCVE-2025-21418. It's worth noting that the exploitation of CVE-2024-38193 has been attributed to the North Korea-linked Lazarus Group.
+The development has prompted the U.S. Cybersecurity and Infrastructure Security Agency (CISA) to add all five vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the fixes by June 3, 2025.
+Microsoft's Patch Tuesday update also addresses a privilege escalation bug in Microsoft Defender for Endpoint for Linux (CVE-2025-26684, CVSS score: 6.7) that could permit an authorized attacker to elevate privileges locally.
+Stratascale researcher Rich Mirch, who is one of the two researchers, acknowledged for reporting the vulnerability, said the issue is rooted in a Python helper script that includes a function ("grab_java_version()") to determine the Java Runtime Environment (JRE) version.
+"The function determines the location of the Java binary on disk by checking the /proc/<PID>/exe symbolic link and then executes the java -version command," Mirchexplained. "The problem is the Java binary could be running from an untrusted location. A malicious local unprivileged user can create a process with the name java or javaw, which will eventually be executed with root privileges to determine the version of the JRE."
+Another notable flaw is a spoofing vulnerability affecting Microsoft Defender for Identity (CVE-2025-26685, CVSS score: 6.5) that allows an attacker with LAN access to perform spoofing over an adjacent network.
+"Thelateral movement path detection featurecan itself potentially be exploited by an adversary to obtain an NTLM hash," Adam Barnett, lead software engineer at Rapid7, said in a statement. "The compromised credentials in this case would be those of the Directory Services account, and exploitation relies on achieving fallback from Kerberos to NTLM."
+The vulnerability with the maximum-severity isCVE-2025-29813(CVSS score: 10.0), a privilege escalation flaw in Azure DevOps Server that allows an unauthorized attacker to elevate privileges over a network. Microsoft said the shortcoming has been already deployed in the cloud and there is no action required on the part of customers.
+In addition to Microsoft, security updates have also been released by other vendors over the past few weeks to rectify several vulnerabilities, including —
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- zero-day (Exploit)
+- exploit (Exploit)
+- ransomware (Ransomware)
+
+
+=== Classificação do Malware ===
+- Exploit: zero-day
+- Exploit: exploit
+- Ransomware: ransomware

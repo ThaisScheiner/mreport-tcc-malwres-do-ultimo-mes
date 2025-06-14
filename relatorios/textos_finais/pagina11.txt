@@ -1,0 +1,30 @@
+TÍTULO:
+⚡ Weekly Recap: Zero-Day Exploits, Insider Threats, APT Targeting, Botnets and More
+
+CORPO DA NOTÍCIA:
+Cybersecurity leaders aren't just dealing with attacks—they're also protecting trust, keeping systems running, and maintaining their organization's reputation. This week's developments highlight a bigger issue: as we rely more on digital tools, hidden weaknesses can quietly grow.
+Just fixing problems isn't enough anymore—resilience needs to be built into everything from the ground up. That means better systems, stronger teams, and clearer visibility across the entire organization. What's showing up now isn't just risk—it's a clear signal that acting fast and making smart decisions matters more than being perfect.
+Here's what surfaced—and what security teams can't afford to overlook.
+Microsoft Fixes 5 Actively Exploited 0-Days— Microsoftaddresseda total of 78 security flaws in its Patch Tuesday update for May 2025 last week, out of which five of them have come under active exploitation in the wild. The vulnerabilities include CVE-2025-30397, CVE-2025-30400, CVE-2025-32701, CVE-2025-32706, and CVE-2025-32709. It's currently not known in what context these defects have been exploited, who is behind them, and who was targeted in these attacks.
+In cloud-native environments, the security of your code repositories and development pipelines is critical. Do you know the most pressing risks facing your organization today? By analyzing hundreds of thousands of repositories, the Wiz Threat Research team uncovered key vulnerabilities and attacker strategies in the new2025 State of Code Security Report.
+Key stats include:
+Download the report to explore all the findings in detail and learn actionable strategies to protect your organization.
+Attackers love software vulnerabilities—they're easy doors into your systems. Every week brings fresh flaws, and waiting too long to patch can turn a minor oversight into a major breach. Below are this week's critical vulnerabilities you need to know about. Take a look, update your software promptly, and keep attackers locked out.
+This week's list includes —CVE-2025-30397, CVE-2025-30400, CVE-2025-32701, CVE-2025-32706, CVE-2025-32709(Microsoft Windows),CVE-2025-42999(SAP NetWeaver),CVE-2024-11182(MDaemon),CVE-2025-4664(Google Chrome),CVE-2025-4632(Samsung MagicINFO 9 Server),CVE-2025-32756(Fortinet FortiVoice, FortiMail, FortiNDR, FortiRecorder, and FortiCamera),CVE-2025-4427, CVE-2025-4428(Ivanti Endpoint Manager Mobile),CVE-2025-3462, CVE-2025-3463(ASUS DriverHub),CVE-2025-47729(TeleMessage TM SGNL),CVE-2025-31644(F5 BIG-IP),CVE-2025-22249(VMware Aria Automation),CVE-2025-27696(Apache Superset),CVE-2025-4317(TheGem WordPress theme),CVE-2025-23166(Node.js),CVE-2025-47884(Jenkins OpenID Connect Provider Plugin),CVE-2025-47889(Jenkins WSO2 Oauth Plugin),CVE-2025-4802(Linux glibc), andCVE-2025-47539(Eventin plugin).
+Modern applications don't live in one place—they span code, cloud, and runtime. Yet security is still siloed. This webinar shows why securing just the code isn't enough. You'll learn how unifying AppSec, cloud, and SOC teams can close critical gaps, reduce response times, and stop attacks before they spread. If you're still treating dev, infra, and operations as separate problems, it's time to rethink.
+Catch Hidden Threats in Files Users Trust Too Much →Hackers are using a quiet but dangerous trick: hiding malicious code inside files that look safe — like desktop shortcuts, installer files, or web links. These aren't classic malware files. Instead, they run trusted apps like PowerShell or curl in the background, using basic user actions (like opening a file) to silently infect systems. These attacks often go undetected because the files seem harmless, and no exploits are used — just misuse of normal features.
+To detect this, focus on behavior. For example, .desktop files in Linux that run hidden shell commands, .lnk files in Windows launching PowerShell or remote scripts, or macOS .app files silently calling terminal tools. These aren't rare anymore — attackers know defenders often ignore these paths. They're especially dangerous because they don't need admin rights and are easy to hide in shared folders or phishing links.
+You canspot these threatsusing free tools and simple rules. On Windows, use Sysmon and Sigma rules to alert on .lnk files starting PowerShell or suspicious child processes from explorer.exe. On Linux or macOS, use grep or find to scan .desktop and .plist files for odd execution patterns. To test your defenses, simulate these attack paths using MITRE CALDERA — it's free and lets you safely model real-world attacker behavior. Focusing on these overlooked execution paths can close a major gap attackers rely on every day.
+The headlines may be over, but the work isn't. Whether it's rechecking assumptions, prioritizing patches, or updating your response playbooks, the right next step is rarely dramatic—but always decisive. Choose one, and move with intent.
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- zero-day (Exploit)
+
+
+=== Classificação do Malware ===
+- Exploit: zero-day

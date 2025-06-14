@@ -1,25 +1,28 @@
 TÍTULO:
-RVTools Official Site Hacked to Deliver Bumblebee Malware via Trojanized Installer
+From Infection to Access: A 24-Hour Timeline of a Modern Stealer Campaign
 
 CORPO DA NOTÍCIA:
-The official site for RVTools has been hacked to serve a compromised installer for the popular VMware environment reporting utility.
-"Robware.net and RVTools.com are currently offline. We are working expeditiously to restore service and appreciate your patience," the companysaidin a statement posted on its website.
-"Robware.net and RVTools.com are the only authorized and supported websites for RVTools software. Do not search for or download purported RVTools software from any other websites or sources."
-The development comes after security researcher Aidan Leonrevealedthat an infected version of the installer downloaded from the website was being used to sideload amalicious DLLthat turned out to be a known malware loader calledBumblebee.
-It's currently not known how long the trojanized version of RVTools had been available for download and how many had installed it before the site was taken offline.
-In the interim, users are recommended to verify the installer's hash and review any execution of version.dll from user directories.
-The disclosure comes as it has come to light that the official software supplied with Procolored printers included a Delphi-based backdoor called XRed and a clipper malware dubbed SnipVex that's capable of substituting wallet addresses in the clipboard with that of a hard-coded address.
-Details of the malicious activity werefirst discoveredby Cameron Coward, who is behind the YouTube channel Serial Hobbyism.
-XRed, believed to be active since at least 2019, comes with features to collect system information, log keystrokes, propagate via connected USB drives, and execute commands sent from an attacker-controlled server to capture screenshots, enumerate file systems and directories, download files, and delete files from the system.
-"[SnipVex] searches the clipboard for content that resembles a BTC address and replaces it with the attacker's address, such that cryptocurrency transactions will be diverted to the attacker," G DATA researcher Karsten Hahn, who further investigated the incident,said.
-But in an interesting twist, the malware infects .EXE files with the clipper functionality and makes use of an infection marker sequence – 0x0A 0x0B 0x0C – at the end to avoid re-infecting the files a second time. Thewallet addressin question has received 9.30857859 BTC (about $974,000) to date.
-Procolored has since acknowledged that the software packages were uploaded to the Mega file hosting service in October 2024 via USB drives and that the malware may have been introduced during this process. Software downloads are currently only available for F13 Pro, VF13 Pro, and V11 Pro products.
-"The malware's command-and-control server has been offline since February 2024," Hahn noted. "So it is not possible that XRed established a successful remote connection after that date. The accompanying clipbanker virus SnipVex is still a serious threat. Although transactions to the BTC address stopped on March 3, 2024, the file infection itself damages systems."
-Dell Technologies, which operates the two sites, said the malicious RVTools installer was not distributed from them but rather from fake domains mimicking them. It also said that the sites were taken down as they are being targeted in DDoS attacks. The entire statement from Dell is below -
-Dell Technologies operates two websites to distribute our RVTools software: Robware.net and RVTools.com. We are aware of reports alleging that malicious versions of the RVTools software were available on these websites. Our investigation has not identified any indications to suggest a compromise of these websites or the software available for download there.
-We have identified fake websites designed to mimic our websites that may be distributing malware. Our legitimate websites – Robware.net and RVTools.com – have been the subject of recent denial of service (DOS) attacks. As a precaution, we temporarily disabled these sites.
-For the RVTools software, the only Dell-managed sites are Robware.net and RVTools.com. Customers should not search for or download purported RVTools software from any other websites or sources.
-(The story was updated after publication on May 21, 2025, to include a response from Dell.)
+Stealer malware no longer just steals passwords. In 2025, it steals live sessions—and attackers are moving faster and more efficiently than ever.
+While many associate account takeovers with personal services, the real threat is unfolding in the enterprise. Flare's latest research,The Account and Session Takeover Economy, analyzed over20 million stealer logsand tracked attacker activity across Telegram channels and dark web marketplaces. The findings expose how cybercriminals weaponize infected employee endpoints to hijack enterprise sessions—often in less than 24 hours.
+Here's the real timeline of a modern session hijacking attack.
+Once a victim runs a malicious payload—typically disguised as cracked software, fake updates, or phishing attachments—commodity stealers like Redline (44% of logs), Raccoon (25%), and LummaC2 (18%) take over.
+These malware kits:
+Within hours, cybercriminals sift through stolen data, focusing on high-value session tokens:
+Using Telegram bot commands, attackers filter logs by geography, application, and privilege level. Marketplace listings include browser fingerprint data and ready-made login scripts that bypass MFA.
+Pricing for stolen sessions varies widely, with consumer accounts typically selling for $5 to $20, while enterprise-level AWS or Microsoft sessions can fetch $1,200 or more.
+Once session tokens are purchased, attackers import them into anti-detect browsers, gaining seamless access to business-critical platforms without triggering MFA or login alerts.
+This isn't about personal accounts being misused. It's about attackers infiltrating corporate environments, where they quickly:
+Flare analyzed a single stealer log that included live, ready-to-use access to Gmail, Slack, Microsoft 365, Dropbox, AWS, and PayPal—all tied to a single infected machine. In the wrong hands, this level of session access can escalate into a serious breach within hours.
+This is no outlier. It is amassive, industrialized underground marketenabling ransomware gangs, fraudsters, and espionage groups:
+These attacks don't result from breaches at Microsoft, Google, AWS, or other service providers. Instead, they stem from individual users getting infected by stealer malware, which silently exfiltrates their credentials and live session tokens. Attackers then exploit this user-level access to impersonate employees, steal data, and escalate privileges.
+According toVerizon's 2025 DBIR, 88% of breaches involved stolen credentials, highlighting just how central identity-based attacks have become.
+If you're only watching for stolen passwords or failed login attempts, you're missing the biggest attack vector.
+Session tokens are as critical as passwords and require a new defense mindset:
+Adapting defenses to this new reality is essential for stopping fast-moving threat actors.
+Our full report covers:
+Explore our extensive dataset yourself by starting afree trial. Search millions of stealer logs, identify exposed sessions, and get ahead of attackers.
+Read the full report|Start your free trial
+Note:This article is expertly written and contributed by Eric Clay, who has experience in governance, risk and compliance, security data analysis, and security research. He currently serves as the CMO at Flare, a Threat Exposure Management SaaS solution.
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -27,14 +30,14 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
+- infection (Virus)
 - infected (Virus)
-- trojan (Trojan)
-- backdoor (Backdoor)
-- virus (Virus)
+- ransomware (Ransomware)
+- exploit (Exploit)
 
 
 === Classificação do Malware ===
+- Virus: infection
 - Virus: infected
-- Trojan: trojan
-- Backdoor: backdoor
-- Virus: virus
+- Ransomware: ransomware
+- Exploit: exploit

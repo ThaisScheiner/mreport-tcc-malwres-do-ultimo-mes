@@ -1,0 +1,42 @@
+TÍTULO:
+Rust-based Myth Stealer Malware Spread via Fake Gaming Sites Targets Chrome, Firefox Users
+
+CORPO DA NOTÍCIA:
+Cybersecurity researchers have shed light on a previously undocumented Rust-based information stealer called Myth Stealer that's being propagated via fraudulent gaming websites.
+"Upon execution, the malware displays a fake window to appear legitimate while simultaneously decrypting and executing malicious code in the background," Trellix security researchers Niranjan Hegde, Vasantha Lakshmanan Ambasankar, and Adarsh Ssaidin an analysis.
+The stealer, initially marketed on Telegram for free under beta in late December 2024, has since transitioned to a malware-as-a-service (MaaS) model. It's equipped to steal passwords, cookies, and autofill information from both Chromium- and Gecko-based browsers, such as Google Chrome, Microsoft Edge, Brave, Opera, Vivaldi, and Mozilla Firefox.
+The operators of the malware have been found maintaining a number of Telegram channels to advertise the sale of compromised accounts as well as provide testimonials of their service. These channels have been shut down by Telegram.
+Evidence shows that Myth Stealer is distributed through fake websites, including one hosted on Google's Blogger, offering various video games under the pretext of testing them. It's worth noting that a near-identical Blogger page has been used to deliver another stealer malware known asAgeoStealer, as disclosed by Flashpoint in April 2025.
+"As per our investigation, there is no correlation between Myth Stealer and AgeoStealer," the company told The Hacker News. "AgeoStealer is written in JavaScript which is packaged as an Electron application whereas Myth Stealer is written in Rust. Other than the use of visually similar webpages, there is no relation between the two."
+Trellix said it also discovered the malware being distributed as a cracked version of a game cheating software called DDrace in an online forum, highlighting the myriad distribution vehicles.
+Regardless of the initial access vector, the downloaded loader displays a fake setup window to the user to deceive them into thinking that a legitimate application is executed. In the background, the loader decrypts and launches the stealer component.
+In a 64-bit DLL file, the stealer attempts to terminate running processes associated with various web browsers before stealing the data and exfiltrating it to a remote server, or, in some cases, to a Discord webhook.
+"It also contains anti-analysis techniques such as string obfuscation and system checks using filenames and usernames," the researchers said. "The malware authors regularly update stealer code to evade AV detection and introduce additional functionality such as screen capture capability and clipboard hijacking."
+Myth Stealer is by no means alone when it comes to using game cheat lures to distribute malware. Last week, Palo Alto Networks Unit 42 shed light on another Windows malware referred to as Blitz that's spread through backdoored game cheats and cracked installers for legitimate programs.
+Primarily propagated via an attacker-controlled Telegram channel, Blitz consists of two stages: A downloader that's responsible for a bot payload, which is designed to log keystrokes, take screenshots, download/upload files, and inject code. It also comes fitted with a denial-of-service (DoS) function against web servers and drops an XMRig miner.
+The backdoored cheat performs anti-sandbox checks before retrieving the malware's next stage, with the downloader only running when the victim logs in again after logging out or a reboot. The downloader is also configured to run the same anti-sandbox checks prior to dropping the bot payload.
+What's notable about the attack chain is that the Blitz bot and XMR cryptocurrency miner payloads, along with components of its command-and-control (C2) infrastructure, are hosted in a Hugging Face Space. Hugging Face has locked the user account following responsible disclosure.
+As of late April 2025, Blitz is estimated to have amassed 289 infections in 26 countries, led by Russia, Ukraine, Belarus, and Kazakhstan. Last month, the threat actor behind Blitz claimed on their Telegram channel that they are hanging up the boots after they apparently found that the cheat had a trojan embedded in it. They also provided a removal tool to wipe the malware from victim systems.
+"The person behind Blitz malware appears to be a Russian speaker who uses the moniker sw1zzx on social media platforms," Unit 42said. "This malware operator is likely the developer of Blitz."
+The development comes as CYFIRMA detailed a new C#-based remote access trojan (RAT) named DuplexSpy RAT that comes with extensive capabilities for surveillance, persistence, and system control. It waspublishedon GitHub in April 2025, claiming it's intended for "educational and ethical demonstration only."
+"It establishes persistence via startup folder replication and Windows registry modifications while employing fileless execution and privilege escalation techniques for stealth," the companysaid. "Key features include keylogging, screen capture, webcam/audio spying, remote shell, and anti-analysis functions."
+Besides featuring the ability to remotely play audio or system sounds on the victim's machine, DuplexSpy RAT incorporates a power control module that makes it possible for the attacker to remotely execute system-level commands on the compromised host, such as shutdown, restart, logout, and sleep.
+"[The malware] enforces a fake lock screen by displaying an attacker-supplied image (Base64-encoded) in full screen while disabling user interaction," CYFIRMA added. "It prevents closure unless explicitly permitted, simulating a system freeze or ransom notice to manipulate or extort the victim."
+The findings also follow a report from Positive Technologies thatmultiple threat actors, includingTA558,Blind Eagle,Aggah(akaHagga),PhaseShifters(aka Angry Likho, Sticky Werewolf, and UAC-0050),UAC-0050, andPhantomControl, are using a crypter-as-a-service offering calledCrypters And Toolsto obfuscate files like Ande Loader.
+Attack chains using Crypters And Tools have targeted the United States, Eastern Europe (including Russia), and Latin America. One platform where the crypter is sold is nitrosoftwares[.]com, which also offers various tools, including exploits, crypters, loggers, and cryptocurrency clippers, among others.
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- trojan (Trojan)
+- rat (Backdoor)
+- stealth (Rootkit)
+
+
+=== Classificação do Malware ===
+- Trojan: trojan
+- Backdoor: rat
+- Rootkit: stealth

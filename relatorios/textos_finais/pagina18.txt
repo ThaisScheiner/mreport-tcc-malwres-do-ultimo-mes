@@ -1,0 +1,40 @@
+TÍTULO:
+Hackers Use Fake VPN and Browser NSIS Installers to Deliver Winos 4.0 Malware
+
+CORPO DA NOTÍCIA:
+Cybersecurity researchers have disclosed a malware campaign that uses fake software installers masquerading as popular tools like LetsVPN and QQ Browser to deliver theWinos 4.0framework.
+The campaign, first detected by Rapid7 in February 2025, involves the use of a multi-stage, memory-resident loader called Catena.
+"Catena uses embedded shellcode and configuration switching logic to stage payloads like Winos 4.0 entirely in memory, evading traditional antivirus tools," security researchers Anna Širokova and Ivan Feiglsaid. "Once installed, it quietly connects to attacker-controlled servers – mostly hosted in Hong Kong – to receive follow-up instructions or additional malware."
+The attacks, like those that have deployed Winos 4.0 in the past, appear to focus specifically on Chinese-speaking environments, with the cybersecurity company calling out the "careful, long-term planning" by a very capable threat actor.
+Winos 4.0 (aka ValleyRAT) wasfirst publicly documentedby Trend Micro in June 2024 as used in attacks targeting Chinese-speaking users by means of malicious Windows Installer (MSI) files for VPN apps. The activity has been attributed to a threat cluster it tracks as Void Arachne, which is also referred to as Silver Fox.
+Subsequent campaigns distributing the malware haveleveragedgaming-related applications like installation tools, speed boosters, and optimization utilities as lures to trick users into installing it. Another attack wavedetailedin February 2025 targeted entities in Taiwan via phishing emails that purported to be from the National Taxation Bureau.
+Built atop the foundations of a known remote access trojan called Gh0st RAT, Winos 4.0 is an advanced malicious framework written in C++ that makes use of a plugin-based system to harvest data, provide remote shell access, and launch distributed denial-of-service (DDoS) attacks.
+Rapid7 said all the artifacts flagged in February 2025 relied on NSIS installers bundled with signed decoy apps, shellcode embedded in ".ini" files, and reflective DLL injection to covertly maintain persistence on infected hosts and avoid detection. The entire infection chain has been given the moniker Catena.
+"The campaign has so far been active throughout 2025, showing a consistent infection chain with some tactical adjustments – pointing to a capable and adaptive threat actor," the researchers said.
+The starting point is a trojanizedNSISinstaller impersonating an installer for QQ Browser, a Chromium-based web browser developed by Tencent, that's designed to deliver Winos 4.0 using Catena. The malware communicates with hard-coded command-and-control (C2) infrastructure over TCP port 18852 and HTTPS port 443.
+Persistence on the host is achieved by registering scheduled tasks that are executed weeks after the initial compromise. While the malware features an explicit check to look for Chinese language settings on the system, it still proceeds with the execution even if that's not the case.
+This indicates it's an unfinished feature and something that's expected to be implemented in subsequent iterations of the malware. That said, Rapid7 said it identified in April 2025 a "tactical shift" that not only switched some of the elements of the Catena execution chain, but also incorporated features to evade antivirus detection.
+In the revamped attack sequence, the NSIS installer disguises itself as a setup file for LetsVPN and runs a PowerShell command that addsMicrosoft Defender exclusionsfor all drives (C:\ to Z:\). It then drops additional payloads, including an executable that takes a snapshot of running processes and checks for processes related to 360 Total Security, an antivirus product developed by Chinese vendor Qihoo 360.
+The binary is signed with an expired certificate issued by VeriSign and allegedly belongs to Tencent Technology (Shenzhen). It was valid from 2018-10-11 to 2020-02-02. The primary responsibility of the executable is to reflectively load a DLL file that, in turn, connects to a C2 server ("134.122.204[.]11:18852" or "103.46.185[.]44:443") in order to download and execute Winos 4.0.
+"This campaign shows a well-organized, regionally focused malware operation using trojanized NSIS installers to quietly drop the Winos 4.0 stager," the researchers said.
+"It leans heavily on memory-resident payloads, reflective DLL loading, and decoy software signed with legit certificates to avoid raising alarms. Infrastructure overlaps and language-based targeting hint at ties to Silver Fox APT, with activity likely aimed at Chinese-speaking environments."
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- trojan (Trojan)
+- rat (Backdoor)
+- infected (Virus)
+- infection (Virus)
+- trojanized (Trojan)
+
+
+=== Classificação do Malware ===
+- Trojan: trojan
+- Backdoor: rat
+- Virus: infected
+- Virus: infection
+- Trojan: trojanized

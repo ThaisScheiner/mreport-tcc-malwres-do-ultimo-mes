@@ -1,22 +1,26 @@
 TÍTULO:
-Chinese APT41 Exploits Google Calendar for Malware Command-and-Control Operations
+Iran-Linked BladedFeline Hits Iraqi and Kurdish Targets with Whisper and Spearal Malware
 
 CORPO DA NOTÍCIA:
-Google on Wednesday disclosed that the Chinese state-sponsored threat actor known as APT41 leveraged a malware called TOUGHPROGRESS that uses Google Calendar for command-and-control (C2).
-The tech giant, which discovered the activity in late October 2024, said the malware was hosted on a compromised government website and was used to target multiple other government entities.
-"Misuse of cloud services for C2 is a technique that many threat actors leverage in order to blend in with legitimate activity," Google Threat Intelligence Group (GTIG) researcher Patrick Whitsellsaid.
-APT41, also tracked as Axiom, Blackfly, Brass Typhoon (formerly Barium), Bronze Atlas, Earth Baku, HOODOO, RedGolf, Red Kelpie, TA415, Wicked Panda, and Winnti, is the name assigned to a prolific nation-state group known for its targeting of governments and organizations within the global shipping and logistics, media and entertainment, technology, and automotive sectors.
-In July 2024, Googlerevealedthat several entities operating within these industry verticals in Italy, Spain, Taiwan, Thailand, Turkey, and the U.K. were targeted by a "sustained campaign" using a combination of web shells and droppers like ANTSWORD, BLUEBEAM, DUSTPAN, and DUSTTRAP.
-Then earlier this year, a sub-cluster within the APT41 umbrella wasidentifiedas attacking Japanese companies in the manufacturing, materials, and energy sectors in March 2024 as part of a campaign dubbed RevivalStone.
-The latest attack chain documented by Google involves sending spear-phishing emails containing a link to a ZIP archive that's hosted on the exploited government website. The ZIP file includes a directory and a Windows shortcut (LNK) that masquerades as a PDF document. The directory features what appear to be seven different images of arthropods (from "1.jpg" to "7.jpg").
-The infection begins when the LNK file is launched, causing a decoy PDF to be presented to the recipient stating the species pulled from the directory need to be declared for export. However, it's worth noting that "6.jpg" and "7.jpg" are fake images.
-"The first file is actually an encrypted payload and is decrypted by the second file, which is a DLL file launched when the target clicks the LNK," Whitsell said, adding the malware implements various stealth and evasion techniques, such as memory-only payloads, encryption, compression, and control flow obfuscation.
-The malware consists of three distinct components, each of which are deployed in series and are designed to carry out a specific function -
-The malware is designed to read and write events with an attacker-controlled Google Calendar, creating a zero-minute event at a hard-coded date (2023-05-30) in order to store the harvested data in the event description.
-The operators place encrypted commands in Calendar events on July 30 and 31, 2023, which are then polled by the malware, decrypted, executed on the compromised Windows host, and the results written back to another Calendar event from where they can be extracted by the attackers.
-Google said it has taken the step of taking down the malicious Google Calendar and terminated the associated Workspace projects, thereby neutralizing the whole campaign. It also said that affected organizations were notified. The exact scale of the campaign is unclear.
-This is not the first time APT41 has weaponized Google's services to its advantage. In April 2023, Googledisclosedthat the threat actor targeted an unnamed Taiwanese media organization to deliver a Go-based open-source red teaming tool known as Google Command and Control (GC2) delivered via password-protected files hosted on Google Drive.
-Once installed, GC2 acts as a backdoor to read commands from Google Sheets and exfiltrate data using the cloud storage service.
+An Iran-aligned hacking group has been attributed to a new set of cyber attacks targeting Kurdish and Iraqi government officials in early 2024.
+The activity is tied to a threat group ESET tracks asBladedFeline, which is assessed with medium confidence to be a sub-cluster withinOilRig, a known Iranian nation-state cyber actor. It's said to be active since September 2017, when it targeted officials associated with the Kurdistan Regional Government (KRG).
+"This group develops malware for maintaining and expanding access within organizations in Iraq and the KRG," the Slovak cybersecurity companysaidin a technical report shared with The Hacker News.
+"BladedFeline has worked consistently to maintain illicit access to Kurdish diplomatic officials, while simultaneously exploiting a regional telecommunications provider in Uzbekistan, and developing and maintaining access to officials in the government of Iraq."
+BladedFeline wasfirst documentedby ESET in May 2024 as part of its APT Activity Report Q4 2023–Q1 2024, detailing the adversary's attack on a governmental organization from the Kurdistan region of Iraq and its targeting of the Uzbekistan telecom provider that may have been compromised as early as May 2022.
+The group was discovered in 2023 following attacks aimed at Kurdish diplomatic officials with Shahmaran, a simple backdoor that checks in with a remote server and executes any operator-provided commands on the infected host to upload or download files, request specific file attributes, and provide a file and directory manipulation API.
+Then last November, the cybersecurity firmsaidit observed the hacking crew orchestrating attacks against Iran's neighbors, particularly regional and government entities in Iraq and diplomatic envoys from Iraq to various countries, using bespoke backdoors like Whisper (aka Veaty), Spearal, and Optimizer.
+"BladedFeline has invested heavily in gathering diplomatic and financial information from Iraqi organizations, indicating that Iraq plays a large part in the strategic objectives of the Iranian government," ESET noted in November 2024. "Additionally, governmental organizations in Azerbaijan have been another focus of BladedFeline."
+While the exact initial access vector used to get into KRG victims is unclear, it's suspected that the threat actors likely leveraged a vulnerability in an internet-facing application to break into Iraqi government networks and deploy the Flog web shell to maintain persistent remote access.
+The wide range of backdoors highlights BladedFeline's commitment to refining its malware arsenal. Whisper is a C#/.NET backdoor that logs into a compromised webmail account on a Microsoft Exchange server and uses it to communicate with the attackers via email attachments. Spearal is a .NET backdoor that utilizes DNS tunneling for command-and-control communication.
+"Optimizer is an iterative update on the Spearal backdoor. It uses the same workflow and offers the same features. The main differences between Spearal and Optimizer are largely cosmetic," the ESET research team told The Hacker News.
+Select attacks observed in December 2023 have also involved the deployment of a Python implant referred to as Slippery Snakelet that comes with limited capabilities to execute commands via "cmd.exe," download files from an external URL, and upload files.
+The backdoors notwithstanding, BladedFeline is notable for the use of various tunneling tools Laret and Pinar to maintain access to target networks. Also put to use is a malicious IIS module dubbed PrimeCache, which ESET said bears similarities to theRDATbackdoor used by OilRig APT.
+A passive backdoor, PrimeCache works by keeping an eye out for incoming HTTP requests matching a predefined cookie header structure in order to process commands issued by the attacker and exfiltrate files.
+It's this aspect, coupled with the fact that two of OilRig's tools – RDAT and a reverse shell codenamed VideoSRV – were discovered on a compromised KRG system in September 2017 and January 2018, respectively, has led to the possibility that BladedFeline may be a subgroup within OilRig, but also different fromLyceum– a moniker assigned to a different sub-cluster.
+The OilRig connection is alsoreinforcedby a September 2024 report from Check Point, which pointed fingers at the Iranian hacking group for infiltrating the networks of Iraqi government networks and infecting them with Whisper and Spearal using likely social engineering efforts.
+ESET said it identified a malicious artifact named Hawking Listener that was uploaded to the VirusTotal platform in March 2024 by the same party that uploaded Flog. Hawking Listener is an early-stage implant that listens on a specified port to run commands through "cmd.exe."
+"BladedFeline is targeting the KRG and the GOI for cyber espionage purposes, with an eye toward maintaining strategic access to high-ranking officials in both governmental entities," the company concluded.
+"The KRG's diplomatic relationship with Western nations, coupled with the oil reserves in the Kurdistan region, makes it an enticing target for Iran-aligned threat actors to spy on and potentially manipulate. In Iraq, these threat actors are most probably trying to counter the influence of Western governments following the U.S. invasion and occupation of the country."
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -24,20 +28,10 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- ransomware (Ransomware)
+- backdoor (Backdoor)
 - infected (Virus)
-- trojanized (Trojan)
-- exploit (Exploit)
-- crypto (Ransomware)
-- virus (Virus)
-- trojan (Trojan)
 
 
 === Classificação do Malware ===
-- Ransomware: ransomware
+- Backdoor: backdoor
 - Virus: infected
-- Trojan: trojanized
-- Exploit: exploit
-- Ransomware: crypto
-- Virus: virus
-- Trojan: trojan

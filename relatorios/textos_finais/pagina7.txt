@@ -1,23 +1,48 @@
 TÍTULO:
-Former Black Basta Members Use Microsoft Teams and Python Scripts in 2025 Attacks
+OtterCookie v4 Adds VM Detection and Chrome, MetaMask Credential Theft Capabilities
 
 CORPO DA NOTÍCIA:
-Former members tied to the Black Basta ransomware operation have been observed sticking to their tried-and-tested approach ofemail bombing and Microsoft Teams phishingto establish persistent access to target networks.
-"Recently, attackers have introduced Python script execution alongside these techniques, using cURL requests to fetch and deploy malicious payloads," ReliaQuestsaidin a report shared with The Hacker News.
-The development is a sign that the threat actors are continuing to pivot and regroup, despite theBlack Basta brandsuffering a huge blow and a decline after thepublic leak of its internal chat logsearlier this February.
-The cybersecurity company said half of the Teams phishing attacks that were observed between February and May 2025 originated from onmicrosoft[.]com domains, and that breached domains accounted for 42% of the attacks during the same period. The latter is a lot more stealthy and allows threat actors to impersonate legitimate traffic in their attacks.
-As recently as last month, ReliaQuest's customers in the finance and insurance sector and the construction sector have been targeted using Teams phishing by masquerading as help desk personnel to trick unsuspecting users.
-"The shutdown of Black Basta's data-leak site, despite the continued use of its tactics, indicates that former affiliates have likely either migrated to another RaaS group or formed a new one," the company added. "The most probable scenario is that former members have joined theCACTUS RaaS group, which is evidenced by Black Basta leader Trump referencing a $500–600K payment to CACTUS in the leaked chats."
-That said, it's worth noting that CACTUS hasn't named any organizations on its data leak site since March 2025, indicating that the group has either disbanded or is deliberately trying to avoid drawing attention to itself. Another possibility is that the affiliates have moved toBlackLock, which, in turn, is believed to have started collaborating with aransomware cartelnamedDragonForce.
-The threat actors have also been spotted leveraging the access obtained via the Teams phishing technique to initial remote desktop sessions via Quick Assist and AnyDesk, and then downloading a malicious Python script from a remote address and executing it to establish command-and-control (C2) communications.
-"The use of Python scripts in this attack highlights an evolving tactic that's likely to become more prevalent in future Teams phishing campaigns in the immediate future," ReliaQuest said.
-The Black Basta-style social engineering strategy of using a combination of email spamming, Teams phishing, and Quick Assist has since also found takers among the BlackSuit ransomware group, raising the possibility that BlackSuit affiliates have either embraced the approach or absorbed members of the group.
-According to Rapid7, the initial access serves as a pathway to download and execute updated variants of a Java-based RAT that was previously deployed to act as acredential harvesterin Black Basta attacks.
-"The Java malware now abuses cloud-based file hosting services provided by both Google and Microsoft to proxy commands through the respective cloud service provider's (CSP) servers," the companysaid. "Over time, the malware developer has shifted away from direct proxy connections (i.e., the config option is left blank or not present), towards OneDrive and Google Sheets, and most recently, towards simply using Google Drive."
-The new iteration of the malware packs in more features to transfer files between the infected host and a remote server, initiate a SOCKS5 proxy tunnel, steal credentials stored in web browsers, present a fake Windows login window, and download a Java class from a supplied URL and run it in memory.
-Like the 3AM ransomware attacksdetailedby Sophos a couple of weeks ago, the intrusions are also characterized by the use of a tunneling backdoor called QDoor, a malware previously attributed to BlackSuit, and a Rust payload that's likely a custom loader for the SSH utility, and a Python RAT referred to asAnubis.
-The findings come amid a number of developments in the ransomware landscape -
-"RATs enable attackers to gain remote control over infected systems, allowing them to access files, monitor activities, and manipulate system settings," Quorum Cybersaid. "Threat actors can use a RAT to maintain persistence within an organization as well as to introduce additional tooling or malware to the environment. They can also access, manipulate, destroy, or exfiltrate data."
+The North Korean threat actors behind theContagious Interviewcampaign have been observed using updated versions of a cross-platform malware called OtterCookie with capabilities to steal credentials from web browsers and other files.
+NTT Security Holdings, whichdetailedthe new findings, said the attackers have "actively and continuously" updated the malware, introducing versions v3 and v4 in February and April 2025, respectively.
+The Japanese cybersecurity company is tracking the cluster under the nameWaterPlum, which is also known as CL-STA-0240, DeceptiveDevelopment, DEV#POPPER, Famous Chollima, PurpleBravo, and Tenacious Pungsan.
+OtterCookie wasfirst documentedby NTT last year after having observed it in attacks since September 2024. Delivered by means of a JavaScript payload via a malicious npm package, trojanized GitHub or Bitbucket repository, or a bogus videoconferencing app, it's designed to contact an external server to execute commands on compromised hosts.
+OtterCookie v3 has been found to incorporate a new upload module to send files matching a predefined set of extensions to the external server. This consists of environment variables, images, documents, spreadsheets, text files, and files containing mnemonic and recovery phrases associated with cryptocurrency wallets.
+It's worth pointing out that this module was previously executed in OtterCookie v2 as a shell command received from the server.
+The fourth iteration of the malware expands on its predecessor by adding two more modules to steal credentials from Google Chrome, as well as extract data from the MetaMask extension for Google Chrome, Brave browser, and iCloud Keychain.
+Another new feature addition to OtterCookie v4 is the ability to detect if it's being executed in virtual machine (VM) environments pertaining to Broadcom VMware, Oracle VirtualBox, Microsoft, and QEMU.
+Interestingly, it has been found that the first stealer module responsible for gathering Google Chrome credentials does so after decrypting them, whereas the second module harvests encrypted login data from browsers like Chrome and Brave.
+"This difference in data processing or coding style implies that these modules were developed by different developers," researchers Masaya Motoda and Rintaro Koike said.
+The disclosure comes as multiple malicious payloads related to the Contagious Interview campaign have been unearthed in recent months, indicating that the threat actors are refining their modus operandi.
+This includes a Go-based information stealer that's delivered under the guise of a Realtek driver update ("WebCam.zip") that, when opened, runs a shell script responsible for downloading the stealer and launching a deceptive macOS application ("DriverMinUpdate.app") engineered to harvest the victim's macOS system password.
+It's believed that the malware was distributed as part of an updated version of the activity codenamedClickFake Interviewby Sekoia last month owing to the use of ClickFix-style lures to fix non-existent audio and video issues during an online assessment for a job interview process.
+"The stealer's primary role is to establish a persistent C2 channel, profile the infected system, and exfiltrate sensitive data," MacPaw's cybersecurity division, Moonlock,said. "It achieves this through a combination of system reconnaissance, credential theft, and remote command execution."
+It's assessed that the application DriverMinUpdate is part of alargersetofsimilarmalicious appsthat have been uncovered by dmpdump, SentinelOne, ENKI, and Kandji such as ChromeUpdateAlert, ChromeUpdate, CameraAccess, and DriverEasy.
+A second new malware family connected to the campaign is Tsunami-Framework, which is delivered as a follow-up payload to a known Python backdoor referred to asInvisibleFerret. A .NET-based modular malware, it's equipped to steal a wide range of data from web browsers and cryptocurrency wallets.
+It also incorporates features to log keystrokes, collect files, and even a botnet component that appears to be under early development, German security company HiSolutionssaidin a report published late last month.
+Contagious Interview, perESET, is believed to be a new activity cluster that's part of theLazarus Group, a notorious hacking group from North Korea that has a storied history of orchestrating both espionage- and financially-motivated attacks as a way to advance the nation's strategic goals and sidestep international sanctions.
+Earlier this year, the adversarial collective was attributed to the record-breakingbillion-dollar heistfrom cryptocurrency platform Bybit.
+The findings come as cybersecurity company Sophos revealed that the threat actors behind thefraudulent IT worker schemefrom North Korea -- also known as Famous Chollima, Nickel Tapestry, and Wagemole -- have begun to increasingly target organizations in Europe and Asia, and industries beyond the technology sector to secure jobs and funnel the proceeds back to Pyongyang.
+To pull off the scheme, the threat actors are known to flood job sites such as Xing, Upwork, Toptal, and 9am with fabricated profiles, complete with corresponding social media profiles on sites like LinkedIn using AI-generated versions of stock images.
+"Throughout the pre-employment phase, the threat actors often digitally manipulate photos for their falsified resumes and LinkedIn profiles, and to accompany prior work history or group project claims," the company's Secureworks Counter Threat Unit (CTU)said.
+"They commonly use stock photos overlaid with real images of themselves. The threat actors have also increased usage of generative AI, including writing tools, image-editing tools, and resume builders."
+The fraudulent workers, upon landing a job, have also been found usingmouse jiggler utilities, VPN software like Astrill VPN, and KVM over IP for remote access, in some cases even resorting to eight-hour-long Zoom calls for screen sharing.
+Cybersecurity firm ReliaQuest said it found a "recurring trend" in their multi-factor authentication (MFA) devices where Chinese-made brands like Oppo and Vivo were frequently identified and that it uncovered multiple North Korean insiders authenticating from the same fixed-line IP address.
+"North Korean state-sponsored operatives are infiltrating Western companies by posing as skilled IT workers, particularly in full-stack web development roles," itpointed outin a fresh report spotlighting the threat actors' tradecraft.
+"Using fake AI-generated profiles, stolen identities, and tools like Astrill VPN and IP-KVM devices, these operatives fund North Korea's weapons programs while staying under the radar. Their tactics exploit vulnerabilities like BYOD policies, highlighting the growing sophistication of North Korean cyber operations and the urgent need for robust candidate vetting and geo-based login monitoring."
+Last week, cryptocurrency exchange platform Kraken disclosed how a routine job interview for an engineering position turned into an intelligence-gathering operation after it spotted a North Korean hacker attempting to infiltrate the company using the nameSteven Smith.
+"The candidate used remote colocated Mac desktops but interacted with other components through a VPN, a setup commonly deployed to hide location and network activity," the companysaid. "Their resume was linked to a GitHub profile containing an email address exposed in a past data breach."
+"The candidate's primary form of ID appeared to be altered, likely using details stolen in an identity theft case two years prior."
+But instead of rejecting the candidate's application outright, Kraken said its security and recruitment teams "strategically" advanced them through its interview process as way a to trap them by asking them to confirm their location, hold up a government-issued ID, and recommend some local restaurants in the city they claimed to be in.
+"Flustered and caught off guard, they struggled with the basic verification tests, and couldn't convincingly answer real-time questions about their city of residence or country of citizenship," Kraken said. "By the end of the interview, the truth was clear: this was not a legitimate applicant, but an imposter attempting to infiltrate our systems."
+In another case documented by the U.S. Department of Justice (DoJ) last month, a 40-year-old Maryland man,Minh Phuong Ngoc Vong,pleaded guiltyto fraud after securing a job with a government contractor and then outsourcing the work to a North Korean national residing in Shenyang, China – underscoring the severity of the illicit fundraising activity.
+North Korea's ability to stealthily slip thousands of its workers into major companies, often with the help offacilitatorswho run what's called a laptop farm, has led to repeated warnings from Japanese, South Korean, U.K., and U.S. governments.
+Sarah Kern, CTU North Korea and Emerging Threats Lead at Sophos, told the Hacker News that facilitators have been recruited via LinkedIn or freelance job market services.
+"Often, the recruited facilitators had accounts on these sites for legitimate employment opportunities before ultimately becoming an accomplice in the scheme," Kern explained. "The threat actors have asked various facilitators for a wide array of tasks such as interviewing for jobs on their behalf, receiving corporate laptop deliveries, falsifying official documents, and routing paychecks."
+These workers have been found tospend up to 14 monthsinside an organization, with the threat actors also engaging in data theft and extortion threats following termination.
+"However, extortion intentions were not displayed in the first few years of NICKEL TAPESTRY operations," Kern said. "Monetary desperation, level of access to sensitive data, and the value/prosperity of a long-running fake persona can all influence the threat actor's motivations as a fraudulent employee."
+"Organizations [should] establish enhanced identity verification procedures as part of their interview process," Sophos said. "Human resources staff and recruiters should be regularly updated on tactics used in these campaigns to help them identify potential fraudulent North Korean IT workers."
+"Additionally, organizations should monitor for traditional insider threat activity, suspicious usage of legitimate tools, and impossible travel alerts to detect activity often associated with fraudulent workers."
+(The story was updated after publication on May 14, 2025, to include additional insights shared by Sophos.)
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -25,18 +50,14 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- trojan (Trojan)
-- keylogger (Spyware)
-- backdoor (Backdoor)
+- trojanized (Trojan)
 - infected (Virus)
-- spyware (Spyware)
-- virus (Virus)
+- backdoor (Backdoor)
+- exploit (Exploit)
 
 
 === Classificação do Malware ===
-- Trojan: trojan
-- Spyware: keylogger
-- Backdoor: backdoor
+- Trojan: trojanized
 - Virus: infected
-- Spyware: spyware
-- Virus: virus
+- Backdoor: backdoor
+- Exploit: exploit

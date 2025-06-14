@@ -1,18 +1,19 @@
 TÍTULO:
-PureRAT Malware Spikes 4x in 2025, Deploying PureLogs to Target Russian Firms
+⚡ Weekly Recap: Nation-State Hacks, Spyware Alerts, Deepfake Malware, Supply Chain Backdoors
 
 CORPO DA NOTÍCIA:
-Russian organizations have become the target of a phishing campaign that distributes malware called PureRAT, according to new findings from Kaspersky.
-"The campaign aimed at Russian business began back in March 2023, but in the first third of 2025 the number of attacks quadrupled compared to the same period in 2024," the cybersecurity vendorsaid.
-The attack chains, which have not been attributed to any specific threat actor, commence with a phishing email that contains a RAR file attachment or a link to the archive that masquerades as a Microsoft Word or a PDF document by making use of double extensions ("doc_054_[redacted].pdf.rar").
-Present within the archive file is an executable that, when launched, copies itself to the "%AppData%" location of the compromised Windows machine under the name "task.exe" and creates a Visual Basic Script called "Task.vbs" in the Startup VBS folder.
-The executable then proceeds to unpack another executable "ckcfb.exe", runs the system utility "InstallUtil.exe," and injects into it the decrypted module. "Ckcfb.exe," for its part, extracts and decrypts a DLL file "Spydgozoi.dll" that incorporates the main payload of the PureRAT malware.
-PureRAT establishes SSL connections with a command-and-control (C2) server and transmits system information, including details about the antivirus products installed, the computer name, and the time elapsed since the system startup. In response, the C2 server sends auxiliary modules to perform a variety of malicious actions -
-"The Trojan includes modules for downloading and running arbitrary files that provide full access to the file system, registry, processes, camera and microphone, implement keylogger functionality, and give attackers the ability to secretly control the computer using the remote desktop principle," Kaspersky said.
-The original executable that launches "ckcfb.exe" simultaneously also extracts a second binary referred to as "StilKrip.exe," which is a commercially available downloader dubbedPureCrypterthat has been used to deliver various payloads in the past. It's active since 2022.
-"StilKrip.exe" is designed to download "Bghwwhmlr.wav," which follows the aforementioned attack sequence to run "InstallUtil.exe" and ultimately launch "Ttcxxewxtly.exe," an executable that unpacks and runs a DLL payload called PureLogs ("Bftvbho.dll").
-PureLogs is anoff-the-shelf information stealerthat can harvest data from web browsers, email clients, VPN services, messaging apps, wallet browser extensions, password managers, cryptocurrency wallet apps, and other programs like FileZilla and WinSCP.
-"The PureRAT backdoor and PureLogs stealer have broad functionality that allows attackers to gain unlimited access to infected systems and confidential organization data," Kaspersky said. "The main vector of attacks on businesses has been and remains emails with malicious attachments or links."
+What if attackers aren't breaking in—they're already inside, watching, and adapting?
+This week showed a sharp rise in stealth tactics built for long-term access and silent control. AI is being used to shape opinions. Malware is hiding inside software we trust. And old threats are returning under new names. The real danger isn't just the breach—it's not knowing who's still lurking in your systems. If your defenses can't adapt quickly, you're already at risk.
+Here are the key cyber events you need to pay attention to this week.
+Lemon Sandstorm Targets Middle East Critical Infra— The Iranian state-sponsored threat group tracked as Lemon Sandstormtargetedan unnamed critical national infrastructure (CNI) in the Middle East and maintained long-term access that lasted for nearly two years using custom backdoors like HanifNet, HXLibrary, and NeoExpressRAT. The activity, which lasted from at least May 2023 to February 2025, entailed "extensive espionage operations and suspected network prepositioning – a tactic often used to maintain persistent access for future strategic advantage," according to Fortinet.
+Active Directory misconfigurations give attackers the perfect entry point to escalate privileges and move laterally. One weak link is all it takes. Use this AD Security Checklist to identify and fix critical gaps before they're exploited, Download now and secure your Active Directory.
+Attackers love software vulnerabilities—they're easy doors into your systems. Every week brings fresh flaws, and waiting too long to patch can turn a minor oversight into a major breach. Below are this week's critical vulnerabilities you need to know about. Take a look, update your software promptly, and keep attackers locked out.
+This week's list includes —CVE-2025-3928(Commvault Web Server),CVE-2025-1976(Broadcom Brocade Fabric OS),CVE-2025-46271, CVE-2025-46272, CVE-2025-46273, CVE-2025-46274, CVE-2025-46275(Planet Technology),CVE-2025-23016(FastCGI),CVE-2025-43864(React Router),CVE-2025-21756(Linux Kernel),CVE-2025-31650(Apache Tomcat),CVE-2025-46762(Apache Parquet),CVE-2025-2783(Google Chrome),CVE-2025-23242, CVE-2025-23243(NVIDIA Riva),CVE-2025-23254(NVIDIA TensorRT-LLM),CVE-2025-3500(Avast Free Antivirus),CVE-2025-32354(Zimbra Collaboration Server),CVE-2025-4095(Docker),CVE-2025-30194(PowerDNS),CVE-2025-32817(SonicWall Connect Tunnel Windows Client),CVE-2025-29953(Apache ActiveMQ),CVE-2025-4148,CVE-2025-4149,CVE-2025-4150(NETGEAR),CVE-2025-2082(Tesla Model 3),CVE-2025-3927(Digigram PYKO-OUT),CVE-2025-24522, CVE-2025-32011, CVE-2025-35996, CVE-2025-36558(KUNBUS Revolution Pi),CVE-2025-35975, CVE-2025-36521(MicroDicom DICOM Viewer),CVE-2025-2774(Webmin),CVE-2025-29471(Nagios), andCVE-2025-32434(PyTorch).
+Sandbox Your AI Agent — File Access Is the Silent Threat— Most AI agents don't need access to your system files — but they often have it by default. That means if an attacker tricks your agent (via prompt injection, plugin abuse, or tool misuse), it could accidentally expose things like SSH keys, cloud credentials, or logs. This is one of the easiest ways for attackers to move deeper into your environment — and it often goes unnoticed.
+Even if you've locked down API access or IAM roles, the local file system is still a weak spot. Your agent might be able to read .ssh/authorized_keys, .aws/credentials, or even environment files with secrets — just by asking the right question. And once that data is exposed, it's game over.
+You can fix this fast with sandboxing. Use tools like Firejail (Linux) to block access to sensitive folders. This blocks the agent from seeing key files, locks down temp folders, and adds guardrails — even if something inside the agent misbehaves.
+Running your AI agent in a sandbox takes minutes, but massively reduces your attack surface. It's a small move that closes a big gap — and it works even if everything else looks secure.
+Every alert this week reinforces a simple truth: cybersecurity isn't just about defense—it's about detection, speed, and accountability. As threats grow quieter and more calculated, the margin for delay shrinks. Don't just monitor. Measure. Map. Respond. Then ask yourself—where else could they be?
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -20,16 +21,10 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- rat (Backdoor)
-- trojan (Trojan)
-- infected (Virus)
-- backdoor (Backdoor)
-- virus (Virus)
+- spyware (Spyware)
+- stealth (Rootkit)
 
 
 === Classificação do Malware ===
-- Backdoor: rat
-- Trojan: trojan
-- Virus: infected
-- Backdoor: backdoor
-- Virus: virus
+- Spyware: spyware
+- Rootkit: stealth

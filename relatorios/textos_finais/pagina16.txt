@@ -1,0 +1,32 @@
+TÍTULO:
+MirrorFace Targets Japan and Taiwan with ROAMINGMOUSE and Upgraded ANEL Malware
+
+CORPO DA NOTÍCIA:
+The nation-state threat actor known asMirrorFacehas been observed deploying malware dubbed ROAMINGMOUSE as part of a cyber espionage campaign directed against government agencies and public institutions in Japan and Taiwan.
+The activity, detected by Trend Micro in March 2025, involved the use of spear-phishing lures to deliver an updated version of a backdoor called ANEL.
+"The ANEL file from the 2025 campaign discussed in this blog implemented a new command to support an execution of BOF (Beacon Object File) in memory," security researcher Hara Hiroakisaid. "This campaign also potentially leveragedSharpHideto launch the second stage backdoor NOOPDOOR."
+The China-aligned threat actor, also known as Earth Kasha, is assessed to be a sub-cluster within APT10. In March 2025, ESETshed lighton a campaign referred to as Operation AkaiRyū that targeted a diplomatic organization in the European Union in August 2024 with ANEL (aka UPPERCUT).
+The targeting of various Japanese and Taiwanese entities points to a continued expansion of their footprint, as the hacking crew seeks to conduct information theft toadvance their strategic objectives.
+The attack starts with a spear-phishing email -- some of which are sent from legitimate-but-compromised accounts -- that contains an embedded Microsoft OneDrive URL, which, in turn, downloads a ZIP file.
+The ZIP archive includes a malware-laced Excel document, and a macro-enabled dropper codenamedROAMINGMOUSEthat serves as a conduit to deliver components related to ANEL. It's worth noting that ROAMINGMOUSE has been put to use by MirrorFace since last year.
+"ROAMINGMOUSE then decodes the embedded ZIP file by using Base64, drops the ZIP on a disk, and expands its components," Hiroaki said. This includes -
+The end goal of the attack chain is to launch the legitimate executable using explorer.exe and then use it to sideload the malicious DLL, in this case, ANELLDR, which is responsible for decrypting and launching the ANEL backdoor.
+What's notable about the ANEL artifact used in the 2025 campaign is the addition of a new command to support in-memory execution ofbeacon object files(BOFs), which are compiled C programs designed to extend the Cobalt Strike agent with new post-exploitation features.
+"After installing the ANEL file, actors behind Earth Kasha obtained screenshots using a backdoor command and examined the victim's environment," Trend Micro explained. "The adversary appears to investigate the victim by looking through screenshots, running process lists, and domain information."
+Select instances have also leveraged an open-source tool named SharpHide to launch a new version of NOOPDOOR (aka HiddenFace), another backdoor previously identified as used by the hacking group. The implant, for its part, supports DNS-over-HTTPS (DoH) to conceal its IP address lookups during command-and-control (C2) operations.
+"Earth Kasha continues to be an active advanced persistent threat and is now targeting government agencies and public institutions in Taiwan and Japan in its latest campaign which we detected in March 2025," Hiroaki said.
+"Enterprises and organizations, especially those with high-value assets like sensitive data relating to governance, as well as intellectual property, infrastructure data, and access credentials should continue to be vigilant and implement proactive security measures to prevent falling victim to cyber attacks."
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- backdoor (Backdoor)
+- dropper (Trojan)
+
+
+=== Classificação do Malware ===
+- Backdoor: backdoor
+- Trojan: dropper

@@ -10,7 +10,6 @@ from datetime import datetime, timedelta
 import time
 import os
 
-# 🔧 Altere aqui o site desejado
 site_desejado = "thehackernews.com"  # Exemplo: "thehackernews.com"
 
 # Configuração: escolha entre usar mês/ano específico ou mês anterior automático
@@ -20,7 +19,7 @@ usar_mes_especifico = False # Mude para False para usar mês anterior automatica
 mes_especifico = "April"   # Nome do mês em inglês, ex: "April"
 ano_especifico = 2025      # Ano, ex: 2025
 
-# 🕒 Gera o mês anterior (automático)
+# Gera o mês anterior (automático)
 def gerar_mes_anterior():
     hoje = datetime.today()
     primeiro_dia_mes_atual = datetime(hoje.year, hoje.month, 1)
@@ -91,7 +90,7 @@ if usar_mes_especifico:
 else:
     nome_mes, ano = gerar_mes_anterior()
 
-termo = f"site:{site_desejado} malware {nome_mes} {ano}"
+termo = f"{site_desejado} malware {nome_mes} {ano}"
 
 print(f"\nBuscando por: {termo}")
 links_encontrados = buscar_links_bing(driver, termo, site_desejado)

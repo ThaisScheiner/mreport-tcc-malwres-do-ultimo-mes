@@ -1,0 +1,38 @@
+TÍTULO:
+Former Black Basta Members Use Microsoft Teams and Python Scripts in 2025 Attacks
+
+CORPO DA NOTÍCIA:
+Former members tied to the Black Basta ransomware operation have been observed sticking to their tried-and-tested approach ofemail bombing and Microsoft Teams phishingto establish persistent access to target networks.
+"Recently, attackers have introduced Python script execution alongside these techniques, using cURL requests to fetch and deploy malicious payloads," ReliaQuestsaidin a report shared with The Hacker News.
+The development is a sign that the threat actors are continuing to pivot and regroup, despite theBlack Basta brandsuffering a huge blow and a decline after thepublic leak of its internal chat logsearlier this February.
+The cybersecurity company said half of the Teams phishing attacks that were observed between February and May 2025 originated from onmicrosoft[.]com domains, and that breached domains accounted for 42% of the attacks during the same period. The latter is a lot more stealthy and allows threat actors to impersonate legitimate traffic in their attacks.
+As recently as last month, ReliaQuest's customers in the finance and insurance sector and the construction sector have been targeted using Teams phishing by masquerading as help desk personnel to trick unsuspecting users.
+"The shutdown of Black Basta's data-leak site, despite the continued use of its tactics, indicates that former affiliates have likely either migrated to another RaaS group or formed a new one," the company added. "The most probable scenario is that former members have joined theCACTUS RaaS group, which is evidenced by Black Basta leader Trump referencing a $500–600K payment to CACTUS in the leaked chats."
+That said, it's worth noting that CACTUS hasn't named any organizations on its data leak site since March 2025, indicating that the group has either disbanded or is deliberately trying to avoid drawing attention to itself. Another possibility is that the affiliates have moved toBlackLock, which, in turn, is believed to have started collaborating with aransomware cartelnamedDragonForce.
+The threat actors have also been spotted leveraging the access obtained via the Teams phishing technique to initial remote desktop sessions via Quick Assist and AnyDesk, and then downloading a malicious Python script from a remote address and executing it to establish command-and-control (C2) communications.
+"The use of Python scripts in this attack highlights an evolving tactic that's likely to become more prevalent in future Teams phishing campaigns in the immediate future," ReliaQuest said.
+The Black Basta-style social engineering strategy of using a combination of email spamming, Teams phishing, and Quick Assist has since also found takers among the BlackSuit ransomware group, raising the possibility that BlackSuit affiliates have either embraced the approach or absorbed members of the group.
+According to Rapid7, the initial access serves as a pathway to download and execute updated variants of a Java-based RAT that was previously deployed to act as acredential harvesterin Black Basta attacks.
+"The Java malware now abuses cloud-based file hosting services provided by both Google and Microsoft to proxy commands through the respective cloud service provider's (CSP) servers," the companysaid. "Over time, the malware developer has shifted away from direct proxy connections (i.e., the config option is left blank or not present), towards OneDrive and Google Sheets, and most recently, towards simply using Google Drive."
+The new iteration of the malware packs in more features to transfer files between the infected host and a remote server, initiate a SOCKS5 proxy tunnel, steal credentials stored in web browsers, present a fake Windows login window, and download a Java class from a supplied URL and run it in memory.
+Like the 3AM ransomware attacksdetailedby Sophos a couple of weeks ago, the intrusions are also characterized by the use of a tunneling backdoor called QDoor, a malware previously attributed to BlackSuit, and a Rust payload that's likely a custom loader for the SSH utility, and a Python RAT referred to asAnubis.
+The findings come amid a number of developments in the ransomware landscape -
+"RATs enable attackers to gain remote control over infected systems, allowing them to access files, monitor activities, and manipulate system settings," Quorum Cybersaid. "Threat actors can use a RAT to maintain persistence within an organization as well as to introduce additional tooling or malware to the environment. They can also access, manipulate, destroy, or exfiltrate data."
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- ransomware (Ransomware)
+- rat (Backdoor)
+- infected (Virus)
+- backdoor (Backdoor)
+
+
+=== Classificação do Malware ===
+- Ransomware: ransomware
+- Backdoor: rat
+- Virus: infected
+- Backdoor: backdoor

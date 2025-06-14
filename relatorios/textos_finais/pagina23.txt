@@ -1,0 +1,25 @@
+TÍTULO:
+CTM360 Identifies Surge in Phishing Attacks Targeting Meta Business Users
+
+CORPO DA NOTÍCIA:
+A new global phishing threat called "Meta Mirage" has been uncovered, targeting businesses using Meta's Business Suite. This campaign specifically aims at hijacking high-value accounts, including those managing advertising and official brand pages.
+Cybersecurity researchers atCTM360revealed that attackers behind Meta Mirage impersonate official Meta communications, tricking users into handing over sensitive details like passwords and security codes (OTP).
+The scale of this operation is alarming. Researchers have already identified over14,000 malicious URLs, a concerning majority of which—nearly 78%—were not blocked by browsers at the time the report was published.
+Cybercriminals cleverly hosted fake pages leveraging trusted cloud platforms like GitHub, Firebase, and Vercel, making it harder to spot the scams. This method aligns closely with recent findings from Microsoft, which highlighted similar abuse of cloud hosting services to compromise Kubernetes applications, emphasizing how attackers frequently leverage trusted platforms to evade detection.
+The attackers deploy fake alerts about policy violations, account suspensions, or urgent verification notices. These messages, sent via email and direct messages, look convincing because they mimic official communications from Meta, often appearing urgent and authoritative. This tactic mirrors techniques observed in the recent Google Sites phishing campaign, which used authentic-looking Google-hosted pages to deceive users.
+Two main methods are being used:
+These compromised accounts don't just affect individual businesses—they're often exploited to run malicious advertising campaigns, further amplifying damage, similar to tactics observed in thePlayPraetor malware campaignthat hijacked social media accounts for fraudulent ad distribution.
+CTM360's report also outlines a structured and calculated approach used by the attackers to maximize effectiveness. Victims are initially contacted with mild, non-alarming notifications that progressively escalate in urgency and severity. Initial notices might mention generic policy violations, while subsequent messages warn of immediate suspensions or permanent deletion of accounts. This incremental escalation induces anxiety and urgency, driving users to act quickly without thoroughly verifying the authenticity of these messages.
+To protect against this threat,CTM360 recommends:
+This widespread phishing campaign underscores the importance of vigilance and proactive security measures to protect valuable online assets.
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+Nenhuma classificação encontrada.
+
+
+=== Classificação do Malware ===

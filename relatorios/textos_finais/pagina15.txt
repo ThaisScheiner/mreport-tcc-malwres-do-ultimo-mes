@@ -1,0 +1,30 @@
+TÍTULO:
+U.S. DoJ Seizes 4 Domains Supporting Cybercrime Crypting Services in Global Operation
+
+CORPO DA NOTÍCIA:
+A multinational law enforcement operation has resulted in the takedown of an online cybercrime syndicate that offered services to threat actors to ensure that their malicious software stayed undetected from security software.
+To that effect, the U.S. Department of Justice (DoJ) said it seized four domains and their associated server facilitated the crypting service on May 27, 2025, in partnership with Dutch and Finnish authorities. These include AvCheck[.]net, Cryptor[.]biz, Cryptor[.]live, and Crypt[.]guru, all of which now display a seizure notice.
+Other countries that participated in the effort include France, Germany, Denmark, Portugal, and Ukraine.
+"Crypting is the process of using software to make malware difficult for antivirus programs to detect," the DoJsaid. "The seized domains offered services to cybercriminals, including counter-antivirus (CAV) tools. When used together, CAV and crypting services allow criminals to obfuscate malware, making it undetectable and enabling unauthorized access to computer systems."
+The DoJ said authorities made undercover purchases to analyze the services and confirmed that they were being used for cybercrime. In a coordinated announcement, Dutch officialscharacterizedAvCheck as one of the largest CAV services used by bad actors around the world.
+According tosnapshotscaptured by the Internet Archive, AvCheck[.]net billed itself as a "high-speed antivirus scantime checker," offering the ability for registered users to scan their files against 26 antivirus engines, as well as domains and IP addresses with 22 antivirus engines and blocklists.
+The domain seizures were conducted as part of Operation Endgame, an ongoing global effort launched in 2024 to dismantle cybercrime. It marks the fourth major action in recent weeks after the disruption ofLumma Stealer,DanaBot, andhundreds of domains and serversused by various malware families to deliver ransomware.
+"Cybercriminals don't just create malware; they perfect it for maximum destruction," said FBI Houston Special Agent in Charge Douglas Williams. "By leveraging counter-antivirus services, malicious actors refine their weapons against the world's toughest security systems to better slip past firewalls, evade forensic analysis, and wreak havoc across victims' systems."
+The development comes as eSentire detailedPureCrypter, a malware-as-a-service (MaaS) solution that's being used to distribute information stealers like Lumma and Rhadamanthys using the ClickFix initial access vector.
+Marketed on Hackforums[.]net by a threat actor named PureCoder for $159 for three months, $399 for one year, or $799 for lifetime access, the crypter is distributed using an automated Telegram channel, @ThePureBot, which also serves as a marketplace for other offerings, includingPureRAT and PureLogs.
+Like other purveyors of such tools, PureCoder requires users to acknowledge a Terms of Service (ToS) agreement that claims the software is meant only for educational purposes and that any violations would result in immediate revocation of their access and serial key.
+The malware also incorporates the ability to patch theNtManageHotPatch APIin memory on Windows machines running 24H2 or newer to re-enable process hollowing-based code injection. The findings demonstrate how threat actors quickly adapt and devise ways to defeat new security mechanisms.
+"The malware employs multiple evasion techniques including AMSI bypass, DLL unhooking, anti-VM detection, anti-debugging measures, and recently added capabilities to bypass Windows 11 24H2 security features through NtManageHotPatch API patching," the Canadian cybersecurity companysaid.
+"The developers use deceptive marketing tactics by promoting 'Fully UnDetected' (FUD) status based on AvCheck[.]net results, while VirusTotal shows detection by multiple AV/EDR solutions, revealing significant discrepancies in detection rates."
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- ransomware (Ransomware)
+
+
+=== Classificação do Malware ===
+- Ransomware: ransomware

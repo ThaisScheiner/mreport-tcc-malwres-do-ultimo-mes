@@ -1,0 +1,45 @@
+TÍTULO:
+FBI and Europol Disrupt Lumma Stealer Malware Network Linked to 10 Million Infections
+
+CORPO DA NOTÍCIA:
+A sprawling operation undertaken by global law enforcement agencies and a consortium of private sector firms has disrupted the online infrastructure associated with a commodity information stealer known asLumma(aka LummaC or LummaC2), seizing 2,300 domains that acted as the command-and-control (C2) backbone to commandeer infected Windows systems.
+"Malware like LummaC2 is deployed to steal sensitive information such as user login credentials from millions of victims in order to facilitate a host of crimes, including fraudulent bank transfers and cryptocurrency theft," the U.S. Department of Justice (DoJ)saidin a statement.
+The confiscated infrastructure has been used to target millions across the world through affiliates and other cyber criminals. Lumma Stealer, active since late 2022, is estimated to have been used in at least 1.7 million instances to steal information, such as browser data, autofill information, login credentials, and cryptocurrency seed phrases. The U.S. Federal Bureau of Investigation (FBI) has attributed around 10 million infections to Lumma.
+The seizure impacts five domains that serve as login panels for Lumma Stealer's administrators and paying customers to deploy the malware, thereby preventing them from compromising the computers and stealing victim information.
+"Between March 16 and May 16, 2025, Microsoft identified over 394,000 Windows computers globally infected by the Lumma malware," Europolsaid, adding the operation cuts off communications between the malicious tool and victims. The agency described Lumma as the "world's most significant infostealer threat."
+Microsoft's Digital Crimes Unit (DCU), in partnership with other cybersecurity companies ESET, BitSight, Lumen, Cloudflare, CleanDNS, and GMO Registry, said it took down approximately 2,300 malicious domains that formed the backbone of Lumma's infrastructure.
+"The primary developer of Lumma is based in Russia and goes by the internet alias 'Shamel,'" Steven Masada, assistant general counsel at DCU,said. "Shamel markets different tiers of service for Lumma via Telegram and other Russian-language chat forums. Depending on what service a cybercriminal purchases, they can create their own versions of the malware, add tools to conceal and distribute it, and track stolen information through an online portal."
+The stealer, marketed under a malware-as-a-service (MaaS) model, is available on a subscription basis for anywhere between $250 to $1,000. The developer also offers a $20,000 plan that grants customers access to source code and the right to sell it to other criminal actors.
+"Lower tiers include basic filtering and log download options, while higher tiers offer custom data collection, evasion tools, and early access to new features," ESETsaid. "The most expensive plan emphasizes stealth and adaptability, offering unique build generation and reduced detection."
+Over the years, Lumma has become something of a notorious threat, being delivered viavarious distribution vectors, including the increasingly popularClickFixmethod. The Windows maker, which is tracking the threat actor behind the stealer under the name Storm-2477, said its distribution infrastructure is both "dynamic and resilient," leveraging a combination of phishing, malvertising, drive-by download schemes, abuse of trusted platforms, and traffic distribution systems likePrometheus.
+Cato Networks, in a report published Wednesday, revealed that suspected Russian threat actors are leveraging Tigris Object Storage, Oracle Cloud Infrastructure (OCI) Object Storage, and Scaleway Object Storage to host fake reCAPTCHA pages that make use ofClickFix-style lures to trick users into downloadingLumma Stealer.
+"The recent campaign leveraging Tigris Object Storage, OCI Object Storage, and Scaleway Object Storage builds upon earlier methods, introducing new delivery mechanisms aimed at evading detection and targeting technically proficient users," researchers Guile Domingo, Guy Waizel, and Tomer Agayevsaid.
+Some of the notable aspects of the malware are below -
+"The Lumma Stealer distribution infrastructure is flexible and adaptable," Microsoftsaid. "Operators continually refine their techniques, rotating malicious domains, exploiting ad networks, and leveraging legitimate cloud services to evade detection and maintain operational continuity. To further hide the real C2 servers, all the C2 servers are hidden behind the Cloudflare proxy."
+"This dynamic structure enables operators to maximize the success of campaigns while complicating efforts to trace or dismantle their activities. The growth and resilience of Lumma Stealer highlights the broader evolution of cybercrime and underscores the need for layered defenses and industry collaboration to counter threats."
+Web infrastructure company Cloudflare said it placed a new, Turnstile-enabled interstitial warning page in front of the malicious actors' C2 server and marketplace domains, as well as taking action against the accounts that were used to configure the domains.
+"This disruption worked to fully setback their operations by days, taking down a significant number of domain names, and ultimately blocking their ability to make money by committing cybercrime," Blake Darché, head of Cloudforce One, said. "While this effort threw a sizable wrench into the largest global infostealers infrastructure, like any threat actor, those behind Lumma will shift tactics and reemerge to bring their campaign back online."
+In an interview with security researcher g0njxa in January 2025, the developer behind Lummasaidthey intended to cease operations by next fall. "We have done a lot of work over two years to achieve what we have now," they said. "We are proud of this. It has become a part of our daily life for us, and not just work."
+Stating that it's always a "good idea to take anything criminals say with a significant grain of salt," Selena Larson, staff threat researcher at Proofpoint, told The Hacker News that the dismantling of Lumma Stealer has had the threat actors taking steps to update their infrastructure and that they continue to see some activity.
+"The disruption to Lumma Stealer via domain seizure and website defacement is an overall win for the ecosystem, even if there is some functionality remaining," Larson said. "While we are still seeing some Lumma Stealer activity, it has significantly decreased following the disruption. However, as the operators themselves posted, while the domain seizure and defacement did happen, they took steps to improve operational security and plan on having additional information shared soon."
+"It's worth noting however that disruptions can have impacts beyond infrastructure takedowns. All disruptions impose cost on threat actors. While it's true that operators may rebuild, or threat actors who use disrupted malware may pivot to a different payload, infrastructure disruptions, naming and shaming, and even temporary takedowns can have further impacts.
+"For example, threat actors may be wary of buying such malware in the future, or working with the criminals associated with the malware, or even potentially make criminals think about finding a different career. And it's possible another malware that “replaces” it will not have the same features, functionality, or ease of use."
+The Lumma Stealer administrators have alsoacknowledgedthe disruption, but noted that law enforcement broke into its server using an unknown exploit and formatted all disks. They also claimed the authorities intercepted their domain and created a phishing login page to collect IP addresses of its customers.
+"We found out that the control was most likely obtained through some internal vulnerability in IDRAC, how they got access to it, because it is at least located in a completely different network – we still do not know," they said.
+(The story was updated after publication on May 28, 2025, to include a response from Proofpoint and additional information shared by security researcher Rakesh Krishnan.)
+AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
+Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
+
+
+
+=== CLASSIFICAÇÕES DETECTADAS ===
+- infected (Virus)
+- stealth (Rootkit)
+- exploit (Exploit)
+
+
+=== Classificação do Malware ===
+- Virus: infected
+- Rootkit: stealth
+- Exploit: exploit

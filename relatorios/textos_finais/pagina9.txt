@@ -1,21 +1,26 @@
 TÍTULO:
-Ransomware Gangs Use Skitnet Malware for Stealthy Data Theft and Remote Access
+China-Linked APTs Exploit SAP CVE-2025-31324 to Breach 581 Critical Systems Worldwide
 
 CORPO DA NOTÍCIA:
-Several ransomware actors are using a malware calledSkitnetas part of their post-exploitation efforts to steal sensitive data and establish remote control over compromised hosts.
-"Skitnet has been sold on underground forums like RAMP since April 2024," Swiss cybersecurity company PRODAFT told The Hacker News. "However, since early 2025, we have observed multiple ransomware operators using it in real-world attacks."
-"For example, in April 2025, Black Basta leveraged Skitnet in Teams-themed phishing campaigns targeting enterprise environments. With its stealth features and flexible architecture, Skitnet appears to be gaining traction rapidly within the ransomware ecosystem."
-Skitnet, also calledBossnet, is a multi-stage malware developed by a threat actor tracked by the company under the name LARVA-306. A notable aspect of the malicious tool is that it uses programming languages like Rust and Nim to launch a reverse shell over DNS and evade detection.
-It also incorporates persistence mechanisms, remote access tools, commands for data exfiltration, and even download a .NET loader binary that can be used to serve additional payloads, making it a versatile threat.
-First advertised on April 19, 2024, Skitnet is offered to potential customers as a "compact package" comprising a server component and malware. The initial executable is a Rust binary that decrypts and runs an embedded payload that's compiled in Nim.
-"The primary function of this Nim binary is to establish a reverse shell connection with the C2 [command-and-control] server via DNS resolution," PRODAFTsaid. "To evade detection, it employs the GetProcAddress function to dynamically resolve API function addresses rather than using traditional import tables."
-The Nim-based binary further starts multiple threads to send DNS requests every 10 seconds, read DNS responses and extract commands to be executed on the host, and transmit the results of the execution of the command back to the server. The commands are issued via a C2 panel that's used to manage the infected hosts.
-Some of the supported PowerShell commands are listed below -
-"Skitnet is a multi-stage malware that leverages multiple programming languages, and encryption techniques," PRODAFT said. "By using Rust for payload decryption and manual mapping, followed by a Nim-based reverse shell communicating over DNS, the malware tries to evade traditional security measures."
-The disclosure comes as Zscaler ThreatLabz detailed another malware loader dubbed TransferLoader that's being used to deliver a ransomware strain called Morpheus targeting an American law firm.
-Active since at least February 2025, TransferLoader incorporates three components, a downloader, a backdoor, and a specialized loader for the backdoor, enabling the threat actors to execute arbitrary commands on the compromised system.
-While the downloader is designed to fetch and execute a payload from a C2 server and simultaneously run a PDF decoy file, the backdoor is responsible for running commands issued by the server, as well as updating its own configuration.
-"The backdoor utilizes the decentralized InterPlanetary File System (IPFS) peer-to-peer platform as a fallback channel for updating the command-and-control (C2) server," the cybersecurity companysaid. "The developers of TransferLoader use obfuscation methods to make the reverse engineering process more tedious."
+A recently disclosed critical security flaw impacting SAP NetWeaver is being exploited by multiple China-nexus nation-state actors to target critical infrastructure networks.
+"Actors leveragedCVE-2025-31324, an unauthenticated file upload vulnerability that enables remote code execution (RCE)," EclecticIQ researcher Arda Büyükkayasaidin an analysis published today.
+Targets of the campaign include natural gas distribution networks, water and integrated waste management utilities in the United Kingdom, medical device manufacturing plants oil and gas exploration and production companies in the United States, and government ministries in Saudi Arabia that are responsible for investment strategy and financial regulation.
+The findings are based on a publicly exposed directory uncovered on attacker-controlled infrastructure ("15.204.56[.]106") that contained event logs capturing the activities across multiple compromised systems.
+The Dutch cybersecurity company has attributed the intrusions to Chinese threat activity clusters tracked asUNC5221,UNC5174, andCL-STA-0048, the last of which was linked to attacks targeting high-value targets in South Asia by exploiting known vulnerabilities in public-facing IIS, Apache Tomcat, and MS-SQL servers to drop web shells, reverse shells, and the PlugX backdoor.
+It also noted that an uncategorized China-nexus threat actor is conducting a widespread internet scanning and exploitation campaign against SAP NetWeaver systems. The server hosted at the IP address "15.204.56[.]106" has been found to contain multiple files, including -
+"The exposed open-dir infrastructure reveals confirmed breaches and highlights the group's planned targets, offering clear insight into both past and future operations," Büyükkaya noted.
+The exploitation of CVE-2025-31324 is followed by the threat actor deploying two web shells that are designed to maintain persistent remote access to the infected systems and execute arbitrary commands.
+In addition, three different Chinese hacking groups have been observed exploiting the SAP NetWeaver vulnerability as part of efforts to maintain remote access, conduct reconnaissance, and drop malicious programs -
+"China-linked APTs are highly likely to continue targeting internet-exposed enterprise applications and edge devices to establish long-term strategic and persistence access to critical infrastructure networks globally," Büyükkaya said.
+"Their focus on widely used platforms like SAP NetWeaver is a strategic move, as these systems are deeply integrated into enterprise environments and often host unpatched vulnerabilities."
+The disclosure comes days after another China-linked unnamed threat actor dubbed Chaya_004 has also beenattributedto the exploitation of CVE-2025-31324 to deploy a Go-based reverse shell called SuperShell.
+SAP security firm Onapsissaidit is "seeing significant activity from attackers who are using public information to trigger exploitation and abuse web shells placed by the original attackers, who have currently gone dark."
+Further analysis of these attacks has led to the discovery of another critical defect in NetWeaver's Visual Composer Metadata Uploader component. Tracked asCVE-2025-42999(CVSS score: 9.1), it has been described as a deserialization vulnerability that could be exploited by a privileged user to upload untrusted or malicious content.
+"The attacks we observed during March 2025 (that started with basic probes back in January 2025) are actually abusing both, the lack of authentication (CVE-2025-31324) as well as the insecure de-serialization (CVE-2025-42999)," Onapsis CTO, Juan Pablo (JP) Perez-Etchegoyen, told The Hacker News.
+"This combination allowed attackers to execute arbitrary commands remotely and without any type of privileges on the system. Organizations that effectively and timely applied SAP Security Note 3594142 (Patch for CVE-2025-31324), mitigated significantly the risk of exploitation."
+"Organizations should now apply SAP Security Note 3604119 to remove any residual risk on the SAP Applications. This residual risk is basically a de-serialization vulnerability only exploitable by users with VisualComposerUser role on the SAP target system."
+In light of ongoing active exploitation, customers of SAP NetWeaver are recommended to update their instances to thelatest versionas soon as possible.
+(The story was updated after publication on May 14, 2025, to confirm active exploitation of CVE-2025-42999.)
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -23,18 +28,12 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- ransomware (Ransomware)
-- stealth (Rootkit)
-- infected (Virus)
+- exploit (Exploit)
 - backdoor (Backdoor)
-- rootkit (Rootkit)
-- virus (Virus)
+- infected (Virus)
 
 
 === Classificação do Malware ===
-- Ransomware: ransomware
-- Rootkit: stealth
-- Virus: infected
+- Exploit: exploit
 - Backdoor: backdoor
-- Rootkit: rootkit
-- Virus: virus
+- Virus: infected
