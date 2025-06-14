@@ -1,28 +1,26 @@
 TÍTULO:
-From Infection to Access: A 24-Hour Timeline of a Modern Stealer Campaign
+China-Linked APTs Exploit SAP CVE-2025-31324 to Breach 581 Critical Systems Worldwide
 
 CORPO DA NOTÍCIA:
-Stealer malware no longer just steals passwords. In 2025, it steals live sessions—and attackers are moving faster and more efficiently than ever.
-While many associate account takeovers with personal services, the real threat is unfolding in the enterprise. Flare's latest research,The Account and Session Takeover Economy, analyzed over20 million stealer logsand tracked attacker activity across Telegram channels and dark web marketplaces. The findings expose how cybercriminals weaponize infected employee endpoints to hijack enterprise sessions—often in less than 24 hours.
-Here's the real timeline of a modern session hijacking attack.
-Once a victim runs a malicious payload—typically disguised as cracked software, fake updates, or phishing attachments—commodity stealers like Redline (44% of logs), Raccoon (25%), and LummaC2 (18%) take over.
-These malware kits:
-Within hours, cybercriminals sift through stolen data, focusing on high-value session tokens:
-Using Telegram bot commands, attackers filter logs by geography, application, and privilege level. Marketplace listings include browser fingerprint data and ready-made login scripts that bypass MFA.
-Pricing for stolen sessions varies widely, with consumer accounts typically selling for $5 to $20, while enterprise-level AWS or Microsoft sessions can fetch $1,200 or more.
-Once session tokens are purchased, attackers import them into anti-detect browsers, gaining seamless access to business-critical platforms without triggering MFA or login alerts.
-This isn't about personal accounts being misused. It's about attackers infiltrating corporate environments, where they quickly:
-Flare analyzed a single stealer log that included live, ready-to-use access to Gmail, Slack, Microsoft 365, Dropbox, AWS, and PayPal—all tied to a single infected machine. In the wrong hands, this level of session access can escalate into a serious breach within hours.
-This is no outlier. It is amassive, industrialized underground marketenabling ransomware gangs, fraudsters, and espionage groups:
-These attacks don't result from breaches at Microsoft, Google, AWS, or other service providers. Instead, they stem from individual users getting infected by stealer malware, which silently exfiltrates their credentials and live session tokens. Attackers then exploit this user-level access to impersonate employees, steal data, and escalate privileges.
-According toVerizon's 2025 DBIR, 88% of breaches involved stolen credentials, highlighting just how central identity-based attacks have become.
-If you're only watching for stolen passwords or failed login attempts, you're missing the biggest attack vector.
-Session tokens are as critical as passwords and require a new defense mindset:
-Adapting defenses to this new reality is essential for stopping fast-moving threat actors.
-Our full report covers:
-Explore our extensive dataset yourself by starting afree trial. Search millions of stealer logs, identify exposed sessions, and get ahead of attackers.
-Read the full report|Start your free trial
-Note:This article is expertly written and contributed by Eric Clay, who has experience in governance, risk and compliance, security data analysis, and security research. He currently serves as the CMO at Flare, a Threat Exposure Management SaaS solution.
+A recently disclosed critical security flaw impacting SAP NetWeaver is being exploited by multiple China-nexus nation-state actors to target critical infrastructure networks.
+"Actors leveragedCVE-2025-31324, an unauthenticated file upload vulnerability that enables remote code execution (RCE)," EclecticIQ researcher Arda Büyükkayasaidin an analysis published today.
+Targets of the campaign include natural gas distribution networks, water and integrated waste management utilities in the United Kingdom, medical device manufacturing plants oil and gas exploration and production companies in the United States, and government ministries in Saudi Arabia that are responsible for investment strategy and financial regulation.
+The findings are based on a publicly exposed directory uncovered on attacker-controlled infrastructure ("15.204.56[.]106") that contained event logs capturing the activities across multiple compromised systems.
+The Dutch cybersecurity company has attributed the intrusions to Chinese threat activity clusters tracked asUNC5221,UNC5174, andCL-STA-0048, the last of which was linked to attacks targeting high-value targets in South Asia by exploiting known vulnerabilities in public-facing IIS, Apache Tomcat, and MS-SQL servers to drop web shells, reverse shells, and the PlugX backdoor.
+It also noted that an uncategorized China-nexus threat actor is conducting a widespread internet scanning and exploitation campaign against SAP NetWeaver systems. The server hosted at the IP address "15.204.56[.]106" has been found to contain multiple files, including -
+"The exposed open-dir infrastructure reveals confirmed breaches and highlights the group's planned targets, offering clear insight into both past and future operations," Büyükkaya noted.
+The exploitation of CVE-2025-31324 is followed by the threat actor deploying two web shells that are designed to maintain persistent remote access to the infected systems and execute arbitrary commands.
+In addition, three different Chinese hacking groups have been observed exploiting the SAP NetWeaver vulnerability as part of efforts to maintain remote access, conduct reconnaissance, and drop malicious programs -
+"China-linked APTs are highly likely to continue targeting internet-exposed enterprise applications and edge devices to establish long-term strategic and persistence access to critical infrastructure networks globally," Büyükkaya said.
+"Their focus on widely used platforms like SAP NetWeaver is a strategic move, as these systems are deeply integrated into enterprise environments and often host unpatched vulnerabilities."
+The disclosure comes days after another China-linked unnamed threat actor dubbed Chaya_004 has also beenattributedto the exploitation of CVE-2025-31324 to deploy a Go-based reverse shell called SuperShell.
+SAP security firm Onapsissaidit is "seeing significant activity from attackers who are using public information to trigger exploitation and abuse web shells placed by the original attackers, who have currently gone dark."
+Further analysis of these attacks has led to the discovery of another critical defect in NetWeaver's Visual Composer Metadata Uploader component. Tracked asCVE-2025-42999(CVSS score: 9.1), it has been described as a deserialization vulnerability that could be exploited by a privileged user to upload untrusted or malicious content.
+"The attacks we observed during March 2025 (that started with basic probes back in January 2025) are actually abusing both, the lack of authentication (CVE-2025-31324) as well as the insecure de-serialization (CVE-2025-42999)," Onapsis CTO, Juan Pablo (JP) Perez-Etchegoyen, told The Hacker News.
+"This combination allowed attackers to execute arbitrary commands remotely and without any type of privileges on the system. Organizations that effectively and timely applied SAP Security Note 3594142 (Patch for CVE-2025-31324), mitigated significantly the risk of exploitation."
+"Organizations should now apply SAP Security Note 3604119 to remove any residual risk on the SAP Applications. This residual risk is basically a de-serialization vulnerability only exploitable by users with VisualComposerUser role on the SAP target system."
+In light of ongoing active exploitation, customers of SAP NetWeaver are recommended to update their instances to thelatest versionas soon as possible.
+(The story was updated after publication on May 14, 2025, to confirm active exploitation of CVE-2025-42999.)
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -30,14 +28,12 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- infection (Virus)
-- infected (Virus)
-- ransomware (Ransomware)
 - exploit (Exploit)
+- backdoor (Backdoor)
+- infected (Virus)
 
 
 === Classificação do Malware ===
-- Virus: infection
-- Virus: infected
-- Ransomware: ransomware
 - Exploit: exploit
+- Backdoor: backdoor
+- Virus: infected

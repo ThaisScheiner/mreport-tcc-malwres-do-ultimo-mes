@@ -1,19 +1,19 @@
 TÍTULO:
-Malicious npm Package Leverages Unicode Steganography, Google Calendar as C2 Dropper
+⚡ Weekly Recap: Nation-State Hacks, Spyware Alerts, Deepfake Malware, Supply Chain Backdoors
 
 CORPO DA NOTÍCIA:
-Cybersecurity researchers have discovered a malicious package named "os-info-checker-es6" that disguises itself as an operating system information utility to stealthily drop a next-stage payload onto compromised systems.
-"This campaign employs clever Unicode-based steganography to hide its initial malicious code and utilizes a Google Calendar event short link as a dynamic dropper for its final payload," Veracode said in a reportshared with The Hacker News.
-"Os-info-checker-es6" wasfirst publishedin the npm registry on March 19, 2025, by a user named "kim9123." It has been downloaded2,001 timesas of writing. The same user has alsouploadedanother npm package called "skip-tot" that lists "os-info-checker-es6" as a dependency. The package has been downloaded94 times.
-While the initial five versions exhibited no signs of data exfiltration or malicious behavior, a subsequent iteration uploaded on May 7, 2025, has been found to include obfuscated code in the "preinstall.js" file to parse Unicode "Private Use Access" characters and extract a next-stage payload.
-The malicious code, for its part, is designed to contact a Google Calendar event short link ("calendar.app[.]google/<string>") with a Base64-encoded string as the title, which decodes to a remote server with the IP address "140.82.54[.]223." In other words, Google Calendar is adead drop resolverto obfuscate the attacker-controlled infrastructure.
-However, no additional payloads are distributed at this point. This either indicates that the campaign is either still a work in progress, or currently dormant. Another possibility is that it has already concluded, or that the command-and-control (C2) server is designed to respond only to specific machines that meet certain criteria.
-"This use of a legitimate, widely trusted service like Google Calendar as an intermediary to host the next C2 link is a clever tactic to evade detection and make blocking the initial stages of the attack more difficult," Veracode said.
-The application security company and Aikido, which alsodetailedthe activity, further noted that three other packages have listed "os-info-checker-es6" as a dependency, although it's suspected that the dependent packages are part of the same campaign -
-"The os-info-checker-es6 package represents a sophisticated and evolving threat within the npm ecosystem," Veracode said. "The attacker demonstrated a progression from apparent testing to deploying a multi-stage malware."
-The disclosure comes as software supply chain security company Socket highlighted typoquatting, Go repository caching abuse, obfuscation, multi-stage execution, slopsquatting, and abuse of legitimate services and developer tools as the six main adversarial techniques adopted by threat actors in the first half of 2025.
-"To counter this, defenders must focus on behavioral signals, such as unexpected postinstall scripts, file overwrites, and unauthorized outbound traffic, while validating third-party packages before use," security researchers Kirill Boychenko and Philipp Burckhardtsaid.
-"Static and dynamic analysis, version pinning, and close inspection of CI/CD logs are essential to detecting malicious dependencies before they reach production."
+What if attackers aren't breaking in—they're already inside, watching, and adapting?
+This week showed a sharp rise in stealth tactics built for long-term access and silent control. AI is being used to shape opinions. Malware is hiding inside software we trust. And old threats are returning under new names. The real danger isn't just the breach—it's not knowing who's still lurking in your systems. If your defenses can't adapt quickly, you're already at risk.
+Here are the key cyber events you need to pay attention to this week.
+Lemon Sandstorm Targets Middle East Critical Infra— The Iranian state-sponsored threat group tracked as Lemon Sandstormtargetedan unnamed critical national infrastructure (CNI) in the Middle East and maintained long-term access that lasted for nearly two years using custom backdoors like HanifNet, HXLibrary, and NeoExpressRAT. The activity, which lasted from at least May 2023 to February 2025, entailed "extensive espionage operations and suspected network prepositioning – a tactic often used to maintain persistent access for future strategic advantage," according to Fortinet.
+Active Directory misconfigurations give attackers the perfect entry point to escalate privileges and move laterally. One weak link is all it takes. Use this AD Security Checklist to identify and fix critical gaps before they're exploited, Download now and secure your Active Directory.
+Attackers love software vulnerabilities—they're easy doors into your systems. Every week brings fresh flaws, and waiting too long to patch can turn a minor oversight into a major breach. Below are this week's critical vulnerabilities you need to know about. Take a look, update your software promptly, and keep attackers locked out.
+This week's list includes —CVE-2025-3928(Commvault Web Server),CVE-2025-1976(Broadcom Brocade Fabric OS),CVE-2025-46271, CVE-2025-46272, CVE-2025-46273, CVE-2025-46274, CVE-2025-46275(Planet Technology),CVE-2025-23016(FastCGI),CVE-2025-43864(React Router),CVE-2025-21756(Linux Kernel),CVE-2025-31650(Apache Tomcat),CVE-2025-46762(Apache Parquet),CVE-2025-2783(Google Chrome),CVE-2025-23242, CVE-2025-23243(NVIDIA Riva),CVE-2025-23254(NVIDIA TensorRT-LLM),CVE-2025-3500(Avast Free Antivirus),CVE-2025-32354(Zimbra Collaboration Server),CVE-2025-4095(Docker),CVE-2025-30194(PowerDNS),CVE-2025-32817(SonicWall Connect Tunnel Windows Client),CVE-2025-29953(Apache ActiveMQ),CVE-2025-4148,CVE-2025-4149,CVE-2025-4150(NETGEAR),CVE-2025-2082(Tesla Model 3),CVE-2025-3927(Digigram PYKO-OUT),CVE-2025-24522, CVE-2025-32011, CVE-2025-35996, CVE-2025-36558(KUNBUS Revolution Pi),CVE-2025-35975, CVE-2025-36521(MicroDicom DICOM Viewer),CVE-2025-2774(Webmin),CVE-2025-29471(Nagios), andCVE-2025-32434(PyTorch).
+Sandbox Your AI Agent — File Access Is the Silent Threat— Most AI agents don't need access to your system files — but they often have it by default. That means if an attacker tricks your agent (via prompt injection, plugin abuse, or tool misuse), it could accidentally expose things like SSH keys, cloud credentials, or logs. This is one of the easiest ways for attackers to move deeper into your environment — and it often goes unnoticed.
+Even if you've locked down API access or IAM roles, the local file system is still a weak spot. Your agent might be able to read .ssh/authorized_keys, .aws/credentials, or even environment files with secrets — just by asking the right question. And once that data is exposed, it's game over.
+You can fix this fast with sandboxing. Use tools like Firejail (Linux) to block access to sensitive folders. This blocks the agent from seeing key files, locks down temp folders, and adds guardrails — even if something inside the agent misbehaves.
+Running your AI agent in a sandbox takes minutes, but massively reduces your attack surface. It's a small move that closes a big gap — and it works even if everything else looks secure.
+Every alert this week reinforces a simple truth: cybersecurity isn't just about defense—it's about detection, speed, and accountability. As threats grow quieter and more calculated, the margin for delay shrinks. Don't just monitor. Measure. Map. Respond. Then ask yourself—where else could they be?
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -21,8 +21,10 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- dropper (Trojan)
+- spyware (Spyware)
+- stealth (Rootkit)
 
 
 === Classificação do Malware ===
-- Trojan: dropper
+- Spyware: spyware
+- Rootkit: stealth

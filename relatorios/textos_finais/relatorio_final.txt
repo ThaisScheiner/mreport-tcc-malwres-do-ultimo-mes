@@ -1,77 +1,50 @@
+Categoria: RANSOMWARE - 8 ocorrência(s)
+
+  - ransomware (Arquivo: pagina1.txt)
+  - ransomware (Arquivo: pagina12.txt)
+  - ransomware (Arquivo: pagina13.txt)
+  - ransomware (Arquivo: pagina15.txt)
+  - ransomware (Arquivo: pagina3.txt)
+  - ransomware (Arquivo: pagina4.txt)
+  - ransomware (Arquivo: pagina8.txt)
+  - ransomware (Arquivo: pagina9.txt)
+
+Categoria: VIRUS - 4 ocorrência(s)
+
+  - infection (Arquivo: pagina1.txt)
+  - infected (Arquivo: pagina15.txt)
+  - infected (Arquivo: pagina2.txt)
+  - infected (Arquivo: pagina6.txt)
+
+Categoria: BACKDOOR - 5 ocorrência(s)
+
+  - rat (Arquivo: pagina1.txt)
+  - backdoor (Arquivo: pagina2.txt)
+  - rat (Arquivo: pagina5.txt)
+  - backdoor (Arquivo: pagina7.txt)
+  - backdoor (Arquivo: pagina9.txt)
+
+Categoria: TROJAN - 3 ocorrência(s)
+
+  - dropper (Arquivo: pagina10.txt)
+  - trojan (Arquivo: pagina5.txt)
+  - dropper (Arquivo: pagina7.txt)
+
+Categoria: EXPLOIT - 6 ocorrência(s)
+
+  - zero-day (Arquivo: pagina11.txt)
+  - zero-day (Arquivo: pagina13.txt)
+  - exploit (Arquivo: pagina13.txt)
+  - exploit (Arquivo: pagina2.txt)
+  - exploit (Arquivo: pagina6.txt)
+  - zero-day (Arquivo: pagina8.txt)
+
 Categoria: SPYWARE - 1 ocorrência(s)
 
-  - spyware (Arquivo: pagina1.txt)
+  - spyware (Arquivo: pagina14.txt)
 
 Categoria: ROOTKIT - 3 ocorrência(s)
 
-  - stealth (Arquivo: pagina1.txt)
-  - stealth (Arquivo: pagina12.txt)
-  - stealth (Arquivo: pagina13.txt)
-
-Categoria: RANSOMWARE - 8 ocorrência(s)
-
-  - ransomware (Arquivo: pagina10.txt)
-  - ransomware (Arquivo: pagina15.txt)
-  - ransomware (Arquivo: pagina19.txt)
-  - ransomware (Arquivo: pagina2.txt)
-  - ransomware (Arquivo: pagina20.txt)
-  - ransomware (Arquivo: pagina24.txt)
-  - ransomware (Arquivo: pagina3.txt)
-  - ransomware (Arquivo: pagina5.txt)
-
-Categoria: BACKDOOR - 11 ocorrência(s)
-
-  - backdoor (Arquivo: pagina10.txt)
-  - rat (Arquivo: pagina12.txt)
-  - backdoor (Arquivo: pagina16.txt)
-  - rat (Arquivo: pagina18.txt)
-  - rat (Arquivo: pagina19.txt)
-  - backdoor (Arquivo: pagina19.txt)
-  - backdoor (Arquivo: pagina22.txt)
-  - rat (Arquivo: pagina24.txt)
-  - backdoor (Arquivo: pagina7.txt)
-  - backdoor (Arquivo: pagina8.txt)
-  - backdoor (Arquivo: pagina9.txt)
-
-Categoria: EXPLOIT - 9 ocorrência(s)
-
-  - zero-day (Arquivo: pagina11.txt)
-  - exploit (Arquivo: pagina13.txt)
-  - exploit (Arquivo: pagina2.txt)
-  - zero-day (Arquivo: pagina20.txt)
-  - exploit (Arquivo: pagina20.txt)
-  - exploit (Arquivo: pagina25.txt)
-  - zero-day (Arquivo: pagina4.txt)
-  - exploit (Arquivo: pagina7.txt)
-  - exploit (Arquivo: pagina9.txt)
-
-Categoria: TROJAN - 8 ocorrência(s)
-
-  - trojan (Arquivo: pagina12.txt)
-  - dropper (Arquivo: pagina14.txt)
-  - dropper (Arquivo: pagina16.txt)
-  - trojan (Arquivo: pagina18.txt)
-  - trojanized (Arquivo: pagina18.txt)
-  - trojan (Arquivo: pagina22.txt)
-  - trojan (Arquivo: pagina6.txt)
-  - trojanized (Arquivo: pagina7.txt)
-
-Categoria: VIRUS - 14 ocorrência(s)
-
-  - infected (Arquivo: pagina13.txt)
-  - infected (Arquivo: pagina18.txt)
-  - infection (Arquivo: pagina18.txt)
-  - infected (Arquivo: pagina19.txt)
-  - infection (Arquivo: pagina2.txt)
-  - infected (Arquivo: pagina2.txt)
-  - infected (Arquivo: pagina22.txt)
-  - infection (Arquivo: pagina24.txt)
-  - infected (Arquivo: pagina5.txt)
-  - infection (Arquivo: pagina6.txt)
-  - infected (Arquivo: pagina6.txt)
-  - infected (Arquivo: pagina7.txt)
-  - infected (Arquivo: pagina8.txt)
-  - infected (Arquivo: pagina9.txt)
-
-
-=== Classificação do Malware ===
+  - stealth (Arquivo: pagina14.txt)
+  - stealth (Arquivo: pagina5.txt)
+  - stealth (Arquivo: pagina6.txt)

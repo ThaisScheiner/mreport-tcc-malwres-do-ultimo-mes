@@ -1,26 +1,24 @@
 TÍTULO:
-Iran-Linked BladedFeline Hits Iraqi and Kurdish Targets with Whisper and Spearal Malware
+Third Parties and Machine Credentials: The Silent Drivers Behind 2025's Worst Breaches
 
 CORPO DA NOTÍCIA:
-An Iran-aligned hacking group has been attributed to a new set of cyber attacks targeting Kurdish and Iraqi government officials in early 2024.
-The activity is tied to a threat group ESET tracks asBladedFeline, which is assessed with medium confidence to be a sub-cluster withinOilRig, a known Iranian nation-state cyber actor. It's said to be active since September 2017, when it targeted officials associated with the Kurdistan Regional Government (KRG).
-"This group develops malware for maintaining and expanding access within organizations in Iraq and the KRG," the Slovak cybersecurity companysaidin a technical report shared with The Hacker News.
-"BladedFeline has worked consistently to maintain illicit access to Kurdish diplomatic officials, while simultaneously exploiting a regional telecommunications provider in Uzbekistan, and developing and maintaining access to officials in the government of Iraq."
-BladedFeline wasfirst documentedby ESET in May 2024 as part of its APT Activity Report Q4 2023–Q1 2024, detailing the adversary's attack on a governmental organization from the Kurdistan region of Iraq and its targeting of the Uzbekistan telecom provider that may have been compromised as early as May 2022.
-The group was discovered in 2023 following attacks aimed at Kurdish diplomatic officials with Shahmaran, a simple backdoor that checks in with a remote server and executes any operator-provided commands on the infected host to upload or download files, request specific file attributes, and provide a file and directory manipulation API.
-Then last November, the cybersecurity firmsaidit observed the hacking crew orchestrating attacks against Iran's neighbors, particularly regional and government entities in Iraq and diplomatic envoys from Iraq to various countries, using bespoke backdoors like Whisper (aka Veaty), Spearal, and Optimizer.
-"BladedFeline has invested heavily in gathering diplomatic and financial information from Iraqi organizations, indicating that Iraq plays a large part in the strategic objectives of the Iranian government," ESET noted in November 2024. "Additionally, governmental organizations in Azerbaijan have been another focus of BladedFeline."
-While the exact initial access vector used to get into KRG victims is unclear, it's suspected that the threat actors likely leveraged a vulnerability in an internet-facing application to break into Iraqi government networks and deploy the Flog web shell to maintain persistent remote access.
-The wide range of backdoors highlights BladedFeline's commitment to refining its malware arsenal. Whisper is a C#/.NET backdoor that logs into a compromised webmail account on a Microsoft Exchange server and uses it to communicate with the attackers via email attachments. Spearal is a .NET backdoor that utilizes DNS tunneling for command-and-control communication.
-"Optimizer is an iterative update on the Spearal backdoor. It uses the same workflow and offers the same features. The main differences between Spearal and Optimizer are largely cosmetic," the ESET research team told The Hacker News.
-Select attacks observed in December 2023 have also involved the deployment of a Python implant referred to as Slippery Snakelet that comes with limited capabilities to execute commands via "cmd.exe," download files from an external URL, and upload files.
-The backdoors notwithstanding, BladedFeline is notable for the use of various tunneling tools Laret and Pinar to maintain access to target networks. Also put to use is a malicious IIS module dubbed PrimeCache, which ESET said bears similarities to theRDATbackdoor used by OilRig APT.
-A passive backdoor, PrimeCache works by keeping an eye out for incoming HTTP requests matching a predefined cookie header structure in order to process commands issued by the attacker and exfiltrate files.
-It's this aspect, coupled with the fact that two of OilRig's tools – RDAT and a reverse shell codenamed VideoSRV – were discovered on a compromised KRG system in September 2017 and January 2018, respectively, has led to the possibility that BladedFeline may be a subgroup within OilRig, but also different fromLyceum– a moniker assigned to a different sub-cluster.
-The OilRig connection is alsoreinforcedby a September 2024 report from Check Point, which pointed fingers at the Iranian hacking group for infiltrating the networks of Iraqi government networks and infecting them with Whisper and Spearal using likely social engineering efforts.
-ESET said it identified a malicious artifact named Hawking Listener that was uploaded to the VirusTotal platform in March 2024 by the same party that uploaded Flog. Hawking Listener is an early-stage implant that listens on a specified port to run commands through "cmd.exe."
-"BladedFeline is targeting the KRG and the GOI for cyber espionage purposes, with an eye toward maintaining strategic access to high-ranking officials in both governmental entities," the company concluded.
-"The KRG's diplomatic relationship with Western nations, coupled with the oil reserves in the Kurdistan region, makes it an enticing target for Iran-aligned threat actors to spy on and potentially manipulate. In Iraq, these threat actors are most probably trying to counter the influence of Western governments following the U.S. invasion and occupation of the country."
+It wasn't ransomware headlines or zero-day exploits that stood out most in this year's Verizon 2025 Data Breach Investigations Report (DBIR) — it was what fueled them. Quietly, yet consistently, two underlying factors played a role in some of the worst breaches:third-party exposureandmachine credential abuse.
+According to the 2025 DBIR, third-party involvement in breachesdoubledyear-over-year, jumping from15% to 30%. In parallel, attackers increasingly exploited machine credentials and ungoverned machine accounts to gain access, escalate privileges, and exfiltrate sensitive data.
+The message is clear: it's no longer enough to protect your employee users alone. To truly defend against modern threats, organizations must governall identities— human, non-employee, and machine — within a unified security strategy.
+Today's enterprise is a patchwork of partnerships: contractors, vendors, business partners, managed service providers, affiliates, and more. While these relationships drive efficiency, they also create sprawling identity ecosystems. Without strong governance third-party identities become blind spots ripe for exploitation.
+Breaches tied to third-party access often stem frompoor lifecycle management— for example, a contractor account left active after a project ends, or a business partner login with excessive privileges. The 2025 DBIR notes that this trend is accelerating, and it isn't confined to any one industry: healthcare, finance, manufacturing, and the public sector all reported major incidents stemming from third-party exposure.
+Organizations must extend identity governance to non-employees with the same rigor applied to internal staff, ensuring visibility, accountability, and timely deactivation across the full range of third-party users.
+While human identities remain vulnerable, machine identities are an even faster-growing risk. Service accounts, bots, RPAs, AI agents, APIs — the digital workforce — are exploding in number, often without clear ownership or oversight. As AI agents multiply, they will push machine identity growth—and complexity—even beyond what organizations are managing today.
+This year's 2025 DBIR found that credential-based attacks remain a top initial access method, and attackers are increasingly targeting ungoverned machine accounts for entry. Unprotected machine accounts were tied to major breaches and escalating ransomware attacks.
+The stakes are growing; yet most traditional identity security tools still treat machines like second-class citizens. That's why it's essential to move beyond ad hoc machine management to a model built for scale and automation. For a deeper dive into the problem,check out thewhitepaper"Who's Watching the Machines?".
+Fragmented identity governance isn't a weakness anymore. It's a liability. Managing employees in one silo, third-party users in another, and machines — if at all — in a third leaves cracks wide enough for attackers to walk through. They don't need to breach everything. They just need one opening.
+Breaches tied to third-party users and machine accounts are accelerating faster than those tied to internal employees — a clear warning sign that inconsistent governance is fueling new vulnerabilities. The reality is:identity is identity. Human, non-employee, or machine, every identity must be properly managed, governed, and secured under a unified strategy.
+The organizations that survive tomorrow's threats aren't the ones who try to harmonize solutions — they're the ones who recognize that governing every identity together is the only way forward. Consolidating identity security across employees, contractors, partners, service accounts, bots, and AI agents closes critical gaps, boosts visibility, and hardens defenses when it matters most.
+SailPoint helps organizations secure the full spectrum of identitieswith solutions designed for today's complex enterprise environments — at enterprise scale. Whether you're managing machine identities or securing non-employee access, SailPoint delivers a unified identity security experience—powered by the SailPoint Atlas platform—that turns identity chaos into clarity.
+To dig deeper into why machine identities, require a new approach — and why traditional human-centric models are no longer enough —explore ourthree-part article seriescovering what a machine identity is (and why the definition matters), how machine identities evolved alongside human identities, and why traditional governance methods are failing in a machine-driven world.
+The gap between human and machine identity security is widening. It's time to close it — before attackers do it for you.
+Source:
+Verizon 2025 Data Breach Investigations Report (DBIR)
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -28,10 +26,10 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- backdoor (Backdoor)
-- infected (Virus)
+- ransomware (Ransomware)
+- zero-day (Exploit)
 
 
 === Classificação do Malware ===
-- Backdoor: backdoor
-- Virus: infected
+- Ransomware: ransomware
+- Exploit: zero-day

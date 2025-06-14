@@ -1,15 +1,21 @@
 TÍTULO:
-Commvault Confirms Hackers Exploited CVE-2025-3928 as Zero-Day in Azure Breach
+Qilin Ransomware Ranked Highest in April 2025 with 72 Data Leak Disclosures
 
 CORPO DA NOTÍCIA:
-Enterprise data backup platform Commvault has revealed that an unknown nation-state threat actor breached its Microsoft Azure environment by exploiting CVE-2025-3928 but emphasized there is no evidence of unauthorized data access.
-"This activity has affected a small number of customers we have in common with Microsoft, and we are working with those customers to provide assistance," the companysaidin an update.
-"Importantly, there has been no unauthorized access to customer backup data that Commvault stores and protects, and no material impact on our business operations or our ability to deliver products and services."
-In an advisoryissuedon March 7, 2025, Commvault said it was notified by Microsoft on February 20 about unauthorized activity within its Azure environment and that the threat actor exploited CVE-2025-3928 as a zero-day. It also said it rotated affected credentials and enhanced security measures.
-The disclosure comes as the U.S. Cybersecurity and Infrastructure Security Agency (CISA)addedCVE-2025-3928 to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the necessary patches for Commvault Web Server by May 19, 2025.
-To mitigate the risk posed by such attacks, customers are advised to apply a Conditional Access policy to all Microsoft 365, Dynamics 365, and Azure AD single-tenant app registrations, and rotate and sync client secrets between Azure portal and Commvault every 90 days.
-The company is also urging users to monitor sign-in activity to detect any access attempts originating from IP addresses outside of the allowlisted ranges. The following IP addresses have been associated with malicious activity -
-"These IP addresses should be explicitly blocked within your Conditional Access policies and monitored in your Azure sign-in logs," Commvaultsaid. "If any access attempts from these IPs are detected, please report the incident immediately to Commvault Support for further analysis and action."
+Threat actors with ties to theQilinransomwarefamily have leveraged malware known asSmokeLoaderalong with a previously undocumented .NET compiled loader codenamed NETXLOADER as part of a campaign observed in November 2024.
+"NETXLOADER is a new .NET-based loader that plays a critical role in cyber attacks," Trend Micro researchers Jacob Santos, Raymart Yambot, John Rainier Navato, Sarah Pearl Camiling, and Neljorn Nathaniel Aguassaidin a Wednesday analysis.
+"While hidden, it stealthily deploys additional malicious payloads, such as Agenda ransomware and SmokeLoader. Protected by .NET Reactor 6, NETXLOADER is difficult to analyze."
+Qilin, also called Agenda, has been anactive ransomware threatsince it surfaced in the threat landscape in July 2022. Last year, cybersecurity company Halcyon discovered an improved version of the ransomware that it named Qilin.B.
+Recent data shared by Group-IB shows that disclosures on Qilin's data leak site have more than doubled since February 2025, making it thetop ransomware groupfor April with72 claimed victims, surpassing other players like Akira, Play, and Lynx.
+"From July 2024 to January 2025, Qilin's affiliates did not disclose more than 23 companies per month," the Singaporean cybersecurity companysaidlate last month. "However, [...] since February 2025 the amount of disclosures have significantly increased, with 48 in February, 44 in March and 45 in the first weeks of April."
+Qilin is also said to have benefited from an influx of affiliates following RansomHub's abrupt shutdown at the start of last month. According to Flashpoint, RansomHub was thesecond-most active ransomware groupin 2024, claiming38 victimsin the financial sector between April 2024 and April 2025.
+"Agenda ransomware activity was primarily observed in healthcare, technology, financial services, and telecommunications sectors across the U.S., the Netherlands, Brazil, India, and the Philippines," according to Trend Micro's data from the first quarter of 2025.
+NETXLOADER, the cybersecurity company said, is a highly obfuscated loader that's designed to launch next-stage payloads retrieved from external servers (e.g., "bloglake7[.]cfd"), which are then used to drop SmokeLoader and Agenda ransomware.
+Protected by .NET Reactor version 6, it also incorporates a bevy of tricks to bypass traditional detection mechanisms and resist analysis efforts, such as the use of just-in-time (JIT) hooking techniques, and seemingly meaningless method names, and control flow obfuscation.
+"The operators' use of NETXLOADER is a major leap forward in how malware is delivered," Trend Micro said. "It uses a heavily obfuscated loader that hides the actual payload, meaning you can't know what it truly is without executing the code and analyzing it in memory. Even string-based analysis won't help because the obfuscation scrambles the clues that would normally reveal the payload's identity."
+Attack chains have been found to leverage valid accounts and phishing as initial access vectors to drop NETXLOADER, which then deploys SmokeLoader on the host. The SmokeLoader malware proceeds to perform a series of steps to perform virtualization and sandbox evasion, while simultaneously terminating a hard-coded list of running processes.
+In the final stage, SmokeLoader establishes contact with a command-and-control (C2) server to fetch NETXLOADER, which launches the Agenda ransomware using atechniqueknown asreflective DLL loading.
+"The Agenda ransomware group is continually evolving by adding new features designed to cause disruption," the researchers said. "Its diverse targets include domain networks, mounted devices, storage systems, and VCenter ESXi."
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -17,8 +23,8 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- zero-day (Exploit)
+- ransomware (Ransomware)
 
 
 === Classificação do Malware ===
-- Exploit: zero-day
+- Ransomware: ransomware

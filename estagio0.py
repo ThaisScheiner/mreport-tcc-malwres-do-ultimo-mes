@@ -10,14 +10,14 @@ from datetime import datetime, timedelta
 import time
 import os
 
-site_desejado = "thehackernews.com"  # Exemplo: "thehackernews.com"
+site_desejado = "thehackernews.com"  
 
 # Configuração: escolha entre usar mês/ano específico ou mês anterior automático
 usar_mes_especifico = False # Mude para False para usar mês anterior automaticamente
-
-# Se usar mês/ano específico, defina aqui:
-mes_especifico = "April"   # Nome do mês em inglês, ex: "April"
-ano_especifico = 2025      # Ano, ex: 2025
+                            # True = para escolher o mes espscifico
+# Define o mês/ano específico
+mes_especifico = "April"   # mês em inglês, ex: "April"
+ano_especifico = 2025      
 
 # Gera o mês anterior (automático)
 def gerar_mes_anterior():
@@ -29,7 +29,8 @@ def gerar_mes_anterior():
     return nome_mes, ano
 
 def buscar_links_bing(driver, termo, site_alvo, max_paginas=5):
-    url = f"https://www.bing.com/search?q={quote_plus(termo)}&qft=+filterui:age-lt=1m"
+    url = f"https://www.bing.com/search?q={quote_plus(termo)}" # Se usar o mes espscifico comentar a linha de baixo
+    # url = f"https://www.bing.com/search?q={quote_plus(termo)}&qft=+filterui:age-lt=1m"
     driver.get(url)
     todos_links = set()
 
@@ -50,7 +51,7 @@ def buscar_links_bing(driver, termo, site_alvo, max_paginas=5):
 
             print(f"Página {pagina + 1} - {len(todos_links)} links coletados até agora.")
 
-            # Rebusca o botão de próxima página a cada iteração para evitar "stale"
+            # Rebusca o botão de próxima página a cada iteração para evitar erro
             next_button = None
             try:
                 next_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'a.sb_pagN')))
@@ -98,7 +99,7 @@ print(f"\nTotal de links encontrados: {len(links_encontrados)}")
 
 driver.quit()
 
-# Salvar os links encontrados
+# Salva os links encontrados
 output_txt = os.path.join(os.getcwd(), 'relatorios', f'links_malware_bing_{nome_mes}_{ano}.txt')
 os.makedirs(os.path.dirname(output_txt), exist_ok=True)
 

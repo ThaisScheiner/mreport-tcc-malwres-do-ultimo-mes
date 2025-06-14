@@ -1,19 +1,34 @@
 TÍTULO:
-⚡ Weekly Recap: Nation-State Hacks, Spyware Alerts, Deepfake Malware, Supply Chain Backdoors
+New PathWiper Data Wiper Malware Disrupts Ukrainian Critical Infrastructure in 2025 Attack
 
 CORPO DA NOTÍCIA:
-What if attackers aren't breaking in—they're already inside, watching, and adapting?
-This week showed a sharp rise in stealth tactics built for long-term access and silent control. AI is being used to shape opinions. Malware is hiding inside software we trust. And old threats are returning under new names. The real danger isn't just the breach—it's not knowing who's still lurking in your systems. If your defenses can't adapt quickly, you're already at risk.
-Here are the key cyber events you need to pay attention to this week.
-Lemon Sandstorm Targets Middle East Critical Infra— The Iranian state-sponsored threat group tracked as Lemon Sandstormtargetedan unnamed critical national infrastructure (CNI) in the Middle East and maintained long-term access that lasted for nearly two years using custom backdoors like HanifNet, HXLibrary, and NeoExpressRAT. The activity, which lasted from at least May 2023 to February 2025, entailed "extensive espionage operations and suspected network prepositioning – a tactic often used to maintain persistent access for future strategic advantage," according to Fortinet.
-Active Directory misconfigurations give attackers the perfect entry point to escalate privileges and move laterally. One weak link is all it takes. Use this AD Security Checklist to identify and fix critical gaps before they're exploited, Download now and secure your Active Directory.
-Attackers love software vulnerabilities—they're easy doors into your systems. Every week brings fresh flaws, and waiting too long to patch can turn a minor oversight into a major breach. Below are this week's critical vulnerabilities you need to know about. Take a look, update your software promptly, and keep attackers locked out.
-This week's list includes —CVE-2025-3928(Commvault Web Server),CVE-2025-1976(Broadcom Brocade Fabric OS),CVE-2025-46271, CVE-2025-46272, CVE-2025-46273, CVE-2025-46274, CVE-2025-46275(Planet Technology),CVE-2025-23016(FastCGI),CVE-2025-43864(React Router),CVE-2025-21756(Linux Kernel),CVE-2025-31650(Apache Tomcat),CVE-2025-46762(Apache Parquet),CVE-2025-2783(Google Chrome),CVE-2025-23242, CVE-2025-23243(NVIDIA Riva),CVE-2025-23254(NVIDIA TensorRT-LLM),CVE-2025-3500(Avast Free Antivirus),CVE-2025-32354(Zimbra Collaboration Server),CVE-2025-4095(Docker),CVE-2025-30194(PowerDNS),CVE-2025-32817(SonicWall Connect Tunnel Windows Client),CVE-2025-29953(Apache ActiveMQ),CVE-2025-4148,CVE-2025-4149,CVE-2025-4150(NETGEAR),CVE-2025-2082(Tesla Model 3),CVE-2025-3927(Digigram PYKO-OUT),CVE-2025-24522, CVE-2025-32011, CVE-2025-35996, CVE-2025-36558(KUNBUS Revolution Pi),CVE-2025-35975, CVE-2025-36521(MicroDicom DICOM Viewer),CVE-2025-2774(Webmin),CVE-2025-29471(Nagios), andCVE-2025-32434(PyTorch).
-Sandbox Your AI Agent — File Access Is the Silent Threat— Most AI agents don't need access to your system files — but they often have it by default. That means if an attacker tricks your agent (via prompt injection, plugin abuse, or tool misuse), it could accidentally expose things like SSH keys, cloud credentials, or logs. This is one of the easiest ways for attackers to move deeper into your environment — and it often goes unnoticed.
-Even if you've locked down API access or IAM roles, the local file system is still a weak spot. Your agent might be able to read .ssh/authorized_keys, .aws/credentials, or even environment files with secrets — just by asking the right question. And once that data is exposed, it's game over.
-You can fix this fast with sandboxing. Use tools like Firejail (Linux) to block access to sensitive folders. This blocks the agent from seeing key files, locks down temp folders, and adds guardrails — even if something inside the agent misbehaves.
-Running your AI agent in a sandbox takes minutes, but massively reduces your attack surface. It's a small move that closes a big gap — and it works even if everything else looks secure.
-Every alert this week reinforces a simple truth: cybersecurity isn't just about defense—it's about detection, speed, and accountability. As threats grow quieter and more calculated, the margin for delay shrinks. Don't just monitor. Measure. Map. Respond. Then ask yourself—where else could they be?
+A critical infrastructure entity within Ukraine was targeted by a previously unseen data wiper malware named PathWiper, according to new findings from Cisco Talos.
+"The attack was instrumented via a legitimate endpoint administration framework, indicating that the attackers likely had access to the administrative console, that was then used to issue malicious commands and deploy PathWiper across connected endpoints," researchers Jacob Finn, Dmytro Korzhevin, and Asheer Malhotrasaidin an analysis published Thursday.
+The attack is assessed to be the work of a Russia-nexus advanced persistent threat (APT) actor based on the tradecraft observed and the overlapping capabilities with destructive malware used in attacks against Ukraine.
+Talos said the commands issued by the administrative tool's console were received by its client running on the victim endpoints and then executed as a batch (BAT) file.
+The BAT file, in turn, consisted of a command to run a malicious Visual Basic Script (VBScript) file in the Windows TEMP folder called "uacinstall.vbs," that was also pushed to the machines via the administrative console. The VBScript, for its part, dropped the wiper binary under the name "sha256sum.exe" in the same folder and executed it.
+"Throughout the course of the attack, filenames and actions used were intended to mimic those deployed by the administrative utility's console, indicating that the attackers had prior knowledge of the console and possibly its functionality within the victim enterprise's environment," Talos said.
+Once launched, PathWiper is designed to gather a list of connected storage media, including physical drive names, volume names and paths, and network drive paths. The wiper then proceeds to create one thread per drive and volume for every path recorded and overwrites the contents of the artifacts with randomly generated bytes.
+Specifically, it targets: Master Boot Record (MBR), $MFT, $MFTMirr, $LogFile, $Boot, $Bitmap, $TxfLog, $Tops, and $AttrDef. In addition, PathWiper irrevocably destroys files on disk by overwriting them with randomized bytes and attempts to dismount volumes.
+PathWiper has been found to share some level of similarity withHermeticWiper(aka FoxBlade, KillDisk, or NEARMISS), which was detected coinciding with Russia's full-scale military invasion of Ukraine in February 2024. The HermeticWiper malware is attributed to the Russia-linkedSandwormgroup.
+While both wipers attempt to corrupt the MBR and NTFS-related artifacts, it bears noting that HermeticWiper and PathWiper differ in the manner the data corruption mechanism is used against identified drives and volumes.
+"The continued evolution of wiper malware variants highlights the ongoing threat to Ukrainian critical infrastructure despite the longevity of the Russia-Ukraine war," the researchers said.
+The discovery of a new breed of wiper malware against Ukraine comes as Russian cybersecurity company BI.ZONE uncovered two new campaigns undertaken by Silent Werewolf in March 2025 to infect Moldovan and Russian companies with malware.
+"The attackers employed two separate loader instances to retrieve the malicious payload from their C2 server," the companysaid. "Unfortunately, the payload itself was not available at the time of this research. However, a retrospective analysis of similar Silent Werewolf campaigns suggests that the threat actor used XDigo malware."
+Some of the targets of the attacks include nuclear, aircraft, instrumentation, and mechanical engineering sectors in Russia. The starting point is a phishing email containing a ZIP file attachment that, in turn, includes an LNK file and a nested ZIP archive. The second ZIP file consists of a legitimate binary, a malicious DLL, and a decoy PDF.
+Unpacking and launching the Windows shortcut file triggers the extraction of the nested archive and ultimately causes the rogue DLL to be sideloaded via the legitimate executable ("DeviceMetadataWizard.exe"). The DLL is a C# loader ("d3d9.dll") that's designed to retrieve the next-stage payload from a remote server and display the lure document to the victim.
+"The adversaries appear to run checks on target systems," BI.ZONE said. "If a target host does not meet certain criteria, the Llama 2 large language model (LLM) in GGUF format is downloaded from hxxps://huggingface[.]co/TheBloke/Llama-2-70B-GGUF/resolve/main/llama-2-70b.Q5_K_M.gguf."
+"This hinders the comprehensive analysis of the entire attack and allows the threat actor to bypass defenses such as sandboxes."
+The cybersecurity firm said it observed a second campaign that same month targeting unknown sectors in Moldova and, likely, Russia using the same C# loader, but via phishing lures related to official vacation schedules and recommendations for protecting corporate information infrastructure against ransomware attacks.
+The cyber espionage group, per BI.ZONE, is believed to be active at least since 2011, targeting a wide range of companies in Russia, Belarus, Ukraine, Moldova and Serbia. The attacks are characterized by the use of phishing lures to delivermalwaresuch as XDSpy, XDigo, and DSDownloader.
+In recent months, Russian state-owned companies and organizations spanning technology, telecommunications, and production verticals are also said to have come under cyber assaults from a pro-Ukrainian hacktivist group codenamed BO Team (aka Black Owl, Hoody Hyena, and Lifting Zmiy).
+"BO Team is a serious threat aimed both at causing maximum damage to the victim and at extracting financial benefits," Kaspersky researcherssaidin a report last week, detailing the threat actor's ability to sabotage victim's infrastructure and, in some instances, even resorts to data encryption and extortion.
+Active since at least January 2024, attacks mounted by the hacktivist cluster are known to leverage post-exploitation frameworks, including Mythic and Cobalt Strike, as well as legitimate remote access and tunneling tools. The group also has a history of accessing confidential data and publishing information about successful attacks in its Telegram channel BO Team.
+Initial access to target networks is accomplished by sending phishing emails containing booby-trapped attachments that, when opened, activate an infection chain designed to deploy known commodity malware families like DarkGate,BrockenDoor, and Remcos RAT. Also used are tools such as HandleKatz and NanoDump for dumping LSASS and creating LSASS dumps, respectively.
+Armed with the remote access, BO Team has been observed destroying file backups, deleting files using the SDelete utility, and additionally dropping the Windows version of theBabukencryptor to demand a ransom in exchange for regaining access.
+Some of the other activities carried out by the threat actor are listed below -
+"The BO Team group poses a significant threat to Russian organizations due to its unconventional approach to conducting attacks," Kaspersky said. "Unlike most pro-Ukrainian hacktivist groups, BO Team actively uses a wide arsenal of malware, including backdoors such as BrockenDoor, Remcos, and DarkGate."
+"These features confirm the high level of autonomy of the group and the absence of stable connections with other representatives of the pro-Ukrainian hacktivist cluster. In the public activity of BO Team, there are practically no signs of interaction, coordination or exchange of tools with other groups. This once again emphasizes its unique profile within the current hacktivist landscape in Russia."
 AI boosts speed and scale—but also risk. Hidden identity accounts can expose your systems if left unsecured.
 Discover how Zscaler's experts detect stealthy LOTS attacks hiding in trusted sites—and how you can too.
 Get the latest news, expert insights, exclusive resources, and strategies from industry leaders – all for free.
@@ -21,10 +36,12 @@ Get the latest news, expert insights, exclusive resources, and strategies from i
 
 
 === CLASSIFICAÇÕES DETECTADAS ===
-- spyware (Spyware)
-- stealth (Rootkit)
+- ransomware (Ransomware)
+- infection (Virus)
+- rat (Backdoor)
 
 
 === Classificação do Malware ===
-- Spyware: spyware
-- Rootkit: stealth
+- Ransomware: ransomware
+- Virus: infection
+- Backdoor: rat

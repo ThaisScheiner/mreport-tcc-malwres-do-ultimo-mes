@@ -1,6 +1,7 @@
 from estagio1 import Browser
 from datetime import datetime, timedelta
 from urllib.parse import urlparse
+from calendar import month_name
 import os
 import re
 
@@ -8,6 +9,26 @@ input_path = 'relatorios/links_malware_bing_ultimo_mes_completo.txt'
 saida_dir = "C:/Temp/paginas"
 os.makedirs(saida_dir, exist_ok=True)
 
+# Escolher = automático(ultimos 30  dias) ou mês específico
+usar_mes_especifico = False  # True = mês específico / False = Para modo automático
+mes_especifico = "April"    # usado apenas se usar_mes_especifico = True
+ano_especifico = 2025
+
+# Validação do mês se modo específico
+if usar_mes_especifico:
+    if mes_especifico not in list(month_name):
+        print(f"[ERRO] Mês inválido: {mes_especifico}")
+        exit(1)
+    numero_mes = list(month_name).index(mes_especifico)
+    mes_escolhido = f"{ano_especifico}/{numero_mes:02d}"
+    meses_validos = [mes_escolhido]
+else:
+    hoje = datetime.today()
+    mes_atual = hoje.strftime('%Y/%m')
+    mes_anterior = (hoje.replace(day=1) - timedelta(days=1)).strftime('%Y/%m')
+    meses_validos = [mes_atual, mes_anterior]
+
+# Leitura dos links
 if not os.path.exists(input_path):
     print(f"[ERRO] Arquivo não encontrado: {input_path}")
     exit(1)
@@ -19,12 +40,7 @@ if not links:
     print(f"[AVISO] Nenhum link para processar no arquivo: {input_path}")
     exit(0)
 
-# Pega os meses válidos (mês atual e anterior)
-hoje = datetime.today()
-mes_atual = hoje.strftime('%Y/%m')
-mes_anterior = (hoje.replace(day=1) - timedelta(days=1)).strftime('%Y/%m')
-
-# Regex para extrair trecho tipo /2025/06
+# Regex para extrair trecho tipo /2025/04
 padrao_data_url = re.compile(r'/(\d{4}/\d{2})')
 
 # Inicia navegador
@@ -34,11 +50,10 @@ salvos = 0
 ignorados = 0
 
 for i, link in enumerate(links):
-    # Verifica se tem /YYYY/MM válido na URL
     match = padrao_data_url.search(link)
     if match:
         data_url = match.group(1)
-        if data_url not in [mes_atual, mes_anterior]:
+        if data_url not in meses_validos:
             print(f"[AVISO] Ignorando (fora do período): {link}")
             ignorados += 1
             continue

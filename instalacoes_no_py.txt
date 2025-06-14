@@ -32,4 +32,6 @@ pip install beautifulsoup4
 
 pip install reportlab
 
-
+Mudar o estagio0.py e o estagio2.py 
+a variavel = usar_mes_especifico para true ou false 
+# True = mês específico / False = Para modo automático
